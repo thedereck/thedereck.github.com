@@ -1,32 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>{{ site.name }} - {{ page.title }}</title>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="css/{{ site.bootstrap_css }}" rel="stylesheet" media="screen">
-	</head>
+	{% include head.html %}
 	<body>
-		<div class="navbar">
-			<div class="navbar-inner">
-				<a class="brand" href="#">{{ site.brand }}</a>
-				<ul class="nav">
-					<li class="active"><a href="#">Home</a></li>
-					<li><a href="#">Link</a></li>
-					<li><a href="#">Link</a></li>
-				</ul>
-			</div>
-		</div>
-		{% if site.alert %}
-		<div class="alert alert-block">
-			{{ site.alert }}
-		</div>
-		{% endif %}
-		{% if site.notice %}
-		<div class="alert alert-block alert-info">
-			{{ site.information }}
-		</div>
-		{% endif %}
+		{% include body/navbar.html %}
+		{% include body/alert.html %}
+		{% include body/notice.html %}
 		{{ content }}
-		<script src="js/bootstrap.min.js"></script>
+		{% include body/javascript.html %}
 	</body>
 </html>
