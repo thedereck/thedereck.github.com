@@ -1,14 +1,27 @@
 {% assign social = false %}
 
-{% if github_social_link or facebook_social_link or googleplus_social_link or linkedin_social_link or pinterest_social_link or twitter_social_link %}
+{% if site.github_social_link or site.facebook_social_link or site.googleplus_social_link or site.linkedin_social_link or site.pinterest_social_link or site.twitter_social_link %}
 	{% assign social = true %}
 {% endif %}
 
-{% if social %}
-	Social = true<br>
-	{{ site.font_awesome_css }}
-{% else %}
-	Social = false<br>
-	{{ site.font_awesome_css }}
+{% if social and site.font_awesome_css %}
+					<div class="well">
+						You can find me at the following social sites:<br>
+						{% if site.github_social_link %}<i class="icon-github-alt"></i> GitHub{% endif %}<br>
+						{% if site.facebook_social_link %}<i class="icon-facebook"></i> Facebook{% endif %}<br>
+						{% if site.googleplus_social_link %}<i class="icon-google-plus"></i> Google+{% endif %}<br>
+						{% if site.linkedin_social_link %}<i class="icon-linkedin"></i> Linkedin{% endif %}<br>
+						{% if site.pinterest_social_link %}<i class="icon-pinterest"></i> Pinterest{% endif %}<br>
+						{% if site.twitter_social_link %}<i class="icon-twitter"></i> Twitter{% endif %}
+					</div>
+{% elsif social %}
+					<div class="well">
+						You can find me at the following social sites:<br>
+						{% if site.github_social_link %}GitHub{% endif %}<br>
+						{% if site.facebook_social_link %}Facebook{% endif %}<br>
+						{% if site.googleplus_social_link %}Google+{% endif %}<br>
+						{% if site.linkedin_social_link %}Linkedin{% endif %}<br>
+						{% if site.pinterest_social_link %}Pinterest{% endif %}<br>
+						{% if site.twitter_social_link %}Twitter{% endif %}
+					</div>
 {% endif %}
-
