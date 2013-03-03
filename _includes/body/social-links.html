@@ -9,24 +9,3 @@
 	{{ site.font_awesome_css }}
 {% endif %}
 
-{% if social and site.font_awesome_css %}
-					<div class="well">
-						You can find me at the following social sites:<br>
-						{% if github_social_link %}<i class="icon-github-alt"></i> GitHub{% endif %}<br>
-						{% if facebook_social_link %}<i class="icon-facebook"></i> Facebook{% endif %}<br>
-						{% if googleplus_social_link %}<i class="icon-google-plus"></i> Google+{% endif %}<br>
-						{% if linkedin_social_link %}<i class="icon-linkedin"></i> Linkedin{% endif %}<br>
-						{% if pinterest_social_link %}<i class="icon-pinterest"></i> Pinterest{% endif %}<br>
-						{% if twitter_social_link %}<i class="icon-twitter"></i> Twitter{% endif %}
-					</div>
-{% elsif social %}
-					<div class="well">
-						You can find me at the following social sites:<br>
-						{% if github_social_link %}GitHub{% endif %}<br>
-						{% if facebook_social_link %}Facebook{% endif %}<br>
-						{% if googleplus_social_link %}Google+{% endif %}<br>
-						{% if linkedin_social_link %}Linkedin{% endif %}<br>
-						{% if pinterest_social_link %}Pinterest{% endif %}<br>
-						{% if twitter_social_link %}Twitter{% endif %}
-					</div>
-{% endif %}
