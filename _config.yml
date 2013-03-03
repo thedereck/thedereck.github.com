@@ -1,6 +1,6 @@
 name: The Dereck
 brand: Dereck Curry
 
-alert:
+alert: false
 
 bootstrap_css: spacelab.bootstrap.min.css
