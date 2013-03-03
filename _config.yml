@@ -1,8 +1,8 @@
 name: The Dereck
 brand: The Dereck
 
-alert: false
-notice: Sample site notice.
+alert: Sample site alert.
+notice: false
 
 bootstrap_css: spacelab.bootstrap.min.css
 bootstrap_responsive_css: bootstrap-responsive.min.css
