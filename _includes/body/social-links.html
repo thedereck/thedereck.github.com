@@ -6,7 +6,7 @@
 
 {% if social and site.font_awesome_css %}
 	<p class="text-center">Follow Me</p>
-	<ul class="inline">
+	<ul class="inline text-center">
 		{% if site.github_social_link %}<li><a class="btn" href="{{ site.github_social_link }}"><i class="icon-github-alt"></i></a></li>{% endif %}
 		{% if site.facebook_social_link %}<li><a class="btn" href="{{ site.facebook_social_link }}"><i class="icon-facebook"></i></a></li>{% endif %}
 		{% if site.googleplus_social_link %}<li><a class="btn" href="{{ site.googleplus_social_link }}"><i class="icon-google-plus"></i></a></li>{% endif %}
@@ -16,7 +16,7 @@
 	</ul>
 {% elsif social %}
 	<p class="text-center">Follow Me</p>
-	<ul class="inline">
+	<ul class="inline text-center">
 		{% if site.github_social_link %}<li><a class="btn" href="{{ site.github_social_link }}">GitHub</a></li>{% endif %}
 		{% if site.facebook_social_link %}<li><a class="btn" href="{{ site.facebook_social_link }}">Facebook</a></li>{% endif %}
 		{% if site.googleplus_social_link %}<li><a class="btn" href="{{ site.googleplus_social_link }}">Google+</a></li>{% endif %}
