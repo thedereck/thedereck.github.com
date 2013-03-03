@@ -4,6 +4,11 @@
 	{% assign social = true %}
 {% endif %}
 
+{% if social %}
+	Social = true<br>
+	{{ site.font_awesome_css }}
+{% endif %}
+
 {% if social and site.font_awesome_css %}
 					<div class="well">
 						You can find me at the following social sites:<br>
