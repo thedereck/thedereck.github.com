@@ -1,12 +1,12 @@
 name: The Dereck
 brand: The Dereck
 
-facebook_link: false
-github_link: false
-googleplus_link: false
-linkedin_link: false
-pinterest_link: false
-twitter_link: false
+facebook_social_link: false
+github_social_link: false
+googleplus_social_link: false
+linkedin_social_link: http://www.linkedin.com/in/dereckcurry
+pinterest_social_link: false
+twitter_social_link: false
 
 alert: false
 notice: false
