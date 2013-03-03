@@ -1,1 +1,6 @@
-		<script src="js/bootstrap.min.js"></script>
+{% if site.jquery_js %}
+		<script src="js/{{ site.jquery_js }}"></script>
+{% endif %}
+{% if site.bootstrap_js %}
+		<script src="js/{{ site.bootstrap_js }}"></script>
+{% endif %}

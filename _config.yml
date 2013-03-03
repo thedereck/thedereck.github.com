@@ -5,4 +5,6 @@ alert: This is a sample site alert.
 notice: This is a sample site notice.
 
 bootstrap_css: spacelab.bootstrap.min.css
-bootstrap_responsive: true
+bootstrap_responsive_css: bootstrap-responsive.min.css
+bootstrap_js: bootstrap.min.js
+jquery_js: jquery-1.9.1.min.js
