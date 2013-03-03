@@ -1,6 +1,13 @@
 name: The Dereck
 brand: The Dereck
 
+facebook_link: false
+github_link: false
+googleplus_link: false
+linkedin_link: false
+pinterest_link: false
+twitter_link: false
+
 alert: false
 notice: false
 
@@ -8,3 +15,4 @@ bootstrap_css: spacelab.bootstrap.min.css
 bootstrap_responsive_css: bootstrap-responsive.min.css
 bootstrap_js: bootstrap.min.js
 jquery_js: jquery-1.9.1.min.js
+font_awesome_css: font-awesome.min.css
