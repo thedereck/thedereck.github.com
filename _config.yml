@@ -1,7 +1,7 @@
 name: The Dereck
-brand: Dereck Curry
+brand: The Dereck
 
-alert: This is a sample site alert.
+alert: false
 notice: false
 
 bootstrap_css: spacelab.bootstrap.min.css
