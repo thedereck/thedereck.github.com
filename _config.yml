@@ -2,6 +2,6 @@ name: The Dereck
 brand: Dereck Curry
 
 alert: false
-information: This is an information message.
+notice: false
 
 bootstrap_css: spacelab.bootstrap.min.css
