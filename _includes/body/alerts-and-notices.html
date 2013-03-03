@@ -1,37 +1,39 @@
 {% assign alerts = false %}
 {% assign notices = false %}
 
-{% if alerts %}
-alerts = true<br>
-{% else %}
-alerts = false<br>
-{% endif %}
-
-{% if notices %}
-notices = true<br>
-{% else %}
-notices = false<br>
-{% endif %}
-
-
-
 {% if site.alert or page.alert or post.alert %}
 	{% assign alerts = true %}
-{% endif %}
-
-{% if alerts %}
-alerts = true<br>
-{% else %}
-alerts = false<br>
 {% endif %}
 
 {% if site.notice or page.notice or post.notice %}
 	{% assign notices = true %}
 {% endif %}
 
-{% if notices %}
-notices = true<br>
-{% else %}
-notices = false<br>
+{% if alerts and notices %}
+		<div class="container">
+			<div class="row">
+				<div class="span5 offset1">
+{% include body/alerts.html %}
+				</div>
+				<div class="span5">
+{% include body/notices.html %}
+				</div>
+			</div>
+		</div>
+{% elsif alerts %}
+		<div class="container">
+			<div class="row">
+				<div class="span10 offset1">
+{% include body/alerts.html %}
+				</div>
+			</div>
+		</div>
+{% elsif notices %}
+		<div class="container">
+			<div class="row">
+				<div class="span10 offset1">
+{% include body/notices.html %}
+				</div>
+			</div>
+		</div>
 {% endif %}
-
