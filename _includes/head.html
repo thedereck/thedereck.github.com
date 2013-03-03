@@ -1,10 +1,6 @@
 	<head>
 		<title>{{ site.name }} - {{ page.title }}</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-{% if site.bootstrap_css %}
 		<link href="css/{{ site.bootstrap_css }}" rel="stylesheet" media="screen">
-{% endif %}
-{% if site.bootstrap_responsive_css %}
-		<link href="css/{{ site.bootstrap_responsive_css }}" rel="stylesheet">
-{% endif %}
+		{% if site.bootstrap_responsive_css %}<link href="css/{{ site.bootstrap_responsive_css }}" rel="stylesheet">{% endif %}
 	</head>
