@@ -6,20 +6,20 @@
 
 {% if social and site.font_awesome_css %}
 	<ul class="inline">
-		<li>{% if site.github_social_link %}<a class="btn" href="{{ site.github_social_link }}"><i class="icon-github-alt"></i></a>{% endif %}</li>
-		<li>{% if site.facebook_social_link %}<a class="btn" href="{{ site.facebook_social_link }}"><i class="icon-facebook"></i></a>{% endif %}</li>
-		<li>{% if site.googleplus_social_link %}<a class="btn" href="{{ site.googleplus_social_link }}"><i class="icon-google-plus"></i></a>{% endif %}</li>
-		<li>{% if site.linkedin_social_link %}<a class="btn" href="{{ site.linkedin_social_link }}"><i class="icon-linkedin"></i></a>{% endif %}</li>
-		<li>{% if site.pinterest_social_link %}<a class="btn" href="{{ site.pinterest_social_link }}"><i class="icon-pinterest"></i></a>{% endif %}</li>
-		<li>{% if site.twitter_social_link %}<a class="btn" href="{{ site.twitter_social_link }}"><i class="icon-twitter"></i></a>{% endif %}</li>
+		{% if site.github_social_link %}<li><a class="btn" href="{{ site.github_social_link }}"><i class="icon-github-alt"></i></a></li>{% endif %}
+		{% if site.facebook_social_link %}<li><a class="btn" href="{{ site.facebook_social_link }}"><i class="icon-facebook"></i></a></li>{% endif %}
+		{% if site.googleplus_social_link %}<li><a class="btn" href="{{ site.googleplus_social_link }}"><i class="icon-google-plus"></i></a></li>{% endif %}
+		{% if site.linkedin_social_link %}<li><a class="btn" href="{{ site.linkedin_social_link }}"><i class="icon-linkedin"></i></a></li>{% endif %}
+		{% if site.pinterest_social_link %}<li><a class="btn" href="{{ site.pinterest_social_link }}"><i class="icon-pinterest"></i></a></li>{% endif %}
+		{% if site.twitter_social_link %}<li><a class="btn" href="{{ site.twitter_social_link }}"><i class="icon-twitter"></i></a></li>{% endif %}
 	</ul>
 {% elsif social %}
 	<ul class="inline">
-		<li>{% if site.github_social_link %}<a class="btn" href="{{ site.github_social_link }}">GitHub</a>{% endif %}</li>
-		<li>{% if site.facebook_social_link %}<a class="btn" href="{{ site.facebook_social_link }}">Facebook</a>{% endif %}</li>
-		<li>{% if site.googleplus_social_link %}<a class="btn" href="{{ site.googleplus_social_link }}">Google+</a>{% endif %}</li>
-		<li>{% if site.linkedin_social_link %}<a class="btn" href="{{ site.linkedin_social_link }}">Linkedin</a>{% endif %}</li>
-		<li>{% if site.pinterest_social_link %}<a class="btn" href="{{ site.pinterest_social_link }}">Pinterest</a>{% endif %}</li>
-		<li>{% if site.twitter_social_link %}<a class="btn" href="{{ site.twitter_social_link }}">Twitter</a>{% endif %}</li>
+		{% if site.github_social_link %}<li><a class="btn" href="{{ site.github_social_link }}">GitHub</a></li>{% endif %}
+		{% if site.facebook_social_link %}<li><a class="btn" href="{{ site.facebook_social_link }}">Facebook</a></li>{% endif %}
+		{% if site.googleplus_social_link %}<li><a class="btn" href="{{ site.googleplus_social_link }}">Google+</a></li>{% endif %}
+		{% if site.linkedin_social_link %}<li><a class="btn" href="{{ site.linkedin_social_link }}">Linkedin</a></li>{% endif %}
+		{% if site.pinterest_social_link %}<li><a class="btn" href="{{ site.pinterest_social_link }}">Pinterest</a></li>{% endif %}
+		{% if site.twitter_social_link %}<li><a class="btn" href="{{ site.twitter_social_link }}">Twitter</a></li>{% endif %}
 	</ul>
 {% endif %}
