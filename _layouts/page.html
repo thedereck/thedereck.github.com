@@ -4,7 +4,16 @@
 	<body>
 {% include body/navbar.html %}
 {% include body/alerts-and-notices.html %}
-		{{ content }}
+		<div class="container">
+			<div class="row">
+				<div class="span8">
+					{{ content }}
+				</div>
+				<div class="span4">
+					Follow me into the desert, as thirsty as you are.
+				</div>
+			</div>
+		</div>
 {% include body/javascript.html %}
 	</body>
 </html>
