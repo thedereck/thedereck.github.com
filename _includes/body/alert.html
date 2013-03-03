@@ -4,7 +4,12 @@
 		</div>
 {% endif %}
 {% if page.alert %}
-		<div class="alert alert-block alert-error">
+		<div class="alert alert-block">
 			{{ page.alert }}
+		</div>
+{% endif %}
+{% if post.alert %}
+		<div class="alert alert-block">
+			{{ post.alert }}
 		</div>
 {% endif %}
