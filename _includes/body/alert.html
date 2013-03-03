@@ -1,5 +1,10 @@
-		{% if site.alert %}
+{% if site.alert %}
 		<div class="alert alert-block">
 			{{ site.alert }}
 		</div>
-		{% endif %}
+{% endif %}
+{% if site.alert %}
+		<div class="alert alert-block">
+			{{ page.alert }}
+		</div>
+{% endif %}

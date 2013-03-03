@@ -1,5 +1,10 @@
-		{% if site.notice %}
+{% if site.notice %}
 		<div class="alert alert-block alert-info">
-			{{ site.information }}
+			{{ site.notice }}
 		</div>
-		{% endif %}
+{% endif %}
+{% if page.notice %}
+		<div class="alert alert-block alert-info">
+			{{ page.notice }}
+		</div>
+{% endif %}
