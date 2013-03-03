@@ -1,10 +1,20 @@
+{% if site.alert or page.alert or post.alert or site.notice or page.notice or post.notice %}
 		<div class="container">
 			<div class="row">
+{% if site.alert or page.alert or post.alert %}
 				<div class="span5 offset1">
-{% include body/alert.html %}
+{% include body/alerts.html %}
 				</div>
+{% if site.notice or page.notice or post.notice %}
 				<div class="span5">
-{% include body/notice.html %}
+{% include body/notices.html %}
 				</div>
+{% endif %}
+{% elseif site.notice or page.notice or post.notice %}
+				<div class="span5 offset1">
+{% include body/notices.html %}
+				</div>
+{% endif %}
 			</div>
 		</div>
+{% endif %}
