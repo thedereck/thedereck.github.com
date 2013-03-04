@@ -10,11 +10,9 @@ notice: sample page notice.
 	<div clas="row">
 		<div class="span8">
 			<div class="well-outline">
-				<div class="row">
-					<h2>{{ p.title }} <small>{{ p.subtext }}</small></h2>
-					{{ p.date | date_to_long_string }}
-					{{ p.content }}
-				</div>
+				<h2>{{ p.title }} <small>{{ p.subtext }}</small></h2>
+				{{ p.date | date_to_long_string }}
+				{{ p.content }}
 			</div>
 		</div>
 	</div>
