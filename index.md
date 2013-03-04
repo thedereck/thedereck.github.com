@@ -5,5 +5,5 @@ exclude: true
 ---
 
 {% for p in site.posts %}
-	{{ p.title }}
+	## {{ p.title }}
 {% endfor %}
