@@ -7,7 +7,7 @@ notice: sample page notice.
 ---
 
 {% for p in site.posts %}
-	<div class="well-outline">
+	<div class="well-outline span8">
 		<h2>{{ p.title }} <small>{{ p.subtext }}</small></h2>
 		{{ p.date | date_to_long_string }}
 		{{ p.content }}
