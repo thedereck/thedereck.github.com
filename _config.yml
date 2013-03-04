@@ -1,6 +1,9 @@
 name: The Dereck
 brand: The Dereck
 
+alert: false
+notice: false
+
 brief_bio: true
 follow_name: Dereck
 gravatar_image: http://www.gravatar.com/avatar/2f8947394b8acb62ed0f08df91055f27.png?s=200
@@ -10,9 +13,6 @@ googleplus_social_link: https://plus.google.com/109660251296662910676
 linkedin_social_link: http://www.linkedin.com/in/dereckcurry
 pinterest_social_link: false
 twitter_social_link: false
-
-alert: sample site alert.
-notice: sample site notice.
 
 bootstrap_css: spacelab.bootstrap.min.css
 bootstrap_responsive_css: bootstrap-responsive.min.css
