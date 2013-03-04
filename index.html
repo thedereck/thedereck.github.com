@@ -4,4 +4,6 @@ title: The Dereck
 exclude: true
 ---
 
-Meh
+{% for p in site.posts %}
+	{{ p.title }}
+{% endfor %}
