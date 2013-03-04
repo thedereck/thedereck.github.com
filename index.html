@@ -7,13 +7,9 @@ notice: sample page notice.
 ---
 
 {% for p in site.posts %}
-	<div clas="row">
-		<div class="span8">
-			<div class="well-outline">
-				<h2>{{ p.title }} <small>{{ p.subtext }}</small></h2>
-				{{ p.date | date_to_long_string }}
-				{{ p.content }}
-			</div>
-		</div>
+	<div class="well-outline">
+		<h2>{{ p.title }} <small>{{ p.subtext }}</small></h2>
+		{{ p.date | date_to_long_string }}
+		{{ p.content }}
 	</div>
 {% endfor %}
