@@ -3,11 +3,12 @@
 	{% include head.html %}
 	<body>
 		{% include body/navbar.html %}
-		{% include body/alerts-and-notices.html %}
-		{% include body/page-header.html %}
+		{% include body/site-alerts-and-notices.html %}
 		<div class="container">
 			<div class="row">
 				<div class="span8">
+					{% include body/page-header.html %}
+					{% include body/page-alerts-and-notices.html %}
 					{{ content }}
 				</div>
 				<div class="span3 offset1">

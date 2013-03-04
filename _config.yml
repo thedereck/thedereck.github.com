@@ -11,8 +11,8 @@ linkedin_social_link: http://www.linkedin.com/in/dereckcurry
 pinterest_social_link: false
 twitter_social_link: false
 
-alert: false
-notice: false
+alert: sample site alert.
+notice: sample site notice.
 
 bootstrap_css: spacelab.bootstrap.min.css
 bootstrap_responsive_css: bootstrap-responsive.min.css

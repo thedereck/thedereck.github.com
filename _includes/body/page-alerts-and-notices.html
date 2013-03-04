@@ -1,0 +1,30 @@
+{% if page.alerts and page.notice %}
+	<div class="row">
+		<div class="span3 offset1">
+			<div class="alert alert-block">
+				{{ page.alert }}
+			</div>
+		</div>
+		<div class="span3">
+			<div class="alert alert-block alert-success">
+				{{ page.notice }}
+			</div>
+		</div>
+	</div>
+{% elsif page.alert %}
+	<div class="row">
+		<div class="span6 offset1">
+			<div class="alert alert-block">
+				{{ page.alert }}
+			</div>
+		</div>
+	</div>
+{% elsif page.notice %}
+	<div class="row">
+		<div class="span6 offset1">
+			<div class="alert alert-block alert-success">
+				{{ page.notice }}
+			</div>
+		</div>
+	</div>
+{% endif %}

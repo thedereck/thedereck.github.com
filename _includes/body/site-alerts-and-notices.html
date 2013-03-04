@@ -1,0 +1,36 @@
+{% if site.alert and site.notices %}
+	<div class="container">
+		<div class="row">
+			<div class="span5 offset1">
+				<div class="alert alert-block alert-error">
+					{{ site.alert }}
+				</div>
+			</div>
+			<div class="span5">
+				<div class="alert alert-block alert-info">
+					{{ site.notice }}
+				</div>
+			</div>
+		</div>
+	</div>
+{% elsif site.alert %}
+	<div class="container">
+		<div class="row">
+			<div class="span10 offset1">
+				<div class="alert alert-block alert-error">
+					{{ site.alert }}
+				</div>
+			</div>
+		</div>
+	</div>
+{% elsif site.notice %}
+	<div class="container">
+		<div class="row">
+			<div class="span10 offset1">
+				<div class="alert alert-block alert-info">
+					{{ site.notice }}
+				</div>
+			</div>
+		</div>
+	</div>
+{% endif %}
