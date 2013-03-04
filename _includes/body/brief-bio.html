@@ -1,6 +1,13 @@
 {% if site.brief_bio %}
 	<div class="well">
-		{% include content/brief-bio.html %}
+		<ul class="thumbnails">
+			<li>
+    			<div class="thumbnail">
+					<img data-src="holder.js/300x200" alt="">
+					{% include content/brief-bio.html %}
+				</div>
+			</li>
+		</ul>
 		<br>
 		{% include body/social-links.html %}
 	</div>
