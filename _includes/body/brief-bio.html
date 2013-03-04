@@ -1,7 +1,7 @@
 {% if site.brief_bio %}
 	<div class="well">
 		<div class="thumbnail">
-			<img data-src="holder.js/300x200" alt="" src="{{ site.gravatar_image }}">
+			{% if site.gravatar_image %}<img data-src="holder.js/200x200" alt="" src="{{ site.gravatar_image }}">{% endif %}
 			<div class="caption">
 				{% include content/brief-bio.html %}
 				{% include body/social-links.html %}
