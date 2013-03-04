@@ -1,10 +1,11 @@
 {% if site.brief_bio %}
-    <div class="thumbnail">
-		<img data-src="holder.js/300x200" alt="" src="{{ site.gravatar_image }}">
-		<div class="caption">
-			{% include content/brief-bio.html %}
-			<br>
-			{% include body/social-links.html %}
+	<div class="well">
+		<div class="thumbnail">
+			<img data-src="holder.js/300x200" alt="" src="{{ site.gravatar_image }}">
+			<div class="caption">
+				{% include content/brief-bio.html %}
+				{% include body/social-links.html %}
+			</div>
 		</div>
 	</div>
 {% endif %}
