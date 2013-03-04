@@ -4,4 +4,4 @@ title: Hello, world!
 subtext: Cliches R Us
 ---
 
-## Hello, world!
+Hello, world!
