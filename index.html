@@ -10,6 +10,16 @@ notice: sample page notice.
 	<div class="well-outline">
 		<h2>{{ p.title }} <small>{{ p.subtext }}</small></h2>
 		{{ p.date | date_to_long_string }}
+		{% if p.alert %}
+			<div class="alert alert-block">
+				{{ p.alert }}
+			</div>
+		{% endif %}
+		{% if p.notice %}
+			<div class="alert alert-block alert-success">
+				{{ p.notice }}
+			</div>
+		{% endif %}
 		{{ p.content }}
 	</div>
 {% endfor %}
