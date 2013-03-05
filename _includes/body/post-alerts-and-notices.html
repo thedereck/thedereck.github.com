@@ -1,29 +1,29 @@
-{% if post.alert and post.notice %}
+{% if page.alert and page.notice %}
 	<div class="row">
 		<div class="span4">
 			<div class="alert alert-block">
-				{{ post.alert }}
+				{{ page.alert }}
 			</div>
 		</div>
 		<div class="span4">
 			<div class="alert alert-block alert-success">
-				{{ post.notice }}
+				{{ page.notice }}
 			</div>
 		</div>
 	</div>
-{% elsif post.alert %}
+{% elsif page.alert %}
 	<div class="row">
 		<div class="span8">
 			<div class="alert alert-block">
-				{{ post.alert }}
+				{{ page.alert }}
 			</div>
 		</div>
 	</div>
-{% elsif post.notice %}
+{% elsif page.notice %}
 	<div class="row">
 		<div class="span8">
 			<div class="alert alert-block alert-success">
-				{{ post.notice }}
+				{{ page.notice }}
 			</div>
 		</div>
 	</div>
