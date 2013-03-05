@@ -7,7 +7,7 @@ exclude: true
 {% for p in site.posts %}
 	<div class="well-outline">
 		<h2>{{ p.title }}</h2>
-		<p>{% if site.font_awesome_css %}<i class="icon-pencil"></i> {% endif %}<small>Published on {{ p.date | date_to_long_string }}.</small></p>
+		<p>{% if site.font_awesome_css %}<i class="icon-pencil"></i> {% endif %}<small>Published on {{ p.date | date_to_long_string }}.<br>{% if p.subtext %}{{ p.subtext }}{% endif %}</small></p>
 		{% if p.alert %}
 			<div class="alert alert-block">
 				{{ p.alert }}
@@ -19,7 +19,6 @@ exclude: true
 			</div>
 		{% endif %}
 		<br>
-		{% if p.subtext %}<h4>{{ p.subtext }}</h4>{% endif %}
 		{{ p.content }}
 		{% if p.tags.size > 0 %}
 			<br>
