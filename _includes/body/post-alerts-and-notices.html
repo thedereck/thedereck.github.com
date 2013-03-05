@@ -1,0 +1,30 @@
+{% if post.alert and post.notice %}
+	<div class="row">
+		<div class="span4">
+			<div class="alert alert-block">
+				{{ post.alert }}
+			</div>
+		</div>
+		<div class="span4">
+			<div class="alert alert-block alert-success">
+				{{ post.notice }}
+			</div>
+		</div>
+	</div>
+{% elsif post.alert %}
+	<div class="row">
+		<div class="span8">
+			<div class="alert alert-block">
+				{{ post.alert }}
+			</div>
+		</div>
+	</div>
+{% elsif post.notice %}
+	<div class="row">
+		<div class="span8">
+			<div class="alert alert-block alert-success">
+				{{ post.notice }}
+			</div>
+		</div>
+	</div>
+{% endif %}

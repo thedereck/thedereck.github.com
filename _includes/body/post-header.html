@@ -1,0 +1,13 @@
+{% if post.title and post.subtext %}
+	<div class="page-header">
+		<h1>{{ post.title }} <small>{{ post.subtext }}</small></h1>
+	</div>
+{% elsif post.title %}
+	<div class="page-header">
+		<h1>{{ post.title }}</h1>
+	</div>
+{% elsif post.subtext %}
+	<div class="page-header">
+		<h1><small>{{ post.subtext }}</small></h1>
+	</div>
+{% endif %}
