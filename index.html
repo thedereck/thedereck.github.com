@@ -6,7 +6,7 @@ exclude: true
 
 {% for p in site.posts %}
 	<div class="well-outline">
-		<h2>{{ p.title }}<strong></h2>
+		<h4>{{ p.title }}</h4>
 		<p><small>Published on {{ p.date | date_to_long_string }}</small></p>
 		{% if p.alert %}
 			<div class="alert alert-block">
