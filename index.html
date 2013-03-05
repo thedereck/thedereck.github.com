@@ -20,7 +20,7 @@ exclude: true
 		{% endif %}
 		{% if p.subtext %}<h2><small>{{ p.subtext }}</small></h2>{% endif %}
 		{{ p.content }}
-		{% if {{ p.tags | size }} > 0 %}
+		{% if p.tags.size > 0 %}
 			<p>{% if site.font_awesome_css %}<i class="icon-tags"></i> {% endif %}Tags: {% for t in p.tags %} <span class="label label-inverse">{{ t }} </span>{% endfor %}</p>
 		{% endif %}
 	</div>
