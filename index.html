@@ -7,7 +7,7 @@ exclude: true
 {% for p in site.posts %}
 	<div class="well-outline">
 		<a href="{{ p.url }}"><h2>{{ p.title }}</h2></a>
-		<p>{% if site.font_awesome_css %}<i class="icon-pencil"></i> {% endif %}<small>Published on {{ p.date | date_to_long_string }}.<br>{% if p.subtext %}{% if site.font_awesome_css %}<i class="icon-book"></i> {% endif %}{{ p.subtext }}{% endif %}</small></p>
+		<p><small>{% if p.subtext %}{% if site.font_awesome_css %}<i class="icon-book"></i> {% endif %}{{ p.subtext }}{% endif %}<br>{% if site.font_awesome_css %}<i class="icon-pencil"></i> {% endif %}Published on {{ p.date | date_to_long_string }}.</small></p>
 		{% if p.alert %}
 			<div class="alert alert-block">
 				{{ p.alert }}
