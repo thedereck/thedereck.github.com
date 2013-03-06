@@ -7,13 +7,15 @@
 		<div class="container">
 			<div class="row">
 				<div class="span8">
-					{% include body/post-header.html %}
-					{% include body/post-alerts-and-notices.html %}
-					{{ content }}
-					{% if page.tags.size > 0 %}
-						<br>
-						<p>{% if site.font_awesome_css %}<i class="icon-tags"></i> {% endif %}Tags: {% for t in page.tags %} <span class="label label-inverse">{{ t }} </span>{% endfor %}</p>
-					{% endif %}
+					<div class="post">
+						{% include body/post-header.html %}
+						{% include body/post-alerts-and-notices.html %}
+						{{ content }}
+						{% if page.tags.size > 0 %}
+							<br>
+							<p>{% if site.font_awesome_css %}<i class="icon-tags"></i> {% endif %}Tags: {% for t in page.tags %} <span class="label label-inverse">{{ t }} </span>{% endfor %}</p>
+						{% endif %}
+					</div>
 				</div>
 				<div class="span3 offset1">
 					{% include body/brief-bio.html %}
