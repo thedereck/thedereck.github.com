@@ -20,10 +20,19 @@ brief_bio :
     pinterest_social_link : false
     twitter_social_link : http://www.twitter.com/_TheDereck_
 
-bootstrap_css : spacelab.bootstrap.min.css
-bootstrap_responsive_css : bootstrap-responsive.min.css
-bootstrap_js : bootstrap.min.js
-jquery_js : jquery-1.9.1.min.js
+bootstrap:
+  css : spacelab.bootstrap.min.css
+  responsive :
+    enabled : true
+    css : bootstrap-responsive.min.css
+  js :
+    enabled : true
+    js : bootstrap.min.js
+
+jquery:
+  enabled : true
+  js : jquery-1.9.1.min.js
+
 font_awesome_css : font-awesome.min.css
 
 rss_enabled : true

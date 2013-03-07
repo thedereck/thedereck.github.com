@@ -1,7 +1,7 @@
-{% if site.jquery_js %}
-<script src="js/{{ site.jquery_js }}"></script>
+{% if site.jquery.enabled %}
+<script src="/js/{{ site.jquery.js }}"></script>
 {% endif %}
 
-{% if site.bootstrap_js %}
-<script src="js/{{ site.bootstrap_js }}"></script>
+{% if site.bootstrap.js.enabled %}
+<script src="/js/{{ site.bootstrap.js.js }}"></script>
 {% endif %}
