@@ -1,5 +1,8 @@
 name: The Dereck
 brand: The Dereck
+description: Dereck Curry's blog and website
+url: http://thedereck.github.com
+email: thedereck@thedereck.com
 
 alert: false
 notice: false
@@ -20,4 +23,10 @@ bootstrap_js: bootstrap.min.js
 jquery_js: jquery-1.9.1.min.js
 font_awesome_css: font-awesome.min.css
 
-rss_xml: true
+rss:
+	enabled: true
+	title: The Dereck
+	link: http://thedereck.github.com
+	description: Dereck Curry's blog and website
+	managingeditor: thedereck@thedereck.com
+	webmaster: thedereck@thedereck.com

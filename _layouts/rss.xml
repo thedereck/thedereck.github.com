@@ -1,17 +1,17 @@
 <?xml version="1.0"?>
-{% if site.rss_xml %}
+{% if site.rss.enabled %}
 <rss version="2.0">
    <channel>
-      <title>{{ site.name }}</title>
-      <link>{{ site.URL }}</link>
-      <description>Liftoff to Space Exploration.</description>
+      <title>{{ site.rss.title }}</title>
+      <link>{{ site.rss.link }}</link>
+      <description>{{ site.rss.description }}</description>
       <language>en-us</language>
       <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
       <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</lastBuildDate>
       <docs>http://blogs.law.harvard.edu/tech/rss</docs>
       <generator>gh-pages-blog</generator>
-      <managingEditor>editor@example.com</managingEditor>
-      <webMaster>webmaster@example.com</webMaster>
+      <managingEditor>{{ site.rss.managingeditor }}</managingEditor>
+      <webMaster>{{ site.rss.webmasterl }}</webMaster>
       <item>
          <title>Star City</title>
          <link>http://liftoff.msfc.nasa.gov/news/2003/news-starcity.asp</link>
