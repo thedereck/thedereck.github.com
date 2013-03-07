@@ -31,9 +31,9 @@
 		<item>
 			<title>{{ p.title }}</title>
 			<link>{{ p.url }}</link>
-			<description></description>
+			<description>{{ p.description }}</description>
 			<pubDate>{{ p.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
-			<guid>{{ p.date }}</guid>
+			<guid>{{ p.id }}</guid>
 		</item>
 		{% endfor %}
 
