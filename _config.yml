@@ -39,3 +39,9 @@ font_awesome :
 
 rss :
   enabled : true
+  ttl :
+    enabled : true
+    ttl : 1800
+  image :
+    enabled : true
+    image : http://www.gravatar.com/avatar/2f8947394b8acb62ed0f08df91055f27.png?s=200

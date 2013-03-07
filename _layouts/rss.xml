@@ -12,6 +12,12 @@
       <generator>gh-pages-blog</generator>
       <managingEditor>{{ site.email }}</managingEditor>
       <webMaster>{{ site.email }}</webMaster>
+      {% if site.rss.ttl.enabled %}
+      <ttl>{{ site.rss.ttl.ttl }}</ttl>
+      {% endif %}
+      {% if site.rss.image.enabled %}
+      <image>{{ site.rss.image.image }}</image>
+      {% endif %}
       <item>
          <title>Star City</title>
          <link>http://liftoff.msfc.nasa.gov/news/2003/news-starcity.asp</link>
