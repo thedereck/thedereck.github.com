@@ -1,5 +1,4 @@
-<?xml version="1.0"?>
-{% if site.rss.enabled %}
+{% if site.rss.enabled %}<?xml version="1.0"?>
 <rss version="2.0">
 	<channel>
 		<title>{{ site.name }}</title>
