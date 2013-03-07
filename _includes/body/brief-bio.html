@@ -1,12 +1,14 @@
 {% if site.brief_bio %}
-	<div class="well">
-		<div class="thumbnail">
-			{% if site.gravatar_image %}<img data-src="holder.js/200x200" alt="" src="{{ site.gravatar_image }}">{% endif %}
-			<div class="caption">
-				{% include content/brief-bio.html %}
-			</div>
+<div class="well">
+	<div class="thumbnail">
+		{% if site.gravatar_image %}
+		<img data-src="holder.js/200x200" alt="" src="{{ site.gravatar_image }}">
+		{% endif %}
+		<div class="caption">
+			{% include content/brief-bio.html %}
 		</div>
-		<br>
-		{% include body/social-links.html %}
 	</div>
+	<br>
+	{% include body/social-links.html %}
+</div>
 {% endif %}

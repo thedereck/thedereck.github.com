@@ -1,33 +1,33 @@
 {% if page.alert and page.notice %}
-	<div class="row">
-		<div class="span4">
-			<div class="alert alert-block">
-				{{ page.alert }}
-			</div>
-		</div>
-		<div class="span4">
-			<div class="alert alert-block alert-success">
-				{{ page.notice }}
-			</div>
+<div class="row">
+	<div class="span4">
+		<div class="alert alert-block">
+			{{ page.alert }}
 		</div>
 	</div>
-	<br>
+	<div class="span4">
+		<div class="alert alert-block alert-success">
+			{{ page.notice }}
+		</div>
+	</div>
+</div>
+<br>
 {% elsif page.alert %}
-	<div class="row">
-		<div class="span8">
-			<div class="alert alert-block">
-				{{ page.alert }}
-			</div>
+<div class="row">
+	<div class="span8">
+		<div class="alert alert-block">
+			{{ page.alert }}
 		</div>
 	</div>
-	<br>
+</div>
+<br>
 {% elsif page.notice %}
-	<div class="row">
-		<div class="span8">
-			<div class="alert alert-block alert-success">
-				{{ page.notice }}
-			</div>
+<div class="row">
+	<div class="span8">
+		<div class="alert alert-block alert-success">
+			{{ page.notice }}
 		</div>
 	</div>
-	<br>
+</div>
+<br>
 {% endif %}

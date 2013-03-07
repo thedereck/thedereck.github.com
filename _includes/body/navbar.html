@@ -1,36 +1,36 @@
 {% if site.bootstrap_responsive_css %}
-	<div class="navbar">
-		<div class="navbar-inner">
-			<div class="container">
-      			<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
-        			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>
-        			<span class="icon-bar"></span>
-      			</a>
-				<a class="brand" href="/"><strong>{{ site.brand | upcase }}</strong></a>
-				<div class="nav-collapse collapse">
-					<ul class="nav pull-right">
-						{% for p in site.pages %}
-							{% unless p.exclude %}
-								<li><a href="{{ p.url }}">{{ p.title }}</a></li>
-							{% endunless %}
-						{% endfor %}
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-{% else %}
-	<div class="navbar">
-		<div class="navbar-inner">
-			<div class="container">
-				<a class="brand" href="/"><strong>{{ site.brand | upcase }}</strong></a>
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="container">
+      		<a class="btn btn-navbar collapsed" data-toggle="collapse" data-target=".nav-collapse">
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+        		<span class="icon-bar"></span>
+      		</a>
+			<a class="brand" href="/"><strong>{{ site.brand | upcase }}</strong></a>
+			<div class="nav-collapse collapse">
 				<ul class="nav pull-right">
 					{% for p in site.pages %}
-						<li><a href="{{ p.url }}">{{ p.title }}</a></li>
+					{% unless p.exclude %}
+					<li><a href="{{ p.url }}">{{ p.title }}</a></li>
+					{% endunless %}
 					{% endfor %}
 				</ul>
 			</div>
 		</div>
 	</div>
+</div>
+{% else %}
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="brand" href="/"><strong>{{ site.brand | upcase }}</strong></a>
+			<ul class="nav pull-right">
+				{% for p in site.pages %}
+				<li><a href="{{ p.url }}">{{ p.title }}</a></li>
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
 {% endif %}
