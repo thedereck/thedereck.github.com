@@ -14,7 +14,7 @@ exclude: true
 			{% endif %}
 			<br>
 			<small>
-				{% if site.font_awesome_css %}
+				{% if site.font_awesome.enabled %}
 				<i class="icon-pencil"></i> 
 				{% endif %}
 				Published on {{ p.date | date_to_long_string }}.

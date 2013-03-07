@@ -4,7 +4,7 @@
 	<h5>
 		{{ page.subtext }}
 		<br>
-		{% if site.font_awesome_css %}
+		{% if site.font_awesome.enabled %}
 		<i class="icon-pencil"></i> 
 		{% endif %}
 		Published on {{ page.date | date_to_long_string }}.
@@ -14,7 +14,7 @@
 <div class="page-header">
 	<h1>{{ page.title }}</h1>
 	<h5>
-		{% if site.font_awesome_css %}
+		{% if site.font_awesome.enabled %}
 		<i class="icon-pencil"></i> 
 		{% endif %}
 		Published on {{ page.date | date_to_long_string }}.
@@ -25,7 +25,7 @@
 	<h5>
 		{{ page.subtext }}
 		<br>
-		{% if site.font_awesome_css %}
+		{% if site.font_awesome.enabled %}
 		<i class="icon-pencil"></i> 
 		{% endif %}
 		Published on {{ page.date | date_to_long_string }}.
