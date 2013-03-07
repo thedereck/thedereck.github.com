@@ -33,6 +33,9 @@ jquery:
   enabled : true
   js : jquery-1.9.1.min.js
 
-font_awesome_css : font-awesome.min.css
+font_awesome :
+  enabled : true
+  css : font-awesome.min.css
 
-rss_enabled : true
+rss :
+  enabled : true

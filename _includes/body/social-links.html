@@ -4,7 +4,7 @@
 {% assign social = true %}
 {% endif %}
 
-{% if social and site.font_awesome_css %}
+{% if social and site.font_awesome.enabled %}
 <p class="text-center"><small><strong>FOLLOW {{ site.follow_name | upcase }}</strong></small></p>
 <ul class="inline text-center">
 	{% if site.brief_bio.social_links.github_social_link %}

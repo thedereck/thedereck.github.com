@@ -8,11 +8,11 @@
 	<link href="/css/{{ site.bootstrap.responsive.css }}" rel="stylesheet">
 	{% endif %}
 
-	{% if site.font_awesome_css %}
-	<link rel="stylesheet" href="/css/{{ site.font_awesome_css }}">
+	{% if site.font_awesome.enabled %}
+	<link rel="stylesheet" href="/css/{{ site.font_awesome.css }}">
 	{% endif %}
 
-	{% if site.rss_enabled %}
+	{% if site.rss.enabled %}
 	<link rel="alternate" type="application/rss+xml" title="RSS" href="{{ BASE_URL }}/rss.xml" />
 	{% endif %}
 </head>
