@@ -43,7 +43,7 @@
 			{% endfor %}
 
 			<description><![CDATA[ {{ p.description }} ]]></description>
-			<content><![CDATA[ {{ content }} ]]></content>
+			<content><![CDATA[ {{ p.content }} ]]></content>
 		</item>
 		{% endfor %}
 
