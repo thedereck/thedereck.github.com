@@ -30,17 +30,20 @@
 		<item>
 			<title>{{ p.title }}</title>
 			<link>{{ site.url }}{{ p.url }}</link>
-			<description>{{ p.description }}</description>
-			<pubDate>{{ p.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
-			<guid>{{ p.id }}</guid>
-
-			{% for c in p.categories %}
-			<category>{{ c }}</category>
-			{% endfor %}
 
 			{% if p.author %}
 			<author>{{ p.author }}</author>
 			{% endif %}
+
+			<pubDate>{{ p.date | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
+			<guid>{{ site.url }}{{ p.id }}</guid>
+
+			{% for c in p.categories %}
+			<category><![CDATA[ {{ c }} ]]></category>
+			{% endfor %}
+
+			<description><![CDATA[ {{ p.description }} ]]></description>
+			<content><![CDATA[ {{ content }} ]]></content>
 		</item>
 		{% endfor %}
 
