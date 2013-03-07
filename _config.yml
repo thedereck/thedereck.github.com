@@ -39,6 +39,12 @@ font_awesome :
 
 rss :
   enabled : true
+  managingeditor :
+    enabled : true
+    managingeditor : thedereck@thedereck.com
+  webmaster :
+    enabled : true
+    webmaster : thedereck@thedereck.com
   ttl :
     enabled : true
     ttl : 1800

@@ -9,9 +9,13 @@
       <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
       <lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</lastBuildDate>
       <docs>http://blogs.law.harvard.edu/tech/rss</docs>
-      <generator>gh-pages-blog</generator>
-      <managingEditor>{{ site.email }}</managingEditor>
-      <webMaster>{{ site.email }}</webMaster>
+      <generator>http://github.com/thedereck/gh-pages-blog</generator>
+      {% if site.rss.managingeditor.enabled %}
+      <managingEditor>{{ site.rss.managingeditor.managingeditor }}</managingEditor>
+      {% endif %}
+      {% if site.rss.webmaster.enabled %}
+      <webMaster>{{ site.rss.webmaster.webmaster }}</webMaster>
+      {% endif %}
       {% if site.rss.ttl.enabled %}
       <ttl>{{ site.rss.ttl.ttl }}</ttl>
       {% endif %}
