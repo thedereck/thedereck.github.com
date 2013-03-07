@@ -4,6 +4,17 @@ description : Dereck Curry's blog and website
 url : http://thedereck.github.com
 email : thedereck@thedereck.com
 
+favicon :
+  enabled : true
+  local :
+    enabled : true
+    filename : TheDereck.png
+    type : png
+  remote :
+    enabled : false
+    url : false
+    type : false
+
 alert : false
 notice : false
 
