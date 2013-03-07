@@ -3,7 +3,7 @@
 <rss version="2.0">
    <channel>
       <title>{{ site.name }}</title>
-      <link>{{ site.url }}</link>
+      <link>{{ site.URL }}</link>
       <description>Liftoff to Space Exploration.</description>
       <language>en-us</language>
       <pubDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</pubDate>
