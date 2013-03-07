@@ -19,3 +19,5 @@ bootstrap_responsive_css: bootstrap-responsive.min.css
 bootstrap_js: bootstrap.min.js
 jquery_js: jquery-1.9.1.min.js
 font_awesome_css: font-awesome.min.css
+
+rss_xml: true
