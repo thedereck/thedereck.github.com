@@ -8,7 +8,7 @@ favicon :
   enabled : true
   local :
     enabled : true
-    filename : TheDereck.png
+    filename : /img/TheDereck.png
     type : png
   remote :
     enabled : false
