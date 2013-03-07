@@ -1,60 +1,60 @@
 {% assign social = false %}
 
-{% if site.social_links.enabled %}
+{% if site.brief_bio.social_links.enabled %}
 {% assign social = true %}
 {% endif %}
 
 {% if social and site.font_awesome_css %}
 <p class="text-center"><small><strong>FOLLOW {{ site.follow_name | upcase }}</strong></small></p>
 <ul class="inline text-center">
-	{% if site.social_links.github_social_link %}
+	{% if site.brief_bio.social_links.github_social_link %}
 	<li><a class="btn" href="{{ site.github_social_link }}"><i class="icon-github-alt"></i></a></li>
 	{% endif %}
 	
-	{% if site.social_links.facebook_social_link %}
+	{% if site.brief_bio.social_links.facebook_social_link %}
 	<li><a class="btn" href="{{ site.facebook_social_link }}"><i class="icon-facebook"></i></a></li>
 	{% endif %}
 	
-	{% if site.social_links.googleplus_social_link %}
+	{% if site.brief_bio.social_links.googleplus_social_link %}
 	<li><a class="btn" href="{{ site.googleplus_social_link }}"><i class="icon-google-plus"></i></a></li>
 	{% endif %}
 	
-	{% if site.social_links.linkedin_social_link %}
+	{% if site.brief_bio.social_links.linkedin_social_link %}
 	<li><a class="btn" href="{{ site.linkedin_social_link }}"><i class="icon-linkedin"></i></a></li>
 	{% endif %}
 	
-	{% if site.social_links.pinterest_social_link %}
+	{% if site.brief_bio.social_links.pinterest_social_link %}
 	<li><a class="btn" href="{{ site.pinterest_social_link }}"><i class="icon-pinterest"></i></a></li>
 	{% endif %}
 	
-	{% if site.social_links.twitter_social_link %}
+	{% if site.brief_bio.social_links.twitter_social_link %}
 	<li><a class="btn" href="{{ site.twitter_social_link }}"><i class="icon-twitter"></i></a></li>
 	{% endif %}
 </ul>
 {% elsif social %}
 <p class="text-center"><small><strong>FOLLOW {{ site.follow_name | upcase }}</strong></small></p>
 <ul class="inline text-center">
-	{% if site.social_links.github_social_link %}
+	{% if site.brief_bio.social_links.github_social_link %}
 	<li><a class="btn" href="{{ site.github_social_link }}">GitHub</a></li>
 	{% endif %}
 	
-	{% if site.social_links.facebook_social_link %}
+	{% if site.brief_bio.social_links.facebook_social_link %}
 	<li><a class="btn" href="{{ site.facebook_social_link }}">Facebook</a></li>
 	{% endif %}
 	
-	{% if site.social_links.googleplus_social_link %}
+	{% if site.brief_bio.social_links.googleplus_social_link %}
 	<li><a class="btn" href="{{ site.googleplus_social_link }}">Google+</a></li>
 	{% endif %}
 	
-	{% if site.social_links.linkedin_social_link %}
+	{% if site.brief_bio.social_links.linkedin_social_link %}
 	<li><a class="btn" href="{{ site.linkedin_social_link }}">Linkedin</a></li>
 	{% endif %}
 	
-	{% if site.social_links.pinterest_social_link %}
+	{% if site.brief_bio.social_links.pinterest_social_link %}
 	<li><a class="btn" href="{{ site.pinterest_social_link }}">Pinterest</a></li>
 	{% endif %}
 	
-	{% if site.social_links.twitter_social_link %}
+	{% if site.brief_bio.social_links.twitter_social_link %}
 	<li><a class="btn" href="{{ site.twitter_social_link }}">Twitter</a></li>
 	{% endif %}
 </ul>
