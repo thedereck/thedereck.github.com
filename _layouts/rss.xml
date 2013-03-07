@@ -7,7 +7,7 @@
       <description>Liftoff to Space Exploration.</description>
       <language>en-us</language>
       <pubDate>Tue, 10 Jun 2003 04:00:00 GMT</pubDate>
-      <lastBuildDate>Tue, 10 Jun 2003 09:41:01 GMT</lastBuildDate>
+      <lastBuildDate>{{ site.time }}</lastBuildDate>
       <docs>http://blogs.law.harvard.edu/tech/rss</docs>
       <generator>gh-pages-blog</generator>
       <managingEditor>editor@example.com</managingEditor>

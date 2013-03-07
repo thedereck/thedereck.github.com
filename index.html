@@ -5,27 +5,51 @@ exclude: true
 ---
 
 {% for p in site.posts %}
-	<div class="post">
-		<div class="well-outline">
-			<a href="{{ p.url }}"><h2>{{ p.title }}</h2></a>
-			<p>{% if p.subtext %}{{ p.subtext }}{% endif %}<br><small>{% if site.font_awesome_css %}<i class="icon-pencil"></i> 	{% endif %}Published on {{ p.date | date_to_long_string }}.</small></p>
-			{% if p.alert %}
-				<div class="alert alert-block">
-					{{ p.alert }}
-				</div>
-			{% endif %}
-			{% if p.notice %}
-				<div class="alert alert-block alert-success">
-					{{ p.notice }}
-				</div>
+<div class="post">
+	<div class="well-outline">
+		<a href="{{ p.url }}"><h2>{{ p.title }}</h2></a>
+		<p>
+			{% if p.subtext %}
+			{{ p.subtext }}
 			{% endif %}
 			<br>
-			<br>
-			{{ p.content }}
-			{% if p.tags.size > 0 %}
-				<br>
-				<p>{% if site.font_awesome_css %}<i class="icon-tags"></i> {% endif %}Tags: {% for t in p.tags %} <span class="label label-inverse">{{ t }} </span>{% endfor %}</p>
-			{% endif %}
+			<small>
+				{% if site.font_awesome_css %}
+				<i class="icon-pencil"></i> 
+				{% endif %}
+				Published on {{ p.date | date_to_long_string }}.
+			</small>
+		</p>
+		
+		{% if p.alert %}
+		<div class="alert alert-block">
+			{{ p.alert }}
 		</div>
+		{% endif %}
+		
+		{% if p.notice %}
+		<div class="alert alert-block alert-success">
+			{{ p.notice }}
+		</div>
+		{% endif %}
+		
+		<br>
+		<br>
+		{{ p.content }}
+		
+		{% if p.tags.size > 0 %}
+		<br>
+		<p>
+			{% if site.font_awesome_css %}
+			<i class="icon-tags"></i> 
+			{% endif %}
+			Tags:
+			{% for t in p.tags %}
+			<span class="label label-inverse">{{ t }} </span>
+			{% endfor %}
+		</p>
+		{% endif %}
+
 	</div>
+</div>
 {% endfor %}
