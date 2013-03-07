@@ -1,8 +1,8 @@
 {% if site.brief_bio.enabled %}
 <div class="well">
 	<div class="thumbnail">
-		{% if site.brief_bio.gravatar_image %}
-		<img data-src="holder.js/200x200" alt="" src="{{ site.brief_bio.gravatar_image }}">
+		{% if site.brief_bio.image.enabled %}
+		<img data-src="holder.js/200x200" alt="" src="{{ site.brief_bio.image.url }}">
 		{% endif %}
 		<div class="caption">
 			{% include content/brief-bio.html %}

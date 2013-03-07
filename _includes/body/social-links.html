@@ -5,57 +5,57 @@
 {% endif %}
 
 {% if social and site.font_awesome.enabled %}
-<p class="text-center"><small><strong>FOLLOW {{ site.follow_name | upcase }}</strong></small></p>
+<p class="text-center"><small><strong>FOLLOW {{ site.social_links.follow_name | upcase }}</strong></small></p>
 <ul class="inline text-center">
-	{% if site.brief_bio.social_links.github_social_link %}
-	<li><a class="btn" href="{{ site.github_social_link }}"><i class="icon-github-alt"></i></a></li>
+	{% if site.brief_bio.social_links.github %}
+	<li><a class="btn" href="{{ site.brief_bio.social_links.github }}"><i class="icon-github-alt"></i></a></li>
 	{% endif %}
 	
-	{% if site.brief_bio.social_links.facebook_social_link %}
-	<li><a class="btn" href="{{ site.facebook_social_link }}"><i class="icon-facebook"></i></a></li>
+	{% if site.brief_bio.social_links.facebook %}
+	<li><a class="btn" href="{{ site.brief_bio.social_links.facebook }}"><i class="icon-facebook"></i></a></li>
 	{% endif %}
 	
-	{% if site.brief_bio.social_links.googleplus_social_link %}
-	<li><a class="btn" href="{{ site.googleplus_social_link }}"><i class="icon-google-plus"></i></a></li>
+	{% if site.brief_bio.social_links.googleplus %}
+	<li><a class="btn" href="{{ site.brief_bio.social_links.googleplus }}"><i class="icon-google-plus"></i></a></li>
 	{% endif %}
 	
-	{% if site.brief_bio.social_links.linkedin_social_link %}
-	<li><a class="btn" href="{{ site.linkedin_social_link }}"><i class="icon-linkedin"></i></a></li>
+	{% if site.brief_bio.social_links.linkedin %}
+	<li><a class="btn" href="{{ site.brief_bio.social_links.linkedin }}"><i class="icon-linkedin"></i></a></li>
 	{% endif %}
 	
-	{% if site.brief_bio.social_links.pinterest_social_link %}
-	<li><a class="btn" href="{{ site.pinterest_social_link }}"><i class="icon-pinterest"></i></a></li>
+	{% if site.brief_bio.social_links.pinterest %}
+	<li><a class="btn" href="{{ site.brief_bio.social_links.pinterest }}"><i class="icon-pinterest"></i></a></li>
 	{% endif %}
 	
-	{% if site.brief_bio.social_links.twitter_social_link %}
-	<li><a class="btn" href="{{ site.twitter_social_link }}"><i class="icon-twitter"></i></a></li>
+	{% if site.brief_bio.social_links.twitter %}
+	<li><a class="btn" href="{{ site.brief_bio.social_links.twitter }}"><i class="icon-twitter"></i></a></li>
 	{% endif %}
 </ul>
 {% elsif social %}
 <p class="text-center"><small><strong>FOLLOW {{ site.follow_name | upcase }}</strong></small></p>
 <ul class="inline text-center">
-	{% if site.brief_bio.social_links.github_social_link %}
-	<li><a class="btn" href="{{ site.github_social_link }}">GitHub</a></li>
+	{% if site.brief_bio.social_links.github %}
+	<li><a class="btn" href="{{ site.brief_bio.social_links.github }}">GitHub</a></li>
 	{% endif %}
 	
-	{% if site.brief_bio.social_links.facebook_social_link %}
-	<li><a class="btn" href="{{ site.facebook_social_link }}">Facebook</a></li>
+	{% if site.brief_bio.social_links.facebook %}
+	<li><a class="btn" href="{{ site.brief_bio.social_links.facebook }}">Facebook</a></li>
 	{% endif %}
 	
-	{% if site.brief_bio.social_links.googleplus_social_link %}
-	<li><a class="btn" href="{{ site.googleplus_social_link }}">Google+</a></li>
+	{% if site.brief_bio.social_links.googleplus %}
+	<li><a class="btn" href="{{ site.brief_bio.social_links.googleplus }}">Google+</a></li>
 	{% endif %}
 	
-	{% if site.brief_bio.social_links.linkedin_social_link %}
-	<li><a class="btn" href="{{ site.linkedin_social_link }}">Linkedin</a></li>
+	{% if site.brief_bio.social_links.linkedin %}
+	<li><a class="btn" href="{{ site.brief_bio.social_links.linkedin }}">Linkedin</a></li>
 	{% endif %}
 	
-	{% if site.brief_bio.social_links.pinterest_social_link %}
-	<li><a class="btn" href="{{ site.pinterest_social_link }}">Pinterest</a></li>
+	{% if site.brief_bio.social_links.pinterest %}
+	<li><a class="btn" href="{{ site.brief_bio.social_links.pinterest }}">Pinterest</a></li>
 	{% endif %}
 	
-	{% if site.brief_bio.social_links.twitter_social_link %}
-	<li><a class="btn" href="{{ site.twitter_social_link }}">Twitter</a></li>
+	{% if site.brief_bio.social_links.twitter %}
+	<li><a class="btn" href="{{ site.brief_bio.social_links.twitter }}">Twitter</a></li>
 	{% endif %}
 </ul>
 {% endif %}
