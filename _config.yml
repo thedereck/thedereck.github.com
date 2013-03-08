@@ -18,25 +18,43 @@ favicon :
 alert : false
 notice : false
 
-show_section:
-  brief_bio : true
-  github_projects : true
-  categories : true
-  tags : true
+sections:
+  brief_bio :
+    enabled : true
+    image :
+      enabled : true
+      url : http://www.gravatar.com/avatar/2f8947394b8acb62ed0f08df91055f27.png?s=200
+    content :
+      enabled : true
+      content_file : brief-bio
+    social_links :
+      enabled : true
+      follow_name : Dereck
+      facebook :
+        enabled : false
+        url : false
+      github :
+        enabled : true
+        url : https://github.com/thedereck
+      googleplus :
+        enabled : true
+        url : https://plus.google.com/109660251296662910676
+      linkedin :
+        enabled : true
+        url : http://www.linkedin.com/in/dereckcurry
+      pinterest :
+        enabled : false
+        url : false
+      twitter :
+        enabled : true
+        url : http://www.twitter.com/_TheDereck_
 
-brief_bio :
-  image :
+  github_projects :
     enabled : true
-    url : http://www.gravatar.com/avatar/2f8947394b8acb62ed0f08df91055f27.png?s=200
-  social_links :
+  categories :
     enabled : true
-    follow_name : Dereck
-    facebook : false
-    github : https://github.com/thedereck
-    googleplus : https://plus.google.com/109660251296662910676
-    linkedin : http://www.linkedin.com/in/dereckcurry
-    pinterest : false
-    twitter : http://www.twitter.com/_TheDereck_
+  tags :
+    enabled : true
 
 bootstrap:
   css : spacelab.bootstrap.min.css

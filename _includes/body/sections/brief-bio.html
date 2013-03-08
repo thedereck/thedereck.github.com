@@ -1,10 +1,11 @@
 <div class="well">
 	<div class="thumbnail">
-		{% if site.brief_bio.image.enabled %}
-		<img data-src="holder.js/200x200" alt="" src="{{ site.brief_bio.image.url }}">
+		{% if site.sections.brief_bio.image.enabled %}
+		<img data-src="holder.js/200x200" alt="" src="{{ site.sections.brief_bio.image.url }}">
 		{% endif %}
+		{% if site.sections.brief_bio.content.enabled %}
 		<div class="caption">
-			{% include content/brief-bio.html %}
+			{% include content/site.sections.brief_bio.content.content_file %}
 		</div>
 	</div>
 	<br>
