@@ -1,21 +1,6 @@
-{% assign start_date = site.time %}
-
-{% for p in site.posts %}
-	{% if p.date < start_date %}
-		{% assign start_date = p.date %}
-	{% endif %}
-{% enfor %}
-
-{% assign start_year = start_date %}
-{% assign end_year = site.time %}
-
 <div class="row">
 	<div class="span8">
-{% if start_year != end_year %}
-		&copy; Copyright {{ start_year | date: "%Y" }} - {{ end_year | date: "%Y" }}
-{% else %}
-		&copy; Copyright {{ end_year | date: "%Y" }}
-{% endif %}
+		&copy; Copyright {{ site.time | date: "%Y" }}
 	</div>
 	<div class="span4 text-right">
 		<small><a href="https://github.com/thedereck/gh-pages-blog">FORK GH-PAGES-BLOG ON GITHUB</a></small>
