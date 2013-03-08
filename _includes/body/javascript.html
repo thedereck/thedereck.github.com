@@ -5,3 +5,7 @@
 {% if site.bootstrap.js.enabled %}
 <script src="/js/{{ site.bootstrap.js.src }}"></script>
 {% endif %}
+
+{% if site.analytics.enabled and site.analytics.google-analytics.enabled %}
+{{ include body/google-analytics.js }}
+{% endif %}
