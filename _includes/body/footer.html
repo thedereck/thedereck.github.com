@@ -6,15 +6,15 @@
 	{% endif %}
 {% enfor %}
 
-{% assign start_year = start_date | date: "%Y" %}
-{% assign end_year = site.time | date: "%Y" %}
+{% assign start_year = start_date %}
+{% assign end_year = site.time %}
 
 <div class="row">
 	<div class="span8">
-{% if start_year == end_year %}
-		&copy; Copyright {{ start_year }} - {{ end_year }}
+{% if start_year != end_year %}
+		&copy; Copyright {{ start_year | date: "%Y" }} - {{ end_year | date: "%Y" }}
 {% else %}
-		&copy; Copyright {{ end_year }}
+		&copy; Copyright {{ end_year | date: "%Y" }}
 {% endif %}
 	</div>
 	<div class="span4 text-right">
