@@ -17,8 +17,8 @@
 	{% endif %}
 
 	{% if site.favicon.enabled and site.favicon.local.enabled %}
-	<link rel="icon" type="image/{{ site.favicon.local.type }}" href="{{ site.url }}{{ site.favicon.local.filename }}" />
+	<link rel="icon" type="image/{{ site.favicon.local.type }}" href="{{ site.url }}{{ site.favicon.local.partial_url }}" />
 	{% elsif site.favicon.enabled and site.favicon.remote.enabled %}
-	<link rel="icon" type="image/{{ site.favicon.remote.type }}" href="{{ site.favicon.remote.url }}" />
+	<link rel="icon" type="image/{{ site.favicon.remote.type }}" href="{{ site.favicon.remote.full_url }}" />
 	{% endif %}
 </head>

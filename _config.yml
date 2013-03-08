@@ -8,11 +8,11 @@ favicon :
   enabled : true
   local :
     enabled : true
-    filename : /img/TheDereck.png
+    partial_url : /img/TheDereck.png
     type : png
   remote :
     enabled : false
-    url : false
+    full_url : false
     type : false
 
 alert : false
@@ -60,7 +60,7 @@ rss :
     webmaster : thedereck@thedereck.com
   ttl :
     enabled : true
-    ttl : 1800
+    ttl : 300
   image :
     enabled : true
     image : http://www.gravatar.com/avatar/2f8947394b8acb62ed0f08df91055f27.png?s=200
