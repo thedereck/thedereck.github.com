@@ -19,14 +19,10 @@ alert : false
 notice : false
 
 show_section:
-  brief_bio :
-    enabled : true
-  github_projects :
-    enabled : true
-  categories :
-    enabled : true
-  tags :
-    enabled : true
+  brief_bio : true
+  github_projects : true
+  categories : true
+  tags : true
 
 brief_bio :
   image :

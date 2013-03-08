@@ -1,17 +1,17 @@
 <div class="span3 offset1">
-	{% if site.show_section.brief_bio.enabled %}
+	{% if site.show_section.brief_bio %}
 	{% include body/sections/brief-bio.html %}
 	{% endif %}
 
-	{% if site.show_section.github_projects.enabled %}
+	{% if site.show_section.github_projects %}
 	{% include body/sections/projects.html }
 	{% endif %}
 
-	{% if site.show_section.categories.enabled %}
+	{% if site.show_section.categories %}
 	{% include body/sections/categories.html %}
 	{% endif %}
 
-	{% if site.show_section.tags.enabled %}
+	{% if site.show_section.tags %}
 	{% incude body/sections/tags.html %}
 	{% endif %}
 </div>
