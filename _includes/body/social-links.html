@@ -5,7 +5,7 @@
 {% endif %}
 
 {% if social and site.font_awesome.enabled %}
-<p class="text-center"><small><strong>FOLLOW {{ site.social_links.follow_name | upcase }}</strong></small></p>
+<p class="text-center"><small><strong>FOLLOW {{ site.brief_bio.social_links.follow_name | upcase }}</strong></small></p>
 <ul class="inline text-center">
 	{% if site.brief_bio.social_links.github %}
 	<li><a class="btn" href="{{ site.brief_bio.social_links.github }}"><i class="icon-github-alt"></i></a></li>
@@ -32,7 +32,7 @@
 	{% endif %}
 </ul>
 {% elsif social %}
-<p class="text-center"><small><strong>FOLLOW {{ site.follow_name | upcase }}</strong></small></p>
+<p class="text-center"><small><strong>FOLLOW {{ site.brief_bio.social_links.follow_name | upcase }}</strong></small></p>
 <ul class="inline text-center">
 	{% if site.brief_bio.social_links.github %}
 	<li><a class="btn" href="{{ site.brief_bio.social_links.github }}">GitHub</a></li>
