@@ -10,6 +10,10 @@
 	{{ tag_names | split:' ' | sort | join:' ' }}
 {% endcapture %}
 
+{% capture number_of_tags %}
+	{{ sorted_tag_names | number_of_words }}
+{% endcapture %}
+
 <ul class="nav pull-left">
 	<li class="dropdown">
 		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -17,9 +21,16 @@
 			<b class="caret"></b>
 		</a>
 		<ul class="dropdown-menu">
+{% for i in (1..number_of_tags) %}
+	{% capture tag %}
+		{{ sorted_tag_names | truncatewords: i | last }}
+	{% endcapture %}
 			<li>
-				{{ sorted_tag_names }}
+				<a href="{{ tag }}">
+					{{ tag | replace: '___', ' ' }}
+				</a>
 			</li>
+{% endfor %}
 		</ul>
 	</li>
 </ul>
