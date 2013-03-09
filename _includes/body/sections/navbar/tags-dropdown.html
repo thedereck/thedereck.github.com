@@ -26,7 +26,7 @@
 		{{ sorted_tag_names | truncatewords:i | strip_newlines | remove: '...' | split:' ' | last | strip_newlines }}
 	{% endcapture %}
 			<li>
-				<a href="{{ tag }}">
+				<a href="{{ site.url }}/tag.html?tag={{ tag }}">
 					{{ tag | replace: '___', ' ' }}
 				</a>
 			</li>
