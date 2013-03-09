@@ -3,14 +3,15 @@
 		GitHub Projects
 	</h4>
 
-	<ul>
-	{% for project in site.github_projects %}
-		<li>
-			{% if site.font_awesome.enabled %}
-			<i class="icon-github-alt"></i>
-			{% endif %}
+	<div class="btn-group btn-group-vertical">
+		{% for project in site.github_projects %}
+			<a class="btn" href="{{ project.url }}">
+				{% if site.font_awesome.enabled %}
+				<i class="icon-github-alt"></i> 
+				{% endif %}
 			
-			<a href="{{ project.url }}">{{ project.name }}</a></li>
-	{% endfor %}
-	</ul>
+				{{ project.name }}
+			</a>
+		{% endfor %}
+	</div>
 </div>
