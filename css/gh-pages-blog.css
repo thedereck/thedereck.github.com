@@ -33,3 +33,12 @@
 	color: #09d;
 	text-decoration: none;
 }
+
+.ghpb-nav-list a {
+	color: #666;
+}
+
+.ghpb-nav-list a:hover {
+	color: #09d;
+	text-decoration: none;
+}
