@@ -4,11 +4,6 @@
 	{% endif %}
 
 	<h5>
-	{% if page.category.size > 0 %}
-		Category : {{ page.category | downcase }}
-		<br>
-	{% endif %}
-
 	{% if page.subtext %}
 		{{ page.subtext }}
 		<br>
@@ -16,6 +11,14 @@
 		<i class="icon-pencil"></i> 
 		{% endif %}
 		Published on {{ page.date | date_to_long_string }}.
+	{% endif %}
+
+	{% if page.category.size > 0 %}
+		{% if site.font_awesome.enabled %}
+		<i class="icon-folder-open"></i> 
+		{% endif %}
+		Category : {{ page.category | downcase }}
+		<br>
 	{% endif %}
 	</h5>
 </div>
