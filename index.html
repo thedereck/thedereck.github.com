@@ -45,7 +45,7 @@ exclude: true
 			{% endif %}
 			Tags:
 			{% for t in p.tags %}
-			<a href="{{ site.url }}/tag.html?tag={{ t[0] }}">
+			<a href="{{ site.url }}/tag.html?tag={{ t }}">
 				<span class="label label-inverse">{{ t }} </span>
 			</a>
 			{% endfor %}
