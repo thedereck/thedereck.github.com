@@ -2,51 +2,75 @@
 <p class="text-center"><small><strong>FOLLOW {{ site.sections.brief_bio.social_links.follow_name | upcase }}</strong></small></p>
 <ul class="inline text-center">
 	{% if site.sections.brief_bio.social_links.github.enabled %}
-	{% if site.font_awesome.enabled %}
-	<li><a class="btn" href="{{ site.sections.brief_bio.social_links.github.url }}"><i class="icon-github-alt"></i></a></li>
-	{% else %}
-	<li><a class="btn" href="{{ site.sections.brief_bio.social_links.github.url }}">GitHub</a></li>
-	{% endif %}
+	<li>
+		<a class="btn" href="{{ site.sections.brief_bio.social_links.github.url }}">
+		{% if site.font_awesome.enabled %}
+			<i class="icon-github-alt"></i>
+		{% else %}
+			GitHub
+		{% endif %}
+		</a>
+	</li>
 	{% endif %}
 	
 	{% if site.sections.brief_bio.social_links.facebook.enabled %}
-	{% if site.font_awesome.enabled %}
-	<li><a class="btn" href="{{ site.sections.brief_bio.social_links.facebook.url }}"><i class="icon-facebook"></i></a></li>
-	{% else %}
-	<li><a class="btn" href="{{ site.sections.brief_bio.social_links.facebook.url }}">Facebook</a></li>
-	{% endif %}
+	<li>
+		<a class="btn" href="{{ site.sections.brief_bio.social_links.facebook.url }}">
+		{% if site.font_awesome.enabled %}
+			<i class="icon-facebook"></i>
+		{% else %}
+			Facebook
+		{% endif %}
+		</a>
+	</li>
 	{% endif %}
 	
 	{% if site.sections.brief_bio.social_links.googleplus.enabled %}
-	{% if site.font_awesome.enabled %}
-	<li><a class="btn" href="{{ site.sections.brief_bio.social_links.googleplus.url }}"><i class="icon-google-plus"></i></a></li>
-	{% else %}
-	<li><a class="btn" href="{{ site.sections.brief_bio.social_links.googleplus.url }}">Google+</a></li>
-	{% endif %}
+	<li>
+		<a class="btn" href="{{ site.sections.brief_bio.social_links.googleplus.url }}">
+		{% if site.font_awesome.enabled %}
+			<i class="icon-google-plus"></i>
+		{% else %}
+			Google+
+		{% endif %}
+		</a>
+	</li>
 	{% endif %}
 	
 	{% if site.sections.brief_bio.social_links.linkedin.enabled %}
-	{% if site.font_awesome.enabled %}
-	<li><a class="btn" href="{{ site.sections.brief_bio.social_links.linkedin.url }}"><i class="icon-linkedin"></i></a></li>
-	{% else %}
-	<li><a class="btn" href="{{ site.sections.brief_bio.social_links.linkedin.url }}">Linkedin</a></li>
-	{% endif %}
+	<li>
+		<a class="btn" href="{{ site.sections.brief_bio.social_links.linkedin.url }}">
+		{% if site.font_awesome.enabled %}
+			<i class="icon-linkedin"></i>
+		{% else %}
+			Linkedin
+		{% endif %}
+		</a>
+	</li>
 	{% endif %}
 	
 	{% if site.sections.brief_bio.social_links.pinterest.enabled %}
-	{% if site.font_awesome.enabled %}
-	<li><a class="btn" href="{{ site.sections.brief_bio.social_links.pinterest.url }}"><i class="icon-pinterest"></i></a></li>
-	{% else %}
-	<li><a class="btn" href="{{ site.sections.brief_bio.social_links.pinterest.url }}">Pinterest</a></li>
-	{% endif %}
+	<li>
+		<a class="btn" href="{{ site.sections.brief_bio.social_links.pinterest.url }}">
+		{% if site.font_awesome.enabled %}
+			<i class="icon-pinterest"></i>
+		{% else %}
+			Pinterest
+		{% endif %}
+		</a>
+	</li>
 	{% endif %}
 	
 	{% if site.sections.brief_bio.social_links.twitter.enabled %}
-	{% if site.font_awesome.enabled %}
-	<li><a class="btn" href="{{ site.sections.brief_bio.social_links.twitter.url }}"><i class="icon-twitter"></i></a></li>
-	{% else %}
-	<li><a class="btn" href="{{ site.sections.brief_bio.social_links.twitter.url }}">Twitter</a></li>
-	{% endif %}
+	<li>
+		<a class="btn" href="{{ site.sections.brief_bio.social_links.twitter.url }}">
+		{% if site.font_awesome.enabled %}
+			<i class="icon-twitter"></i>
+		{% else %}
+			Twitter
+		{% endif %}
+		</a>
+	</li>
 	{% endif %}
 </ul>
 {% endif %}
