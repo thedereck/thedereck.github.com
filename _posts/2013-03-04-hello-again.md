@@ -2,7 +2,6 @@
 layout : post
 title : Hello, again.
 subtitle : Department of redundancy department.
-category : Bad__Wolf
 tags :
   - a b
   - A b
