@@ -26,35 +26,35 @@ sections:
       url : http://www.gravatar.com/avatar/2f8947394b8acb62ed0f08df91055f27.png?s=200
     content :
       enabled : true
-      content_file : brief-bio
     social_links :
       enabled : true
-      follow_name : Dereck
-      facebook :
-        enabled : false
-        url : false
-      github :
-        enabled : true
-        url : https://github.com/thedereck
-      googleplus :
-        enabled : true
-        url : https://plus.google.com/109660251296662910676
-      linkedin :
-        enabled : true
-        url : http://www.linkedin.com/in/dereckcurry
-      pinterest :
-        enabled : false
-        url : false
-      twitter :
-        enabled : true
-        url : http://www.twitter.com/_TheDereck_
-
   github_projects :
     enabled : true
   categories :
     enabled : true
   tags :
     enabled : true
+
+social_links :
+  follow_name : Dereck
+  facebook :
+    enabled : false
+    url : false
+  github :
+    enabled : true
+    url : https://github.com/thedereck
+  googleplus :
+    enabled : true
+    url : https://plus.google.com/109660251296662910676
+  linkedin :
+    enabled : true
+    url : http://www.linkedin.com/in/dereckcurry
+  pinterest :
+    enabled : false
+    url : false
+  twitter :
+    enabled : true
+    url : http://www.twitter.com/_TheDereck_
 
 bootstrap:
   css : spacelab.bootstrap.min.css

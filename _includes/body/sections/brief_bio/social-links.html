@@ -1,9 +1,9 @@
 <br>
-<p class="text-center"><small><strong>FOLLOW {{ site.sections.brief_bio.social_links.follow_name | upcase }}</strong></small></p>
+<p class="text-center"><small><strong>FOLLOW {{ site.social_links.follow_name | upcase }}</strong></small></p>
 <ul class="inline text-center">
-	{% if site.sections.brief_bio.social_links.github.enabled %}
+	{% if site.social_links.github.enabled %}
 	<li>
-		<a class="btn" href="{{ site.sections.brief_bio.social_links.github.url }}">
+		<a class="btn" href="{{ site.social_links.github.url }}">
 		{% if site.font_awesome.enabled %}
 			<i class="icon-github-alt"></i>
 		{% else %}
@@ -13,9 +13,9 @@
 	</li>
 	{% endif %}	
 
-	{% if site.sections.brief_bio.social_links.facebook.enabled %}
+	{% if site.social_links.facebook.enabled %}
 	<li>
-		<a class="btn" href="{{ site.sections.brief_bio.social_links.facebook.url }}">
+		<a class="btn" href="{{ site.social_links.facebook.url }}">
 		{% if site.font_awesome.enabled %}
 			<i class="icon-facebook"></i>
 		{% else %}
@@ -25,9 +25,9 @@
 	</li>
 	{% endif %}
 	
-	{% if site.sections.brief_bio.social_links.googleplus.enabled %}
+	{% if site.social_links.googleplus.enabled %}
 	<li>
-		<a class="btn" href="{{ site.sections.brief_bio.social_links.googleplus.url }}">
+		<a class="btn" href="{{ site.social_links.googleplus.url }}">
 		{% if site.font_awesome.enabled %}
 			<i class="icon-google-plus"></i>
 		{% else %}
@@ -37,9 +37,9 @@
 	</li>
 	{% endif %}
 	
-	{% if site.sections.brief_bio.social_links.linkedin.enabled %}
+	{% if site.social_links.linkedin.enabled %}
 	<li>
-		<a class="btn" href="{{ site.sections.brief_bio.social_links.linkedin.url }}">
+		<a class="btn" href="{{ site.social_links.linkedin.url }}">
 		{% if site.font_awesome.enabled %}
 			<i class="icon-linkedin"></i>
 		{% else %}
@@ -49,9 +49,9 @@
 	</li>
 	{% endif %}
 	
-	{% if site.sections.brief_bio.social_links.pinterest.enabled %}
+	{% if site.social_links.pinterest.enabled %}
 	<li>
-		<a class="btn" href="{{ site.sections.brief_bio.social_links.pinterest.url }}">
+		<a class="btn" href="{{ site.social_links.pinterest.url }}">
 		{% if site.font_awesome.enabled %}
 			<i class="icon-pinterest"></i>
 		{% else %}
@@ -61,9 +61,9 @@
 	</li>
 	{% endif %}
 	
-	{% if site.sections.brief_bio.social_links.twitter.enabled %}
+	{% if site.social_links.twitter.enabled %}
 	<li>
-		<a class="btn" href="{{ site.sections.brief_bio.social_links.twitter.url }}">
+		<a class="btn" href="{{ site.social_links.twitter.url }}">
 		{% if site.font_awesome.enabled %}
 			<i class="icon-twitter"></i>
 		{% else %}
