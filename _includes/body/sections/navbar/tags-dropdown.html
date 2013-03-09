@@ -21,13 +21,17 @@
 			<b class="caret"></b>
 		</a>
 		<ul class="dropdown-menu">
+{% assign prev_tag = '' %}
 {% for i in (1..number_of_tags) %}
 	{% capture tag %}{{ sorted_tag_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
+		{% if prev_tag != tag %}
+			{% assign prev_tag = tag %}
 			<li>
 				<a href="{{ site.url }}/tag.html?tag={{ tag }}">
 					{{ tag | replace: '___', ' ' }}
 				</a>
 			</li>
+		{% endif %}
 {% endfor %}
 		</ul>
 	</li>
