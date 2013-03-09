@@ -12,7 +12,10 @@
 		{% if site.font_awesome.enabled %}
 		<i class="icon-folder-open"></i> 
 		{% endif %}
-		Category : {{ page.category | replace: '_', ' ' | capitalize }}
+		Category: 
+		<a href="{{ site.url }}/category.html?category={{ page.category | downcase }}">
+			{{ page.category | replace: '_', ' ' | capitalize }}
+		</a>
 		<br>
 	{% endif %}
 
