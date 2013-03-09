@@ -1,2 +1,35 @@
-<div class="well-outline">
+{% if site.tags.size > 0 %}
+
+{% capture tag_names %}
+	{% for t in site.tags %}
+		{{ t[0] | replace: ' ', '___' }}
+	{% endfor %}
+{% endcapture %}
+
+{% capture sorted_tag_names %}
+	{{ tag_names | split:' ' | sort | join:' ' }}
+{% endcapture %}
+
+{% capture number_of_tags %}
+	{{ sorted_tag_names | number_of_words }}
+{% endcapture %}
+
+<div class="well" style="padding: 8px 0;">
+	<ul class="nav nav-list">
+		<li class="nav-header">Tags</li>
+{% assign prev_category = '' %}
+{% for i in (1..number_of_categories) %}
+	{% capture category %}{{ sorted_category_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
+	{% if prev_category != category %}
+		{% assign prev_category = category %}
+			<li>
+				<a href="{{ site.url }}/tag.html?tag={{ tag }}">
+					{{ tag | replace: '___', ' ' }}
+				</a>
+			</li>
+		{% endif %}
+{% endfor %}
+	</ul>
 </div>
+
+{% endif %}

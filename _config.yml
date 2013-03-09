@@ -68,9 +68,6 @@ github_projects :
   - project :
     name : gh-pages-blog
     url : https://github.com/thedereck/gh-pages-blog
-  - project :
-    name : gh-pages-blog
-    url : https://github.com/thedereck/gh-pages-blog
 
 bootstrap:
   css : spacelab.bootstrap.min.css
