@@ -18,7 +18,7 @@
 	<ul class="nav nav-list">
 		<li class="nav-header">
 			{% if site.font_awesome.enabled %}
-			<i class="icon-folder-alt"></i> 
+			<i class="icon-folder-closed"></i> 
 			{% endif %}
 			Categories
 		</li>
@@ -30,7 +30,7 @@
 		<li>
 			<a href="{{ site.url }}/category.html?category={{ category }}">
 				{% if site.font_awesome.enabled %}
-				<i class="icon-folder-open-alt"></i> 
+				<i class="icon-folder-open"></i> 
 				{% endif %}
 				{{ category | replace: '___', ' ' | capitalize }}
 			</a>

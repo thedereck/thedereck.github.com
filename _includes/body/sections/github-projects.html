@@ -1,11 +1,16 @@
 <div class="well" style="padding: 8px 0;">
 	<ul class="nav nav-list">
-		<li class="nav-header">{{ site.github_projects.header }}</li>
+		<li class="nav-header">
+			{% if site.font_awesome.enabled %}
+			<i class="icon-github"></i> 
+			{% endif %}
+			{{ site.github_projects.header }}
+		</li>
 		{% for project in site.github_projects.projects %}
 		<li>
 			<a href="{{ project.url }}">
 				{% if site.font_awesome.enabled %}
-				<i class="icon-github-alt"></i> 
+				<i class="icon-github"></i> 
 				{% endif %}
 				{{ project.name }}
 			</a>
