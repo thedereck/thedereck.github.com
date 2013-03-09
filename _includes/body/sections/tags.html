@@ -17,11 +17,11 @@
 <div class="well" style="padding: 8px 0;">
 	<ul class="nav nav-list">
 		<li class="nav-header">Tags</li>
-{% assign prev_category = '' %}
-{% for i in (1..number_of_categories) %}
-	{% capture category %}{{ sorted_category_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
-	{% if prev_category != category %}
-		{% assign prev_category = category %}
+{% assign prev_tag = '' %}
+{% for i in (1..number_of_tags) %}
+	{% capture tag %}{{ sorted_tag_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
+		{% if prev_tag != tag %}
+			{% assign prev_tag = tag %}
 			<li>
 				<a href="{{ site.url }}/tag.html?tag={{ tag }}">
 					{{ tag | replace: '___', ' ' }}
