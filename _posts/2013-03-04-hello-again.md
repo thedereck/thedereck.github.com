@@ -2,7 +2,7 @@
 layout : post
 title : Hello, again.
 subtext : Department of redundancy department.
-category : Bad Wolf
+category : Bad__Wolf
 ---
 
 Hello, world!  
