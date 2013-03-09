@@ -1,4 +1,12 @@
 {% if site.tags.size > 0 %}
+
+{% capture tag_names %}
+   {% for t in site.tags %}
+    {{ t[0] | replace: ' ', '___' }}
+   {% endfor %}
+{% endcapture %}
+
+
 <ul class="nav pull-left">
 	<li class="dropdown">
 		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -6,9 +14,9 @@
 			<b class="caret"></b>
 		</a>
 		<ul class="dropdown-menu">
-{% for t in site.tags order:ascending %}
+{% for t in tag_names %}
 			<li>
-				<a href="{{ site.url }}/tag.html?tag={{ t[0] }}">
+				<a href="{{ site.url }}/tag.html?tag={{ t[0] | replace: '___', ' ' }}">
 					{{ t[0] }}
 				</a>
 			</li>
