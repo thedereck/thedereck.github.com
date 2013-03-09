@@ -3,11 +3,11 @@
 		<div class="container">
 {% include body/sections/navbar/brand.html %}
 
-{% if site.navbar.categories.enabled %}
+{% if site.navbar.categories.enabled and site.categories.size > 0 %}
 	{% include body/sections/navbar/categories-dropdown.html %}
 {% endif %}
 
-{% if site.navbar.tags.enabled %}
+{% if site.navbar.tags.enabled and site.tags.size > 0 %}
 	{% include body/sections/navbar/tags-dropdown.html %}
 {% endif %}
 
