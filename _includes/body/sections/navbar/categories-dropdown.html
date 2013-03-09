@@ -21,7 +21,7 @@
 			<b class="caret"></b>
 		</a>
 		<ul class="dropdown-menu">
-{% for i in (1..number_of_tags) %}
+{% for i in (1..number_of_categories) %}
 	{% capture category %}{{ sorted_category_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
 			<li>
 				<a href="{{ site.url }}/category.html?category={{ category | replace: '___', ' ' }}">
