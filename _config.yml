@@ -35,6 +35,12 @@ sections:
   tags :
     enabled : true
 
+navbar :
+  categories :
+    enabled : true
+  tags :
+    enabled : true
+
 social_links :
   follow_name : Dereck
   facebook :

@@ -1,0 +1,7 @@
+<ul class="nav pull-right">
+{% for p in site.pages %}
+	{% unless p.exclude %}
+	<li><a href="{{ p.url }}">{{ p.title }}</a></li>
+	{% endunless %}
+{% endfor %}
+</ul>
