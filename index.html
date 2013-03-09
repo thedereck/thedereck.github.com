@@ -9,15 +9,18 @@ exclude: true
 	<div class="well-outline">
 		<a href="{{ p.url }}"><h2>{{ p.title }}</h2></a>
 		<p>
-			<br>
-
 			{% if p.subtext %}
 			{{ p.subtext }}
 			<br>
 			{% endif %}
 
 			{% if p.category.size > 0 %}
-			Category : {{ p.category | downcase }}
+			<small>
+				{% if site.font_awesome.enabled %}
+				<i class="icon-folder-open-alt"></i> 
+				{% endif %}
+				Category : {{ p.category | downcase }}
+			</small>
 			<br>
 			{% endif %}
 
