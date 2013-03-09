@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Hello, world!
-subtext : Cliches 'R Us
+subtitle : Cliches 'R Us
 category : Bad__wolf
 tags :
   - a b
