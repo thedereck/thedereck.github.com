@@ -1,14 +1,16 @@
 <div class="well">
 	<div class="thumbnail">
-		{% if site.sections.brief_bio.image.enabled %}
+	{% if site.sections.brief_bio.image.enabled %}
 		<img data-src="holder.js/200x200" alt="" src="{{ site.sections.brief_bio.image.url }}">
-		{% endif %}
-		{% if site.sections.brief_bio.content.enabled %}
+	{% endif %}
+	{% if site.sections.brief_bio.content.enabled %}
 		<div class="caption">
 			{% include content/brief-bio %}
 		</div>
-		{% endif %}
+	{% endif %}
 	</div>
-	<br>
-	{% include body/social-links.html %}
+
+	{% if site.sections.brief_bio.social_links.enabled %}
+	{% include body/brief_bio/social-links.html %}
+	{% endif %}
 </div>

@@ -1,4 +1,4 @@
-{% if site.sections.brief_bio.social_links.enabled %}
+<br>
 <p class="text-center"><small><strong>FOLLOW {{ site.sections.brief_bio.social_links.follow_name | upcase }}</strong></small></p>
 <ul class="inline text-center">
 	{% if site.sections.brief_bio.social_links.github.enabled %}
@@ -11,8 +11,8 @@
 		{% endif %}
 		</a>
 	</li>
-	{% endif %}
-	
+	{% endif %}	
+
 	{% if site.sections.brief_bio.social_links.facebook.enabled %}
 	<li>
 		<a class="btn" href="{{ site.sections.brief_bio.social_links.facebook.url }}">
@@ -73,4 +73,3 @@
 	</li>
 	{% endif %}
 </ul>
-{% endif %}
