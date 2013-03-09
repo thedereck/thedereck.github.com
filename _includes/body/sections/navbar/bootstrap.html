@@ -1,0 +1,14 @@
+<div class="navbar">
+	<div class="navbar-inner">
+		<div class="container">
+			<a class="brand" href="/"><strong>{{ site.brand | upcase }}</strong></a>
+			<ul class="nav pull-right">
+				{% for p in site.pages %}
+					{% unless p.exclude %}
+				<li><a href="{{ p.url }}">{{ p.title }}</a></li>
+					{% endunless %}
+				{% endfor %}
+			</ul>
+		</div>
+	</div>
+</div>
