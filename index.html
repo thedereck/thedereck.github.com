@@ -39,7 +39,7 @@ exclude: true
 		
 		{% if p.tags.size > 0 %}
 			{% capture tag_names %}
-				{% for t in p.tags.tags %}
+				{% for t in p.tags %}
 					{{ t | replace: ' ', '___' }}
 				{% endfor %}
 			{% endcapture %}
