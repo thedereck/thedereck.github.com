@@ -62,6 +62,14 @@ social_links :
     enabled : true
     url : http://www.twitter.com/_TheDereck_
 
+github_projects :
+  project :
+    name : gh-pages-blog
+    url : https://github.com/thedereck/gh-pages-blog
+  project :
+    name : gh-pages-blog
+    url : https://github.com/thedereck/gh-pages-blog2
+
 bootstrap:
   css : spacelab.bootstrap.min.css
   responsive :
