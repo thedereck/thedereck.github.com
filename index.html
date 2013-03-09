@@ -38,15 +38,30 @@ exclude: true
 		{{ p.content }}
 		
 		{% if p.tags.size > 0 %}
+			{% capture tag_names %}
+				{% for t in p.tags.tags %}
+					{{ t | replace: ' ', '___' }}
+				{% endfor %}
+			{% endcapture %}
+
+			{% capture sorted_tag_names %}
+				{{ tag_names | split:' ' | sort | join:' ' }}
+			{% endcapture %}
+
+			{% capture number_of_tags %}
+				{{ sorted_tag_names | number_of_words }}
+			{% endcapture %}
+
 		<br>
 		<p>
 			{% if site.font_awesome.enabled %}
 			<i class="icon-tags"></i> 
 			{% endif %}
 			Tags:
-			{% for t in p.tags %}
-			<a href="{{ site.url }}/tag.html?tag={{ t }}">
-				<span class="label label-inverse">{{ t }} </span>
+			{% for i in (1..number_of_tags) %}
+				{% capture tag %}{{ sorted_tag_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
+			<a href="{{ site.url }}/tag.html?tag={{ tag }}">
+				<span class="label label-inverse">{{ tag | replace: '___', ' ' }} </span>
 			</a>
 			{% endfor %}
 		</p>
