@@ -9,13 +9,16 @@ exclude: true
 	<div class="well-outline">
 		<a href="{{ p.url }}"><h2>{{ p.title }}</h2></a>
 		<p>
+			<br>
+
 			{% if p.subtext %}
 			{{ p.subtext }}
+			<br>
 			{% endif %}
 
-			{% if p.category.size > %}
-			<br>
+			{% if p.category.size > 0 %}
 			Category : {{ p.category | downcase }}
+			<br>
 			{% endif %}
 
 			<br>
