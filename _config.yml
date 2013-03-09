@@ -71,7 +71,7 @@ github_projects :
     url : https://github.com/thedereck/gh-pages-blog2
 
 bootstrap:
-  css : spacelab.bootstrap.min.css
+  css : bootstrap.min.css
   responsive :
     enabled : true
     css : bootstrap-responsive.min.css
