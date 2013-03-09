@@ -1,11 +1,14 @@
 {% if site.tags.size > 0 %}
 
 {% capture tag_names %}
-   {% for t in site.tags %}
-    {{ t[0] | replace: ' ', '___' }}
-   {% endfor %}
+	{% for t in site.tags %}
+		{{ t[0] | replace: ' ', '___' }}
+	{% endfor %}
 {% endcapture %}
 
+{% capture sorted_tag_names %}
+	{{ tag_names | split:' ' | sort | join:' ' }}
+{% endif %}
 
 <ul class="nav pull-left">
 	<li class="dropdown">
@@ -14,11 +17,9 @@
 			<b class="caret"></b>
 		</a>
 		<ul class="dropdown-menu">
-{% for tn in tag_names %}
+{% for s in sort_tag_names %}
 			<li>
-				<a href="{{ site.url }}/tag.html?tag={{ tn | replace: '___', ' ' }}">
-					{{ tn }}
-				</a>
+				{{ s }}
 			</li>
 {% endfor %}
 		</ul>
