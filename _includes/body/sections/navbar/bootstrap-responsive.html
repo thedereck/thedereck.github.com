@@ -8,6 +8,15 @@
       		</a>
 {% include body/sections/navbar/brand.html %}
 			<div class="nav-collapse collapse">
+
+{% if site.navbar.categories.enabled %}
+	{% include body/sections/navbar/categories-dropdown.html %}
+{% endif %}
+
+{% if site.navbar.tags.enabled %}
+	{% include body/sections/navbar/tags-dropdown.html %}
+{% endif %}
+
 {% include body/sections/navbar/pages-list.html %}
 			</div>
 		</div>

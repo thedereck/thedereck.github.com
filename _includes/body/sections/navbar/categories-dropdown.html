@@ -1,0 +1,15 @@
+{% if site.categories.length > 0 %}
+<ul class="nav pull-left">
+	<li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			Categories
+			<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+{% for c in site.categories %}
+			{{ c }}
+{% endfor %}
+		</ul>
+	</li>
+</ul>
+{% endif %}
