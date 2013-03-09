@@ -23,7 +23,7 @@
 		<ul class="dropdown-menu">
 {% for i in (1..number_of_tags) %}
 	{% capture tag %}
-		{{ sorted_tag_names | truncatewords: i | strip_new_lines | remove '...' }}
+		{{ sorted_tag_names | truncatewords: i | strip_new_lines | remove: '...' }}
 	{% endcapture %}
 			<li>
 				<a href="{{ tag }}">
