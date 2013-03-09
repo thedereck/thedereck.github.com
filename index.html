@@ -12,6 +12,12 @@ exclude: true
 			{% if p.subtext %}
 			{{ p.subtext }}
 			{% endif %}
+
+			{% if p.category.size > %}
+			<br>
+			Category : {{ p.category | downcase }}
+			{% endif %}
+
 			<br>
 			<small>
 				{% if site.font_awesome.enabled %}
