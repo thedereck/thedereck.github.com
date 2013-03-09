@@ -16,7 +16,12 @@
 
 <div class="well" style="padding: 8px 0;">
 	<ul class="nav nav-list">
-		<li class="nav-header">Tags</li>
+		<li class="nav-header">
+			{% if site.font_awesome.enabled %}
+			<i class="icon-tags"></i> 
+			{% endif %}
+			Tags
+		</li>
 {% assign prev_tag = '' %}
 {% for i in (1..number_of_tags) %}
 	{% capture tag %}{{ sorted_tag_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
@@ -24,6 +29,9 @@
 			{% assign prev_tag = tag %}
 			<li>
 				<a href="{{ site.url }}/tag.html?tag={{ tag }}">
+					{% if site.font_awesome.enabled %}
+					<i class="icon-tag"></i> 
+					{% endif %}
 					{{ tag | replace: '___', ' ' }}
 				</a>
 			</li>
