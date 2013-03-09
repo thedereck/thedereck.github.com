@@ -3,7 +3,12 @@
 		<li class="nav-header">{{ site.github_projects.header }}</li>
 		{% for project in site.github_projects.projects %}
 		<li>
-			<a href="{{ project.url }}">{{ project.name }}</a>
+			<a href="{{ project.url }}">
+				{% if site.font_awesome.enabled %}
+				<i class="icon-github-alt"></i> 
+				{% endif %}
+				{{ project.name }}
+			</a>
 		</li>
 		{% endfor %}
 	</ul>
