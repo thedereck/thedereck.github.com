@@ -23,7 +23,7 @@
 		<ul class="dropdown-menu">
 {% assign prev_category = '' %}
 {% for i in (1..number_of_categories) %}
-	{% capture category %}{{ sorted_category_names | truncatewords:i | remove:'...' | split:' ' | last | capitalize }}{% endcapture %}
+	{% capture category %}{{ sorted_category_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
 	{% if prev_category != category %}
 		{% assign prev_category = category %}
 			<li>
