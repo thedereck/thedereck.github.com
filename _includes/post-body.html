@@ -30,11 +30,15 @@
 						<i class="icon-tags"></i> 
 						{% endif %}
 						Tags:
+						{% assign prev_tag = '' %}
 						{% for i in (1..number_of_tags) %}
 							{% capture tag %}{{ sorted_tag_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
+							{% if prev_tag != tag %}
+								{% assign prev_tag = tag %}
 						<a href="{{ site.url }}/tag.html?tag={{ tag }}">
 							<span class="label label-inverse">{{ tag | replace: '___', ' ' }} </span>
 						</a>
+							{% endif %}
 						{% endfor %}
 					</p>
 					{% endif %}
