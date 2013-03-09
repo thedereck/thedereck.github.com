@@ -1,7 +1,9 @@
 <div class="well-outline">
 	<ul>
 	{% for project in site.github_projects %}
+		{% if project.size > 0 %}
 		<li><a href="{{ project.url }}">{{ project.name }}</a></li>
+		{% endif %}
 	{% endfor %}
 	<li>
 </div>
