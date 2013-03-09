@@ -64,6 +64,7 @@ social_links :
 
 github_projects :
   header: My GitHub Projects
+  projects :
   - project :
     name : gh-pages-blog
     url : https://github.com/thedereck/gh-pages-blog

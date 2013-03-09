@@ -1,7 +1,7 @@
 <div class="well" style="padding: 8px 0;">
 	<ul class="nav nav-list">
 		<li class="nav-header">{{ site.github_projects.header }}</li>
-		{% for project in site.github_projects %}
+		{% for project in site.github_projects.projects %}
 		<li>
 			<a href="{{ project.url }}">{{ project.name }}</a>
 		</li>
