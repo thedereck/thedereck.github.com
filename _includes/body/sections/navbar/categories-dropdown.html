@@ -8,7 +8,7 @@
 		<ul class="dropdown-menu">
 {% for c in site.categories %}
 			<li>
-				<a href="#">
+				<a href="{{ site.url }}/category.html?category={{ c[0] }}">
 					{{ c[0] }}
 				</a>
 			</li>
