@@ -6,19 +6,20 @@
 	<h5>
 	{% if page.subtext %}
 		{{ page.subtext }}
-		<br>
-		{% if site.font_awesome.enabled %}
-		<i class="icon-pencil"></i> 
-		{% endif %}
-		Published on {{ page.date | date_to_long_string }}.
 	{% endif %}
 
 	{% if page.category.size > 0 %}
+		<br>
 		{% if site.font_awesome.enabled %}
 		<i class="icon-folder-open"></i> 
 		{% endif %}
 		Category : {{ page.category | downcase }}
-		<br>
 	{% endif %}
+
+	<br>
+	{% if site.font_awesome.enabled %}
+	<i class="icon-pencil"></i> 
+	{% endif %}
+	Published on {{ page.date | date_to_long_string }}.
 	</h5>
 </div>
