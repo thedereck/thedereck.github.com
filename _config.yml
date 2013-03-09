@@ -63,10 +63,10 @@ social_links :
     url : http://www.twitter.com/_TheDereck_
 
 github_projects :
-  project :
+  - project :
     name : gh-pages-blog
     url : https://github.com/thedereck/gh-pages-blog
-  project :
+  - project :
     name : gh-pages-blog
     url : https://github.com/thedereck/gh-pages-blog2
 
