@@ -63,12 +63,13 @@ social_links :
     url : http://www.twitter.com/_TheDereck_
 
 github_projects :
+  header: My GitHub Projects
   - project :
     name : gh-pages-blog
     url : https://github.com/thedereck/gh-pages-blog
   - project :
     name : gh-pages-blog
-    url : https://github.com/thedereck/gh-pages-blog2
+    url : https://github.com/thedereck/gh-pages-blog
 
 bootstrap:
   css : spacelab.bootstrap.min.css
