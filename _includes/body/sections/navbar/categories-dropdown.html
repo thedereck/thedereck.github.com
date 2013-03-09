@@ -24,8 +24,8 @@
 {% for i in (1..number_of_categories) %}
 	{% capture category %}{{ sorted_category_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
 			<li>
-				<a href="{{ site.url }}/category.html?category={{ category | replace: '___', ' ' }}">
-					{{ c[0] }}
+				<a href="{{ site.url }}/category.html?category={{ category }}">
+					{{ category | replace: '___', ' ' }}
 				</a>
 			</li>
 {% endfor %}
