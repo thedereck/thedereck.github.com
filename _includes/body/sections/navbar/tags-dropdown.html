@@ -6,7 +6,7 @@
 			<b class="caret"></b>
 		</a>
 		<ul class="dropdown-menu">
-{% for t in site.tags %}
+{% for t in site.tags order:ascending %}
 			<li>
 				<a href="{{ site.url }}/tag.html?tag={{ t[0] }}">
 					{{ t[0] }}

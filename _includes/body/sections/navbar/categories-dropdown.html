@@ -6,7 +6,7 @@
 			<b class="caret"></b>
 		</a>
 		<ul class="dropdown-menu">
-{% for c in site.categories %}
+{% for c in site.categories order:ascending %}
 			<li>
 				<a href="{{ site.url }}/category.html?category={{ c[0] }}">
 					{{ c[0] }}
