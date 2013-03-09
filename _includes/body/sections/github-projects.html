@@ -1,4 +1,15 @@
 <div class="well-outline">
+	<p class="text-center">
+		{% if site.font_awesome.enabled %}
+		<i class="icon-github-alt"></i>
+		{% endif %}
+
+		GitHub Projects
+		{% if site.font_awesome.enabled %}
+		<i class="icon-github-alt"></i>
+		{% endif %}
+	</p>
+
 	<ul>
 	{% for project in site.github_projects %}
 		<li><a href="{{ project.url }}">{{ project.name }}</a></li>
