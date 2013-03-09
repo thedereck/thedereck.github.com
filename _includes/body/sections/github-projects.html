@@ -1,7 +1,7 @@
 <div class="well-outline">
 	<ul>
 	{% for project in site.github_projects %}
-		<li><a href="project.url">project.name</a></li>
+		<li><a href="{{ project.url }}">{{ project.name }}</a></li>
 	{% endfor %}
 	<li>
 </div>
