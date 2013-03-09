@@ -3,8 +3,9 @@
 		GitHub Projects
 	</h4>
 
-	<div class="btn-group btn-group-vertical text-center">
-		{% for project in site.github_projects %}
+	<div class="btn-group btn-group-vertical">
+		<p class="text-center">
+			{% for project in site.github_projects %}
 			<a class="btn" href="{{ project.url }}">
 				{% if site.font_awesome.enabled %}
 				<i class="icon-github-alt"></i> 
@@ -12,6 +13,7 @@
 			
 				{{ project.name }}
 			</a>
-		{% endfor %}
+			{% endfor %}
+		</p>
 	</div>
 </div>
