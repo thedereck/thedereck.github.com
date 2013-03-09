@@ -14,10 +14,10 @@
 			<b class="caret"></b>
 		</a>
 		<ul class="dropdown-menu">
-{% for t in tag_names %}
+{% for tn in tag_names %}
 			<li>
-				<a href="{{ site.url }}/tag.html?tag={{ t[0] | replace: '___', ' ' }}">
-					{{ t[0] }}
+				<a href="{{ site.url }}/tag.html?tag={{ tn | replace: '___', ' ' }}">
+					{{ tn }}
 				</a>
 			</li>
 {% endfor %}
