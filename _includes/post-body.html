@@ -17,7 +17,9 @@
 						{% endif %}
 						Tags:
 						{% for t in page.tags %} 
-						<span class="label label-inverse">{{ t }} </span>
+						<a href="{{ site.url }}/tag.html?tag={{ t }}">
+							<span class="label label-inverse">{{ t }} </span>
+						</a>
 						{% endfor %}
 					</p>
 					{% endif %}
