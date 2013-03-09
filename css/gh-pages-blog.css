@@ -24,3 +24,11 @@
 .ghpb-post p {
   font-size: larger;
 }
+
+.ghpb-post a {
+	color: #666;
+}
+
+.ghpb-post a:hover {
+	color: #09d;
+}
