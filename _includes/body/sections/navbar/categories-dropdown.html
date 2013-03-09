@@ -28,7 +28,7 @@
 		{% assign prev_category = category %}
 			<li>
 				<a href="{{ site.url }}/category.html?category={{ category }}">
-					{{ category | replace: '___', ' ' }}
+					{{ category | replace: '_', ' ' | capitalize }}
 				</a>
 			</li>
 	{% endif %}

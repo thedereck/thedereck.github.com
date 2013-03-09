@@ -1,7 +1,7 @@
 ---
 layout : post
 title : Hello, world!
-category : Bad__wolf
+category : bad_wolf
 tags :
   - a b
   - c d
