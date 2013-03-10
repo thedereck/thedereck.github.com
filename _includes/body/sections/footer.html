@@ -1,6 +1,7 @@
 {% if site.posts.size > 0 %}
 
 	{% capture dates %}
+		{{ site.time | date: "%Y" }}
 		{% for p in site.posts %}
 			{{ p.date | date: "%Y" }}
 		{% endfor %}
@@ -27,9 +28,7 @@
 <div class="row ghpb">
 	<div class="span8">
 		&copy; Copyright 
-{% capture prev_year %}
-		{{ site.time | date: "%Y" }}
-{% endcapture %}
+{% assign prev_year = '' %}
 {% for i in (1..number_of_dates) %}
 	{% capture this_year %}{{ sorted_dates | truncatewords:i | remove:'...' | split:' ' | last }}{% endcapture %}
 	{% if prev_year != this_year %}
