@@ -21,6 +21,7 @@
 			{% endif %}
 		</li>
 		{% for link in site.social_links.links %}
+			{% if link.enabled %}
 		<li>
 			<a href="{{ link.url }}">
 				{% if site.font_awesome.enabled and link.font_awesome_icon %}
@@ -29,6 +30,7 @@
 				{{ link.name }}
 			</a>
 		</li>
+			{% endif %}
 		{% endfor %}
 	</ul>
 </div>
