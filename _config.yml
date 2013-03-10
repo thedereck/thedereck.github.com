@@ -57,32 +57,32 @@ social_links :
     - link :
       enabled : false
       name : Facebook
-      font_awesome_icon : false
+      font_awesome_icon : icon-facebook
       url : false
     - link :
       enabled : true
       name : GitHub
-      font_awesome_icon : false
+      font_awesome_icon : icon-github-alt
       url : https://github.com/TheDereck
     - link :
       enabled : true
       name: Google+
-      font_awesome_icon : false
+      font_awesome_icon : icon-google-plus
       url : https://plus.google.com/109660251296662910676
     - link :
       enabled : true
       name : Linkedin
-      font_awesome_icon : false
+      font_awesome_icon : icon-linkedin
       url : http://www.linkedin.com/in/dereckcurry
     - link :
       enabled : false
-      font_awesome_icon : false
+      font_awesome_icon : icon-pinterest
       name : Pinterest
       url : false
     - link :
       enabled : true
       name : Twitter
-      font_awesome_icon : false
+      font_awesome_icon : icon-twitter
       url : http://www.twitter.com/_TheDereck_
 
 github_projects :
