@@ -40,7 +40,7 @@ navbar :
     enabled : true
   tags :
     enabled : true
-  github_project :
+  github_projects :
     enabled : true
   links :
     enabled : true
