@@ -41,7 +41,7 @@
 					</p>
 					{% endif %}
 
-					{% if page.disqus_disable == false %}
+					{% if page.disqus == false or page.disqus.enabled %}
 					<br>
 					<br>
 					<div id="disqus_thread"></div>
@@ -55,7 +55,7 @@
 		{% include body/sections/footer.html %}
 	</div>
 	{% include body/sections/javascript.html %}
-	{% if page.disqus_disable == false %}
+	{% if page.disqus == false or page.disqus.enabled %}
 		{% include body/sections/javascript/post/disqus.html %}
 	{% endif %}
 </body>
