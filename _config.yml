@@ -73,6 +73,13 @@ github_projects :
     name : gh-pages-blog
     url : https://github.com/thedereck/gh-pages-blog
 
+links :
+  header : Links
+  links :
+    - link :
+      name : Baking Kookys
+      url : http://bakingkookys.com
+
 bootstrap:
   css : spacelab.bootstrap.min.css
   responsive :
