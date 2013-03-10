@@ -34,6 +34,11 @@
 	text-decoration: none;
 }
 
+.ghpb-post h2 a:hover {
+	color: #09d;
+	text-decoration: none;
+}
+
 .ghpb-nav-list a {
 	color: #666;
 }
@@ -43,7 +48,7 @@
 	text-decoration: none;
 }
 
-.ghpb-nav-list h2 a:hover {
+.ghpb-nav-list a:hover {
 	color: #09d;
 	text-decoration: none;
 }
