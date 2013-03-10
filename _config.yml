@@ -67,7 +67,7 @@ social_links :
     url : http://www.twitter.com/_TheDereck_
 
 github_projects :
-  header: My GitHub Projects
+  header : My GitHub Projects
   projects :
   - project :
     name : gh-pages-blog
