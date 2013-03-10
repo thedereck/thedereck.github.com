@@ -1,43 +1,37 @@
-{% capture sorted_dates %}
+{% capture earliest_year %}
+	{{ site.time | date: "%Y" }}
+{% endcapture %}
+
+{% capture latest_year %}
 	{{ site.time | date: "%Y" }}
 {% endcapture %}
 
 {% if site.posts.size > 0 %}
+	{% for p in site.posts %}
 
-	{% capture dates %}
-		{{ site.time | date: "%Y" }}
-		{% for p in site.posts %}
+		{% capture post_year %}
 			{{ p.date | date: "%Y" }}
-		{% endfor %}
-	{% endcapture %}
+		{% endcapture %}
 
-	{% capture sorted_dates %}
-		{{ dates | split:' ' | sort | join:' ' }}
-	{% endcapture %}
+		{% if post_year < earliest_year %}
+			earliest_year = post_year
+		{% endif %}
 
+		{% if post_year > latest_year %}
+			latest_yest = post_year
+		{% endif %}
+
+	{% endfor %}
 {% endif %}
-
-{% capture number_of_dates %}
-	{{ sorted_dates | number_of_words }}
-{% endcapture %}
 
 <div class="row ghpb">
 	<div class="span8">
 		&copy; Copyright 
-{% assign printed_year = false %}
-{% assign prev_year = '' %}
-{% for i in (1..number_of_dates) %}
-	{% capture this_year %}{{ sorted_dates | truncatewords:i | remove:'...' | split:' ' | last }}{% endcapture %}
-	{% if prev_year != this_year %}
-		{% assign prev_year = this_year %}
-		{% if printed_year %}
-			, {{ this_year }} 
-		{% else %}
-			{% assign printed_year = true %}
-			{{ this_year }}
-		{% endif %}
-	{% endif %}
-{% endfor %}
+{% if earliest_year == latest_year %}
+		{{ earliest_year }}
+{% else %}
+		{{ earliest_year }} - {{ latest_year }}
+{% endif %}
 	</div>
 	<div class="span4 text-right">
 		<small><a href="https://github.com/thedereck/gh-pages-blog">FORK GH-PAGES-BLOG ON GITHUB</a></small>
