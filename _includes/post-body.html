@@ -14,16 +14,19 @@
 {% if page.tags.size > 0 %}
 	{% assign page_tags_present = true %}
 
+	{% assign page_tag_name = null %}
 	{% capture page_tag_names %}
 		{% for page_t in page.tags %}
 			{{ page_t | replace: ' ', '___' }}
 		{% endfor %}
 	{% endcapture %}
 
+	{% assign sorted_page_tag_names = null %}
 	{% capture sorted_page_tag_names %}
 		{{ page_tag_names | split:' ' | sort | join:' ' }}
 	{% endcapture %}
 
+	{% assign number_of_page_tages = null %}
 	{% capture number_of_page_tags %}
 		{{ sorted_page_tag_names | number_of_words }}
 	{% endcapture %}
@@ -50,6 +53,7 @@
 						Tags:
 						{% assign prev_page_tag = '' %}
 						{% for page_i in (1..number_of_page_tags) %}
+							{% assign page_tag = null %}
 							{% capture page_tag %}{{ sorted_page_tag_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
 							{% if prev_page_tag != page_tag %}
 								{% assign prev_page_tag = page_tag %}
