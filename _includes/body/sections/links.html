@@ -1,0 +1,22 @@
+{% if site.links.links.size > 0 %}
+<div class="well ghpb-well-navlist">
+	<ul class="nav nav-list ghpb-nav-list">
+		<li class="nav-header ghpb-nav-header">
+			{% if site.font_awesome.enabled %}
+			<i class=""></i> 
+			{% endif %}
+			{{ site.links.header }}
+		</li>
+		{% for project in site.links.links %}
+		<li>
+			<a href="{{ link.url }}">
+				{% if site.font_awesome.enabled %}
+				<i class="icon-external-link"></i> 
+				{% endif %}
+				{{ link.name }}
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endif %}
