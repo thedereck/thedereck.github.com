@@ -24,15 +24,17 @@
 <div class="row ghpb">
 	<div class="span8">
 		&copy; Copyright 
+{% assign printed_year = false %}
 {% assign prev_year = '' %}
 {% for i in (1..number_of_dates) %}
 	{% capture this_year %}{{ sorted_dates | truncatewords:i | remove:'...' | split:' ' | last }}{% endcapture %}
 	{% if prev_year != this_year %}
 		{% assign prev_year = this_year %}
-		{% if forloop.last %}
-		{{ this_year }}
+		{% if printed_year %}
+			, {{ this_year }} 
 		{% else %}
-		{{ this_year }}, 
+			{% assign printed_year = true %}
+			{{ this_year }}
 		{% endif %}
 	{% endif %}
 {% endfor %}
