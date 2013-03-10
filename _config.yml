@@ -31,9 +31,9 @@ sections:
   github_projects :
     enabled : true
   categories :
-    enabled : false
+    enabled : true
   tags :
-    enabled : false
+    enabled : true
 
 navbar :
   categories :
