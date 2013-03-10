@@ -40,6 +40,10 @@ navbar :
     enabled : true
   tags :
     enabled : true
+  github_project :
+    enabled : true
+  links :
+    enabled : true
 
 social_links :
   follow_name : Dereck
