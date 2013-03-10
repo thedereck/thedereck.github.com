@@ -1,3 +1,13 @@
+{% assign enable_disqus = false %}
+
+{% if site.disqus.enabled and page.disqus == null %}
+	{% assign enable_disqus = true %}
+{% elsif site.disqus.enabled and page.disqus.enabled == null %}
+	{% assign enable_disqus = true %}
+{% elsif site.disqus.enabled and page.disqus.enabled %}
+	{% assign enable_disqus = true %}
+{% endif %}
+
 <body>
 	{% include body/sections/navbar.html %}
 	{% include body/site-alerts-and-notices.html %}
@@ -41,7 +51,7 @@
 					</p>
 					{% endif %}
 
-					{% if site.disqus.enabled and page.disqus == null %}
+					{% if enable_disqus %}
 					<br>
 					<br>
 					<div id="disqus_thread"></div>
@@ -55,7 +65,7 @@
 		{% include body/sections/footer.html %}
 	</div>
 	{% include body/sections/javascript.html %}
-	{% if site.disqus.enabled and page.disqus == null %}
+	{% if enable_disqus %}
 		{% include body/sections/javascript/post/disqus.html %}
 	{% endif %}
 </body>
