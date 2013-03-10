@@ -30,6 +30,8 @@ sections:
       enabled : true
   github_projects :
     enabled : true
+  links :
+    enabled : true
   categories :
     enabled : true
   tags :
