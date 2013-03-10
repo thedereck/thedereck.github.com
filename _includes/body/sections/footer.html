@@ -29,10 +29,10 @@
 	{% capture this_year %}{{ sorted_dates | truncatewords:i | remove:'...' | split:' ' | last }}{% endcapture %}
 	{% if prev_year != this_year %}
 		{% assign prev_year = this_year %}
-		{% if forloop.first %}
+		{% if forloop.last %}
 		{{ this_year }}
 		{% else %}
-		, {{ this_year }}
+		{{ this_year }}, 
 		{% endif %}
 	{% endif %}
 {% endfor %}
