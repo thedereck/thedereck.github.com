@@ -43,9 +43,9 @@ navbar :
   tags :
     enabled : true
   github_projects :
-    enabled : false
+    enabled : true
   links :
-    enabled : false
+    enabled : true
 
 social_links :
   follow_name : Dereck
