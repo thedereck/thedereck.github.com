@@ -1,4 +1,3 @@
-<body>
 {% assign enable_disqus = false %}
 
 {% if site.disqus.enabled and page.disqus == null %}
@@ -10,27 +9,28 @@
 {% endif %}
 
 
-{% assign tags_present = false %}
+{% assign page_tags_present = false %}
 
 {% if page.tags.size > 0 %}
-	{% assign tags_present = true %}
+	{% assign page_tags_present = true %}
 
-	{% capture tag_names %}
-		{% for t in page.tags %}
-			{{ t | replace: ' ', '___' }}
+	{% capture page_tag_names %}
+		{% for page_t in page.tags %}
+			{{ page_t | replace: ' ', '___' }}
 		{% endfor %}
 	{% endcapture %}
 
-	{% capture sorted_tag_names %}
-		{{ tag_names | split:' ' | sort | join:' ' }}
+	{% capture sorted_page_tag_names %}
+		{{ page_tag_names | split:' ' | sort | join:' ' }}
 	{% endcapture %}
 
-	{% capture number_of_tags %}
-		{{ sorted_tag_names | number_of_words }}
+	{% capture number_of_page_tags %}
+		{{ sorted_page_tag_names | number_of_words }}
 	{% endcapture %}
 {% endif %}
 
 
+<body>
 	{% include body/sections/navbar.html %}
 	{% include body/site-alerts-and-notices.html %}
 	<div class="container">
@@ -41,19 +41,19 @@
 					{% include body/post-alerts-and-notices.html %}
 					{{ content }}
 						
-					{% if tags_present %}
+					{% if page_tags_present %}
 					<br>
 					<p>
 						{% if site.font_awesome.enabled %}
 						<i class="icon-tags"></i> 
 						{% endif %}
 						Tags:
-						{% assign prev_tag = '' %}
-						{% for i in (1..number_of_tags) %}
-							{% capture tag %}{{ sorted_tag_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
-							{% if prev_tag != tag %}
-								{% assign prev_tag = tag %}
-						<a href="{{ site.url }}/tag.html?tag={{ tag }}"><span class="label label-inverse">{{ tag | replace: '___', ' ' }}</span></a> 
+						{% assign page_prev_tag = '' %}
+						{% for page_i in (1..number_of_page_tags) %}
+							{% capture page_tag %}{{ sorted_page_tag_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
+							{% if prev_page_tag != page_tag %}
+								{% assign page_prev_tag = page_tag %}
+						<a href="{{ site.url }}/tag.html?tag={{ page_tag }}"><span class="label label-inverse">{{ page_tag | replace: '___', ' ' }}</span></a> 
 							{% endif %}
 						{% endfor %}
 					</p>
