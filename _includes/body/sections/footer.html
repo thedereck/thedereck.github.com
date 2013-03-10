@@ -1,6 +1,33 @@
+{% capture dates %}
+	{{ site.time | date: "%Y" }}
+	{% for p in site.posts %}
+		{{ p.date | date "%Y" }}
+	{% endfor %}
+{% endcapture %}
+
+{% capture sorted_dates %}
+	{{ dates | split:' ' | sort | join:' ' }}
+{% endcapture %}
+
+{% capture number_of_dates %}
+	{{ sorted_dates | number_of_words }}
+{% endcapture %}
+
 <div class="row ghpb">
 	<div class="span8">
-		&copy; Copyright {{ site.time | date: "%Y" }}
+		&copy; Copyright 
+{% assign prev_year = '' %}
+{% for i in (1..number_of_dates) %}
+	{% capture year %}{{ sorted_dates | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
+	{% if prev_year != year %}
+		{% assign prev_year = year %}
+		{% if forloop.first %}
+		{{ year }}
+		{% else %}
+		, {{ year }}
+		{% endif %}
+	{% endif %}
+{% endfor %}
 	</div>
 	<div class="span4 text-right">
 		<small><a href="https://github.com/thedereck/gh-pages-blog">FORK GH-PAGES-BLOG ON GITHUB</a></small>
