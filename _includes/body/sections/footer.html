@@ -1,10 +1,28 @@
+{% if site.posts.size > 0 %}
+
+	{% capture dates %}
+		{% for p in site.posts %}
+			{{ p.date | date: "%Y" }}
+		{% endfor %}
+	{% endcapture %}
+
+	{% capture sorted_dates %}
+		{{ dates | split:' ' | sort | join:' ' }}
+	{% endcapture %}
+
+	{% capture number_of_dates %}
+		{{ sorted_dates | number_of_words }}
+	{% endcapture %}
+
+{% else %}
+
 	{% capture sorted_dates %}
 		{{ site.time | date: "%Y" }}
 	{% endcapture %}
 
 	{% assign number_of_dates = 1 %}
 
-
+{% endif %}
 
 <div class="row ghpb">
 	<div class="span8">
@@ -14,7 +32,11 @@
 	{% capture this_year %}{{ sorted_dates | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
 	{% if prev_year != this_year %}
 		{% assign prev_year = this_year %}
+		{% if forloop.first %}
 		{{ this_year }}
+		{% else %}
+		, {{ this_year }}
+		{% endif %}
 	{% endif %}
 {% endfor %}
 	</div>
