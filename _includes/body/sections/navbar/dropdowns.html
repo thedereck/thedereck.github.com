@@ -10,6 +10,10 @@
 	{% include body/sections/navbar/dropdowns/github-projects.html %}
 {% endif %}
 
+{% if site.navbar.social_links.enabled %}
+	{% include body/sections/navbar/dropdowns/social_links.html %}
+{% endif %}
+
 {% if site.navbar.external_links.enabled %}
 	{% include body/sections/navbar/dropdowns/external-links.html %}
 {% endif %}

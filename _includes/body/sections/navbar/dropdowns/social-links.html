@@ -1,0 +1,43 @@
+{% assign enabled_social_link = false %}
+
+{% for l in site.social_links.links %}
+	{% if l.enabled %}
+		{% assign enabled_social_link = true %}
+	{% endif %}
+{% endfor %}
+
+{% if enabled_social_link %}
+<ul class="nav pull-left">
+	<li class="dropdown">
+		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+			{% if site.font_awesome.enabled %}
+			<i class="icon-cirlce-blank"></i> 
+			{% endif %}
+
+			{% if site.social_links.follow_name %}
+			Follow {{ site.social_links.follow_name }}
+			{% else %}
+			Follow Me
+			{% endif %}
+
+			<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			{% for link in site.social_links.links %}
+				{% if link.enabled %}
+			<li>
+				<a href="{{ link.url }}">
+					{% if site.font_awesome.enabled and link.font_awesome_icon %}
+					<i class="{{ link.font_awesome_icon }}"></i> 
+					{{ link.name }}
+					{% else %} 
+					{{ link.name }}
+					{% endif %}
+				</a>
+			</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</li>
+</ul>
+{% endif %}
