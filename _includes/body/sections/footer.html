@@ -2,10 +2,6 @@
 	{{ site.time | date: "%Y" }}
 {% endcapture %}
 
-{% capture number_of_dates %}
-	{{ sorted_dates | number_of_words }}
-{% endcapture %}
-
 {% if site.posts.size > 0 %}
 
 	{% capture dates %}
@@ -20,6 +16,10 @@
 	{% endcapture %}
 
 {% endif %}
+
+{% capture number_of_dates %}
+	{{ sorted_dates | number_of_words }}
+{% endcapture %}
 
 <div class="row ghpb">
 	<div class="span8">
