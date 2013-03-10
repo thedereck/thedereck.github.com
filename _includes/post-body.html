@@ -48,11 +48,11 @@
 						<i class="icon-tags"></i> 
 						{% endif %}
 						Tags:
-						{% assign page_prev_tag = '' %}
+						{% assign prev_page_tag = '' %}
 						{% for page_i in (1..number_of_page_tags) %}
 							{% capture page_tag %}{{ sorted_page_tag_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
 							{% if prev_page_tag != page_tag %}
-								{% assign page_prev_tag = page_tag %}
+								{% assign prev_page_tag = page_tag %}
 						<a href="{{ site.url }}/tag.html?tag={{ page_tag }}"><span class="label label-inverse">{{ page_tag | replace: '___', ' ' }}</span></a> 
 							{% endif %}
 						{% endfor %}
