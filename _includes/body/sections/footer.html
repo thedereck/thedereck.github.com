@@ -18,13 +18,13 @@
 		&copy; Copyright 
 {% assign prev_year = '' %}
 {% for i in (1..number_of_dates) %}
-	{% capture year %}{{ sorted_dates | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
-	{% if prev_year != year %}
-		{% assign prev_year = year %}
+	{% capture this_year %}{{ sorted_dates | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
+	{% if prev_year != this_year %}
+		{% assign prev_year = this_year %}
 		{% if forloop.first %}
-		{{ year }}
+		{{ this_year }}
 		{% else %}
-		, {{ year }}
+		, {{ this_year }}
 		{% endif %}
 	{% endif %}
 {% endfor %}
