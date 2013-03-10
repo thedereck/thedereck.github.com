@@ -28,6 +28,8 @@ sections:
       enabled : true
     social_links :
       enabled : true
+  social_links :
+    enabled : true
   github_projects :
     enabled : true
   external_links :
@@ -46,27 +48,42 @@ navbar :
     enabled : false
   external_links :
     enabled : false
+  social_links :
+    enabled : true
 
 social_links :
   follow_name : Dereck
-  facebook :
-    enabled : false
-    url : false
-  github :
-    enabled : true
-    url : https://github.com/thedereck
-  googleplus :
-    enabled : true
-    url : https://plus.google.com/109660251296662910676
-  linkedin :
-    enabled : true
-    url : http://www.linkedin.com/in/dereckcurry
-  pinterest :
-    enabled : false
-    url : false
-  twitter :
-    enabled : true
-    url : http://www.twitter.com/_TheDereck_
+  links :
+    - link :
+      enabled : false
+      name : Facebook
+      font_awesome_icon : false
+      url : false
+    - link :
+      enabled : true
+      name : GitHub
+      font_awesome_icon : false
+      url : https://github.com/TheDereck
+    - link :
+      enabled : true
+      name: Google+
+      font_awesome_icon : false
+      url : https://plus.google.com/109660251296662910676
+    - link :
+      enabled : true
+      name : Linkedin
+      font_awesome_icon : false
+      url : http://www.linkedin.com/in/dereckcurry
+    - link :
+      enabled : false
+      font_awesome_icon : false
+      name : Pinterest
+      url : false
+    - link :
+      enabled : true
+      name : Twitter
+      font_awesome_icon : false
+      url : http://www.twitter.com/_TheDereck_
 
 github_projects :
   header : My GitHub Projects
