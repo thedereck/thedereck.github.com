@@ -19,10 +19,8 @@
 		{% if link.enabled %}
 	<li>
 		<a class="btn" href="{{ link.url }}">
-			{% if site.font_awesome.enabled %}
-				{% if link.font_awesome_icon %}
+			{% if site.font_awesome.enabled and link.font_awesome_icon %}
 			<i class="{{ link.font_awesome_icon }}"></i>
-				{% endif %}
 			{% else %}
 			{{ link.name }}
 			{% endif %}
