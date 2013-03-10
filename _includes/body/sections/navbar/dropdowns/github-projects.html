@@ -12,6 +12,9 @@
 			{% for project in site.github_projects.projects %}
 			<li>
 				<a href="{{ project.url }}">
+					{% if site.font_awesome.enabled %}
+					<i class="icon-github"></i> 
+					{% endif %}
 					{{ project.name }}
 				</a>
 			</li>

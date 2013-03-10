@@ -12,6 +12,9 @@
 			{% for link in site.links.links %}
 			<li>
 				<a href="{{ link.url }}">
+					{% if site.font_awesome.enabled %}
+					<i class="icon-external-link"></i> 
+					{% endif %}
 					{{ link.name }}
 				</a>
 			</li>
