@@ -1,0 +1,35 @@
+{% assign enabled_social_link = false %}
+
+{% for l in site.social_links.links %}
+	{% if l.enabled %}
+		{% assign enabled_social_link = true %}
+	{% endif %}
+{% endfor %}
+
+{% if enabled_social_link %}
+<div class="well ghpb-well-navlist">
+	<ul class="nav nav-list ghpb-nav-list">
+		<li class="nav-header ghpb-nav-header">
+			{% if site.font_awesome.enabled %}
+			<i class="icon-circle-blank"></i> 
+			{% endif %}
+
+			{% if site.social_links.follow_name %}
+			Follow {{ site.social_links.follow_name }}
+			{% else %}
+			Follow Me
+			{% endif %}
+		</li>
+		{% for link in site.social_links.links %}
+		<li>
+			<a href="{{ link.url }}">
+				{% if site.font_awesome.enabled and link.font_awesome_icon %}
+				<i class="{{ link.font_awesome_icon }}"></i> 
+				{% endif %}
+				{{ link.name }}
+			</a>
+		</li>
+		{% endfor %}
+	</ul>
+</div>
+{% endif %}

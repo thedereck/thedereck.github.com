@@ -6,12 +6,12 @@
 	{% include body/sections/navbar/dropdowns/tags.html %}
 {% endif %}
 
-{% if site.navbar.github_projects.enabled %}
-	{% include body/sections/navbar/dropdowns/github-projects.html %}
-{% endif %}
-
 {% if site.navbar.social_links.enabled %}
 	{% include body/sections/navbar/dropdowns/social-links.html %}
+{% endif %}
+
+{% if site.navbar.github_projects.enabled %}
+	{% include body/sections/navbar/dropdowns/github-projects.html %}
 {% endif %}
 
 {% if site.navbar.external_links.enabled %}

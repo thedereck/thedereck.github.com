@@ -29,10 +29,8 @@
 				<a href="{{ link.url }}">
 					{% if site.font_awesome.enabled and link.font_awesome_icon %}
 					<i class="{{ link.font_awesome_icon }}"></i> 
-					{{ link.name }}
-					{% else %} 
-					{{ link.name }}
 					{% endif %}
+					{{ link.name }}
 				</a>
 			</li>
 				{% endif %}
