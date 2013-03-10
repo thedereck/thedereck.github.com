@@ -1,18 +1,23 @@
-{% if site.categories.size > 0 %}
+{% if site.navbar.categories.enabled %}
 
-{% capture category_names %}
-	{% for c in site.categories %}
-		{{ c[0] | replace: ' ', '___' }}
-	{% endfor %}
-{% endcapture %}
+	{% if site.categories.size > 0 %}
 
-{% capture sorted_category_names %}
-	{{ category_names | split:' ' | sort | join:' ' }}
-{% endcapture %}
+	{% assign category_names = null %}
+	{% capture category_names %}
+		{% for c in site.categories %}
+			{{ c[0] | replace: ' ', '___' }}
+		{% endfor %}
+	{% endcapture %}
 
-{% capture number_of_categories %}
-	{{ sorted_category_names | number_of_words }}
-{% endcapture %}
+	{% assign sorted_category_names = null %}
+	{% capture sorted_category_names %}
+		{{ category_names | split:' ' | sort | join:' ' }}
+	{% endcapture %}
+
+	{% assign number_of_categories = null %}
+	{% capture number_of_categories %}
+		{{ sorted_category_names | number_of_words }}
+	{% endcapture %}
 
 <ul class="nav pull-left">
 	<li class="dropdown">
@@ -24,11 +29,12 @@
 			<b class="caret"></b>
 		</a>
 		<ul class="dropdown-menu">
-{% assign prev_category = '' %}
-{% for i in (1..number_of_categories) %}
-	{% capture category %}{{ sorted_category_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
-	{% if prev_category != category %}
-		{% assign prev_category = category %}
+			{% assign prev_category = '' %}
+			{% for i in (1..number_of_categories) %}
+				{% assign category = null %}
+				{% capture category %}{{ sorted_category_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
+				{% if prev_category != category %}
+					{% assign prev_category = category %}
 			<li>
 				<a href="{{ site.url }}/category.html?category={{ category }}">
 					{% if site.font_awesome.enabled %}
@@ -37,8 +43,8 @@
 					{{ category | replace: '___', ' ' | capitalize }}
 				</a>
 			</li>
-	{% endif %}
-{% endfor %}
+				{% endif %}
+			{% endfor %}
 		</ul>
 	</li>
 </ul>
