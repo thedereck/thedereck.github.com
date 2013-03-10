@@ -33,9 +33,9 @@ sections:
   links :
     enabled : true
   categories :
-    enabled : true
+    enabled : false
   tags :
-    enabled : true
+    enabled : false
 
 navbar :
   categories :
@@ -43,9 +43,9 @@ navbar :
   tags :
     enabled : true
   github_projects :
-    enabled : true
+    enabled : false
   links :
-    enabled : true
+    enabled : false
 
 social_links :
   follow_name : Dereck
