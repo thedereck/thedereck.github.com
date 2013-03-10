@@ -7,6 +7,10 @@
 	{% include body/sections/github-projects.html %}
 	{% endif %}
 
+	{% if site.sections.links.enabled %}
+	{% include body/sections/links.html %}
+	{% endif %}
+
 	{% if site.sections.categories.enabled %}
 	{% include body/sections/categories.html %}
 	{% endif %}
