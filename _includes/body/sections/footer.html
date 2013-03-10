@@ -27,9 +27,11 @@
 <div class="row ghpb">
 	<div class="span8">
 		&copy; Copyright 
-{% assign prev_year = '' %}
+{% capture prev_year %}
+		{{ site.time | date: "%Y" }}
+{% endcapture %}
 {% for i in (1..number_of_dates) %}
-	{% capture this_year %}{{ sorted_dates | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
+	{% capture this_year %}{{ sorted_dates | truncatewords:i | remove:'...' | split:' ' | last }}{% endcapture %}
 	{% if prev_year != this_year %}
 		{% assign prev_year = this_year %}
 		{% if forloop.first %}
