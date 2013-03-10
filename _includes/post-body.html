@@ -8,6 +8,28 @@
 	{% assign enable_disqus = true %}
 {% endif %}
 
+
+{% assign tags_present = false %}
+
+{% if page.tags.size > 0 %}
+	{% assign tags_present = true %}
+
+	{% capture tag_names %}
+		{% for t in page.tags %}
+			{{ t | replace: ' ', '___' }}
+		{% endfor %}
+	{% endcapture %}
+
+	{% capture sorted_tag_names %}
+		{{ tag_names | split:' ' | sort | join:' ' }}
+	{% endcapture %}
+
+	{% capture number_of_tags %}
+		{{ sorted_tag_names | number_of_words }}
+	{% endcapture %}
+{% endif %}
+
+
 <body>
 	{% include body/sections/navbar.html %}
 	{% include body/site-alerts-and-notices.html %}
@@ -19,21 +41,7 @@
 					{% include body/post-alerts-and-notices.html %}
 					{{ content }}
 						
-					{% if page.tags.size > 0 %}
-						{% capture tag_names %}
-							{% for t in page.tags %}
-								{{ t | replace: ' ', '___' }}
-							{% endfor %}
-						{% endcapture %}
-
-						{% capture sorted_tag_names %}
-							{{ tag_names | split:' ' | sort | join:' ' }}
-						{% endcapture %}
-
-						{% capture number_of_tags %}
-							{{ sorted_tag_names | number_of_words }}
-						{% endcapture %}
-
+					{% if tags.present %}
 					<br>
 					<p>
 						{% if site.font_awesome.enabled %}
