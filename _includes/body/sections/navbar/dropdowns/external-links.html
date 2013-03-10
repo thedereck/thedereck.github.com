@@ -5,11 +5,11 @@
 			{% if site.font_awesome.enabled %}
 			<i class="icon-external-link"></i> 
 			{% endif %}
-			{{ site.links.header }}
+			{{ site.external_links.header }}
 			<b class="caret"></b>
 		</a>
 		<ul class="dropdown-menu">
-			{% for link in site.links.links %}
+			{% for link in site.external_links.links %}
 			<li>
 				<a href="{{ link.url }}">
 					{% if site.font_awesome.enabled %}

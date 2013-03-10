@@ -30,7 +30,7 @@ sections:
       enabled : true
   github_projects :
     enabled : true
-  links :
+  external_links :
     enabled : true
   categories :
     enabled : false
@@ -43,9 +43,9 @@ navbar :
   tags :
     enabled : true
   github_projects :
-    enabled : true
-  links :
-    enabled : true
+    enabled : false
+  external_links :
+    enabled : false
 
 social_links :
   follow_name : Dereck
@@ -75,7 +75,7 @@ github_projects :
     name : gh-pages-blog
     url : https://github.com/thedereck/gh-pages-blog
 
-links :
+external_links :
   header : Links
   links :
     - link :

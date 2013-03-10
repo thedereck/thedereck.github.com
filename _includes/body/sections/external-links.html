@@ -1,13 +1,13 @@
-{% if site.links.links.size > 0 %}
+{% if site.external_links.links.size > 0 %}
 <div class="well ghpb-well-navlist">
 	<ul class="nav nav-list ghpb-nav-list">
 		<li class="nav-header ghpb-nav-header">
 			{% if site.font_awesome.enabled %}
 			<i class="icon-external-link"></i> 
 			{% endif %}
-			{{ site.links.header }}
+			{{ site.external_links.header }}
 		</li>
-		{% for link in site.links.links %}
+		{% for link in site.external_links.links %}
 		<li>
 			<a href="{{ link.url }}">
 				{% if site.font_awesome.enabled %}
