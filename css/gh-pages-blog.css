@@ -2,15 +2,15 @@
   background-color: #fff; 
 }
 
-.ghpb-well-navlist {
-  padding: 8px 0;
-}
-
-
 .ghpb-well-outline blockquote {
   border-color: #ddd;
   border-color:rgba(0,0,0,0.15)
 }
+
+.ghpb-well-navlist {
+  padding: 8px 0;
+}
+
 
 .ghpb-well-navlist blockquote {
   border-color: #ddd;
@@ -39,6 +39,11 @@
 }
 
 .ghpb-nav-list a:hover {
+	color: #09d;
+	text-decoration: none;
+}
+
+.ghpb-nav-list h2 a:hover {
 	color: #09d;
 	text-decoration: none;
 }
