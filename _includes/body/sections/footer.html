@@ -14,11 +14,11 @@
 		{% endcapture %}
 
 		{% if post_year < earliest_year %}
-			earliest_year = post_year
+			{% assign earliest_year = post_year %}
 		{% endif %}
 
 		{% if post_year > latest_year %}
-			latest_yest = post_year
+			{% assign latest_yest = post_year %}
 		{% endif %}
 
 	{% endfor %}
