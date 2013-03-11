@@ -9,13 +9,13 @@
 				<b class="caret"></b>
 			</a>
 			<ul class="dropdown-menu">
-				{% for navbar_link in site.external_links.links %}
+				{% for navbar_external_link in site.external_links.links %}
 					<li>
-						<a href="{{ navbar_link.url }}">
+						<a href="{{ navbar_external_link.url }}">
 							{% if site.font_awesome.enabled %}
 								<i class="icon-external-link"></i> 
 							{% endif %}
-							{{ navbar_link.name }}
+							{{ navbar_external_link.name }}
 						</a>
 					</li>
 				{% endfor %}
