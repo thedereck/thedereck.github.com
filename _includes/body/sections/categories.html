@@ -1,6 +1,6 @@
 {% if site.sections.categories.enabled and site.categories.size > 0 %}
 
-	{% assign section_category_name = null %}
+	{% assign section_category_names = null %}
 	{% capture section_category_names %}
 		{% for section_c in site.categories %}
 			{{ section_c[0] | replace: ' ', '___' }}
