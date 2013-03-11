@@ -3,10 +3,7 @@
 	{{ site.time | date: "%Y" }}
 {% endcapture %}
 
-{% assign footer_latest_year %}
-{% capture footer_latest_year %}
-	{{ site.time | date: "%Y" }}
-{% endcapture %}
+{% assign footer_latest_year = footer_earliest_year %}
 
 {% if site.posts.size > 0 %}
 	{% for footer_p in site.posts %}
