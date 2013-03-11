@@ -1,18 +1,21 @@
-{% if site.tags.size > 0 %}
+{% if site.navbar.tags.enabled and site.tags.size > 0 %}
 
-{% capture tag_names %}
-	{% for t in site.tags %}
-		{{ t[0] | replace: ' ', '___' }}
-	{% endfor %}
-{% endcapture %}
+	{% assign tag_name = null %}
+	{% capture tag_names %}
+		{% for t in site.tags %}
+			{{ t[0] | replace: ' ', '___' }}
+		{% endfor %}
+	{% endcapture %}
 
-{% capture sorted_tag_names %}
-	{{ tag_names | split:' ' | sort | join:' ' }}
-{% endcapture %}
+	{% assign sorted_tag_names = null %}
+	{% capture sorted_tag_names %}
+		{{ tag_names | split:' ' | sort | join:' ' }}
+	{% endcapture %}
 
-{% capture number_of_tags %}
-	{{ sorted_tag_names | number_of_words }}
-{% endcapture %}
+	{% assign number_of_tags = null %}
+	{% capture number_of_tags %}
+		{{ sorted_tag_names | number_of_words }}
+	{% endcapture %}
 
 <ul class="nav pull-left">
 	<li class="dropdown">
