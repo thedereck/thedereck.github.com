@@ -1,43 +1,50 @@
 {% if site.categories.size > 0 %}
 
-{% capture category_names %}
-	{% for c in site.categories %}
-		{{ c[0] | replace: ' ', '___' }}
-	{% endfor %}
-{% endcapture %}
+	{% assign category_name = null %}
+	{% capture category_names %}
+		{% for c in site.categories %}
+			{{ c[0] | replace: ' ', '___' }}
+		{% endfor %}
+	{% endcapture %}
 
-{% capture sorted_category_names %}
-	{{ category_names | split:' ' | sort | join:' ' }}
-{% endcapture %}
+	{% assign sorted_category_names = null %}
+	{% capture sorted_category_names %}
+		{{ category_names | split:' ' | sort | join:' ' }}
+	{% endcapture %}
 
-{% capture number_of_categories %}
-	{{ sorted_category_names | number_of_words }}
-{% endcapture %}
+	{% assign number_of_categories = null %}
+	{% capture number_of_categories %}
+		{{ sorted_category_names | number_of_words }}
+	{% endcapture %}
 
-<div class="well ghpb-well-navlist">
-	<ul class="nav nav-list ghpb-nav-list">
-		<li class="nav-header ghpb-nav-header">
-			{% if site.font_awesome.enabled %}
-			<i class="icon-folder-close"></i> 
-			{% endif %}
-			Categories
-		</li>
-{% assign prev_category = '' %}
-{% for i in (1..number_of_categories) %}
-	{% capture category %}{{ sorted_category_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
-	{% if prev_category != category %}
-		{% assign prev_category = category %}
-		<li>
-			<a href="{{ site.url }}/category.html?category={{ category }}">
+	<div class="well ghpb-well-navlist">
+		<ul class="nav nav-list ghpb-nav-list">
+			<li class="nav-header ghpb-nav-header">
 				{% if site.font_awesome.enabled %}
-				<i class="icon-folder-open"></i> 
+					<i class="icon-folder-close"></i> 
 				{% endif %}
-				{{ category | replace: '___', ' ' | capitalize }}
-			</a>
-		</li>
-	{% endif %}
-{% endfor %}
-	</ul>
-</div>
+				Categories
+			</li>
+			{% assign prev_category = '' %}
+			{% for i in (1..number_of_categories) %}
 
+				{% assign category = null %}
+				{% capture category %}
+					{{ sorted_category_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}
+				{% endcapture %}
+
+				{% if prev_category != category %}
+					{% assign prev_category = category %}
+					<li>
+						<a href="{{ site.url }}/category.html?category={{ category }}">
+							{% if site.font_awesome.enabled %}
+								<i class="icon-folder-open"></i> 
+							{% endif %}
+							{{ category | replace: '___', ' ' | capitalize }}
+						</a>
+					</li>
+				{% endif %}
+			{% endfor %}
+		</ul>
+	</div>
 {% endif %}

@@ -1,7 +1,7 @@
 <ul class="nav pull-right">
-{% for p in site.pages %}
-	{% unless p.exclude %}
-	<li><a href="{{ p.url }}">{{ p.title }}</a></li>
-	{% endunless %}
-{% endfor %}
+	{% for pages_p in site.pages %}
+		{% unless pages_p.exclude %}
+			<li><a href="{{ pages_p.url }}">{{ pages_p.title }}</a></li>
+		{% endunless %}
+	{% endfor %}
 </ul>
