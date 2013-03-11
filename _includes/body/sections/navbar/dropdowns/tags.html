@@ -1,20 +1,20 @@
 {% if site.navbar.tags.enabled and site.tags.size > 0 %}
 
-	{% assign tag_name = null %}
-	{% capture tag_names %}
+	{% assign navbar_tag_name = null %}
+	{% capture navbar_tag_names %}
 		{% for t in site.tags %}
 			{{ t[0] | replace: ' ', '___' }}
 		{% endfor %}
 	{% endcapture %}
 
-	{% assign sorted_tag_names = null %}
-	{% capture sorted_tag_names %}
-		{{ tag_names | split:' ' | sort | join:' ' }}
+	{% assign navbar_sorted_tag_names = null %}
+	{% capture navbar_sorted_tag_names %}
+		{{ navbar_tag_names | split:' ' | sort | join:' ' }}
 	{% endcapture %}
 
-	{% assign number_of_tags = null %}
-	{% capture number_of_tags %}
-		{{ sorted_tag_names | number_of_words }}
+	{% assign navbar_number_of_tags = null %}
+	{% capture navbar_number_of_tags %}
+		{{ navbar_sorted_tag_names | number_of_words }}
 	{% endcapture %}
 
 	<ul class="nav pull-left">
@@ -27,22 +27,22 @@
 				<b class="caret"></b>
 			</a>
 			<ul class="dropdown-menu">
-				{% assign prev_tag = '' %}
-				{% for i in (1..number_of_tags) %}
+				{% assign navbar_prev_tag = '' %}
+				{% for navbar_i in (1..navbar_number_of_tags) %}
 
-					{% assign tag = null %}
-					{% capture tag %}
-						{{ sorted_tag_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}
+					{% assign navbar_tag = null %}
+					{% capture navbar_tag %}
+						{{ navbar_sorted_tag_names | truncatewords:navbar_i | remove:'...' | split:' ' | last | downcase }}
 					{% endcapture %}
 
-					{% if prev_tag != tag %}
-						{% assign prev_tag = tag %}
+					{% if navbar_prev_tag != tag %}
+						{% assign navbar_prev_tag = tag %}
 						<li>
-							<a href="{{ site.url }}/tag.html?tag={{ tag }}">
+							<a href="{{ site.url }}/tag.html?tag={{ navbar_tag }}">
 								{% if site.font_awesome.enabled %}
 									<i class="icon-tag"></i> 
 								{% endif %}
-								{{ tag | replace: '___', ' ' }}
+								{{ navbar_tag | replace: '___', ' ' }}
 							</a>
 						</li>
 					{% endif %}

@@ -9,13 +9,13 @@
 				<b class="caret"></b>
 			</a>
 			<ul class="dropdown-menu">
-				{% for project in site.github_projects.projects %}
+				{% for navbar_project in site.github_projects.projects %}
 					<li>
-						<a href="{{ project.url }}">
+						<a href="{{ navbar_project.url }}">
 							{% if site.font_awesome.enabled %}
 								<i class="icon-github"></i> 
 							{% endif %}
-							{{ project.name }}
+							{{ navbar_project.name }}
 						</a>
 					</li>
 				{% endfor %}
