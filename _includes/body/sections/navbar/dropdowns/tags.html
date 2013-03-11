@@ -17,32 +17,37 @@
 		{{ sorted_tag_names | number_of_words }}
 	{% endcapture %}
 
-<ul class="nav pull-left">
-	<li class="dropdown">
-		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-			{% if site.font_awesome.enabled %}
-			<i class="icon-tags"></i> 
-			{% endif %}
-			Tags
-			<b class="caret"></b>
-		</a>
-		<ul class="dropdown-menu">
-{% assign prev_tag = '' %}
-{% for i in (1..number_of_tags) %}
-	{% capture tag %}{{ sorted_tag_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
-		{% if prev_tag != tag %}
-			{% assign prev_tag = tag %}
-			<li>
-				<a href="{{ site.url }}/tag.html?tag={{ tag }}">
-					{% if site.font_awesome.enabled %}
-					<i class="icon-tag"></i> 
+	<ul class="nav pull-left">
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				{% if site.font_awesome.enabled %}
+					<i class="icon-tags"></i> 
+				{% endif %}
+				Tags
+				<b class="caret"></b>
+			</a>
+			<ul class="dropdown-menu">
+				{% assign prev_tag = '' %}
+				{% for i in (1..number_of_tags) %}
+
+					{% assign tag = null %}
+					{% capture tag %}
+						{{ sorted_tag_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}
+					{% endcapture %}
+
+					{% if prev_tag != tag %}
+						{% assign prev_tag = tag %}
+						<li>
+							<a href="{{ site.url }}/tag.html?tag={{ tag }}">
+								{% if site.font_awesome.enabled %}
+									<i class="icon-tag"></i> 
+								{% endif %}
+								{{ tag | replace: '___', ' ' }}
+							</a>
+						</li>
 					{% endif %}
-					{{ tag | replace: '___', ' ' }}
-				</a>
-			</li>
-		{% endif %}
-{% endfor %}
-		</ul>
-	</li>
-</ul>
+				{% endfor %}
+			</ul>
+		</li>
+	</ul>
 {% endif %}
