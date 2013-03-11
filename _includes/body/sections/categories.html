@@ -1,20 +1,20 @@
-{% if site.categories.size > 0 %}
+{% if site.sections.categories.enabled and site.categories.size > 0 %}
 
-	{% assign category_name = null %}
-	{% capture category_names %}
-		{% for c in site.categories %}
-			{{ c[0] | replace: ' ', '___' }}
+	{% assign section_category_name = null %}
+	{% capture section_category_names %}
+		{% for section_c in site.categories %}
+			{{ section_c[0] | replace: ' ', '___' }}
 		{% endfor %}
 	{% endcapture %}
 
-	{% assign sorted_category_names = null %}
-	{% capture sorted_category_names %}
-		{{ category_names | split:' ' | sort | join:' ' }}
+	{% assign section_sorted_category_names = null %}
+	{% capture section_sorted_category_names %}
+		{{ section_category_names | split:' ' | sort | join:' ' }}
 	{% endcapture %}
 
-	{% assign number_of_categories = null %}
-	{% capture number_of_categories %}
-		{{ sorted_category_names | number_of_words }}
+	{% assign section_number_of_categories = null %}
+	{% capture section_number_of_categories %}
+		{{ section_sorted_category_names | number_of_words }}
 	{% endcapture %}
 
 	<div class="well ghpb-well-navlist">
@@ -25,22 +25,22 @@
 				{% endif %}
 				Categories
 			</li>
-			{% assign prev_category = '' %}
-			{% for i in (1..number_of_categories) %}
+			{% assign section_prev_category = '' %}
+			{% for section_i in (1..section_number_of_categories) %}
 
-				{% assign category = null %}
-				{% capture category %}
-					{{ sorted_category_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}
+				{% assign section_category = null %}
+				{% capture section_category %}
+					{{ section_sorted_category_names | truncatewords:section_i | remove:'...' | split:' ' | last | downcase }}
 				{% endcapture %}
 
-				{% if prev_category != category %}
-					{% assign prev_category = category %}
+				{% if section_prev_category != section_category %}
+					{% assign section_prev_category = section_category %}
 					<li>
-						<a href="{{ site.url }}/category.html?category={{ category }}">
+						<a href="{{ site.url }}/category.html?category={{ section_category }}">
 							{% if site.font_awesome.enabled %}
 								<i class="icon-folder-open"></i> 
 							{% endif %}
-							{{ category | replace: '___', ' ' | capitalize }}
+							{{ section_category | replace: '___', ' ' | capitalize }}
 						</a>
 					</li>
 				{% endif %}

@@ -1,24 +1,27 @@
-{% capture earliest_year %}
+{% assign footer_earliest_year = null %}
+{% capture footer_earliest_year %}
 	{{ site.time | date: "%Y" }}
 {% endcapture %}
 
-{% capture latest_year %}
+{% assign footer_latest_year %}
+{% capture footer_latest_year %}
 	{{ site.time | date: "%Y" }}
 {% endcapture %}
 
 {% if site.posts.size > 0 %}
-	{% for p in site.posts %}
+	{% for footer_p in site.posts %}
 
-		{% capture post_year %}
-			{{ p.date | date: "%Y" }}
+		{% assign footer_post_year = null %}
+		{% capture footer_post_year %}
+			{{ footer_p.date | date: "%Y" }}
 		{% endcapture %}
 
-		{% if post_year < earliest_year %}
-			{% assign earliest_year = post_year %}
+		{% if footer_post_year < footer_earliest_year %}
+			{% assign footer_earliest_year = footer_post_year %}
 		{% endif %}
 
-		{% if post_year > latest_year %}
-			{% assign latest_yest = post_year %}
+		{% if footer_post_year > footer_latest_year %}
+			{% assign footer_latest_yest = footer_post_year %}
 		{% endif %}
 
 	{% endfor %}
@@ -27,10 +30,10 @@
 <div class="row ghpb">
 	<div class="span8">
 		&copy; Copyright 
-{% if earliest_year == latest_year %}
-		{{ earliest_year }}
+{% if footer_earliest_year == footer_latest_year %}
+		{{ footer_earliest_year }}
 {% else %}
-		{{ earliest_year }}-{{ latest_year }}
+		{{ footer_earliest_year }}-{{ footer_latest_year }}
 {% endif %}
 	</div>
 	<div class="span4 text-right">

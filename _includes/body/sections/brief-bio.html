@@ -1,14 +1,15 @@
-<div class="well">
-	<div class="thumbnail">
-	{% if site.sections.brief_bio.image.enabled %}
-		<img data-src="holder.js/200x200" alt="" src="{{ site.sections.brief_bio.image.url }}">
-	{% endif %}
-	{% if site.sections.brief_bio.content.enabled %}
-		<div class="caption">
-			{% include content/brief-bio %}
+{% if site.sections.brief_bio.enabled %}
+	<div class="well">
+		<div class="thumbnail">
+			{% if site.sections.brief_bio.image.enabled %}
+				<img data-src="holder.js/200x200" alt="" src="{{ site.sections.brief_bio.image.url }}">
+			{% endif %}
+			{% if site.sections.brief_bio.content.enabled %}
+				<div class="caption">
+					{% include content/brief-bio %}
+				</div>
+			{% endif %}
 		</div>
-	{% endif %}
+		{% include body/sections/brief_bio/social-links.html %}
 	</div>
-
-	{% include body/sections/brief_bio/social-links.html %}
-</div>
+{% endif %}

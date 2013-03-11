@@ -1,37 +1,39 @@
-{% assign enabled_social_link = false %}
+{% if site.sections.social_links.enabled %}
+	{% assign section_enabled_social_link = false %}
 
-{% for l in site.social_links.links %}
-	{% if l.enabled %}
-		{% assign enabled_social_link = true %}
+	{% for section_social_l in site.social_links.links %}
+		{% if section_social_l.enabled %}
+			{% assign section_enabled_social_link = true %}
+		{% endif %}
+	{% endfor %}
+
+	{% if section_enabled_social_link %}
+		<div class="well ghpb-well-navlist">
+			<ul class="nav nav-list ghpb-nav-list">
+				<li class="nav-header ghpb-nav-header">
+					{% if site.font_awesome.enabled %}
+						<i class="icon-circle-blank"></i> 
+					{% endif %}
+
+					{% if site.social_links.follow_name %}
+						Follow {{ site.social_links.follow_name }}
+					{% else %}
+						Follow Me
+					{% endif %}
+				</li>
+				{% for section_social_link in site.social_links.links %}
+					{% if section_social_link.enabled %}
+						<li>
+							<a href="{{ link.url }}">
+								{% if site.font_awesome.enabled and link.font_awesome_icon %}
+									<i class="{{ link.font_awesome_icon }}"></i> 
+								{% endif %}
+								{{ section_social_link.name }}
+							</a>
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		</div>
 	{% endif %}
-{% endfor %}
-
-{% if enabled_social_link %}
-<div class="well ghpb-well-navlist">
-	<ul class="nav nav-list ghpb-nav-list">
-		<li class="nav-header ghpb-nav-header">
-			{% if site.font_awesome.enabled %}
-			<i class="icon-circle-blank"></i> 
-			{% endif %}
-
-			{% if site.social_links.follow_name %}
-			Follow {{ site.social_links.follow_name }}
-			{% else %}
-			Follow Me
-			{% endif %}
-		</li>
-		{% for link in site.social_links.links %}
-			{% if link.enabled %}
-		<li>
-			<a href="{{ link.url }}">
-				{% if site.font_awesome.enabled and link.font_awesome_icon %}
-				<i class="{{ link.font_awesome_icon }}"></i> 
-				{% endif %}
-				{{ link.name }}
-			</a>
-		</li>
-			{% endif %}
-		{% endfor %}
-	</ul>
-</div>
 {% endif %}

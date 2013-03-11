@@ -1,11 +1,9 @@
 {% if site.jquery.enabled %}
-<script src="/js/{{ site.jquery.src }}"></script>
+	<script src="/js/{{ site.jquery.src }}"></script>
 {% endif %}
 
 {% if site.bootstrap.js.enabled %}
-<script src="/js/{{ site.bootstrap.js.src }}"></script>
+	<script src="/js/{{ site.bootstrap.js.src }}"></script>
 {% endif %}
 
-{% if site.analytics.enabled and site.analytics.google_analytics.enabled %}
-	{% include body/sections/javascript/google-analytics.html %}
-{% endif %}
+{% include body/sections/javascript/google-analytics.html %}
