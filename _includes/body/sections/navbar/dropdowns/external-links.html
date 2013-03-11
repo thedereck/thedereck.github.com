@@ -1,25 +1,25 @@
 {% if site.links.links.size > 0 %}
-<ul class="nav pull-left">
-	<li class="dropdown">
-		<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-			{% if site.font_awesome.enabled %}
-			<i class="icon-external-link"></i> 
-			{% endif %}
-			{{ site.external_links.header }}
-			<b class="caret"></b>
-		</a>
-		<ul class="dropdown-menu">
-			{% for link in site.external_links.links %}
-			<li>
-				<a href="{{ link.url }}">
-					{% if site.font_awesome.enabled %}
+	<ul class="nav pull-left">
+		<li class="dropdown">
+			<a href="#" class="dropdown-toggle" data-toggle="dropdown">
+				{% if site.font_awesome.enabled %}
 					<i class="icon-external-link"></i> 
-					{% endif %}
-					{{ link.name }}
-				</a>
-			</li>
-			{% endfor %}
-		</ul>
-	</li>
-</ul>
+				{% endif %}
+				{{ site.external_links.header }}
+				<b class="caret"></b>
+			</a>
+			<ul class="dropdown-menu">
+				{% for link in site.external_links.links %}
+					<li>
+						<a href="{{ link.url }}">
+							{% if site.font_awesome.enabled %}
+								<i class="icon-external-link"></i> 
+							{% endif %}
+							{{ link.name }}
+						</a>
+					</li>
+				{% endfor %}
+			</ul>
+		</li>
+	</ul>
 {% endif %}
