@@ -15,7 +15,7 @@
 	{% for javascript_tag_i in (1..javascript_number_of_tags) %}
 
 		{% assign javascript_tag = null %}
-		{% capture javascript_tag %}{{ javascript_sorted_tag_names | truncatewords:javascript_tag_i | remove:'...' | split:' ' | last | remove:' ' | downcase }}{% endcapture %}
+		{% capture javascript_tag %}{{ javascript_sorted_tag_names | truncatewords:javascript_tag_i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
 
 		{% if javascript_prev_tag != javascript_tag %}
 			{% assign javascript_prev_tag = javascript_tag %}
