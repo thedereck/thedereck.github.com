@@ -1,29 +1,31 @@
 {% assign javascript_tag_page = null %}
 {% capture javascript_tag_page %}
-	{% for javascript_post in site.posts %}
-		{% if forloop.first %}
-			{
-		{% else %}
-			, {
-		{% endif %}
-				title : {{ javascript_post.title }} ,
-				subtitle : {{ javascript_post.subtitle }} ,
-				description : {{ javascript_post.description }} ,
-				url : {site.url}{{ javascript_post.url }} ,
-				date : {{ javascript_post.date }} ,
-				category : {{ javascript_post.category | replace: ' ', '___' }},
-				tags :
-					[
-						{% for javascript_post_tag in javascript_post.tags %}
-							{% if forloop.first %}
-								{{ javascript_post_tag | replace: ' ', '___' }}
-							{% else %}
-								, {{ javascript_post_tag | replace: ' ', '___' }}
-							{% endif %}
-						{% endfor %}
-					]
-			}
-	{% endfor %}
+	var posts = [
+		{% for javascript_post in site.posts %}
+			{% if forloop.first %}
+				{
+			{% else %}
+				, {
+			{% endif %}
+					title : {{ javascript_post.title }} ,
+					subtitle : {{ javascript_post.subtitle }} ,
+					description : {{ javascript_post.description }} ,
+					url : {site.url}{{ javascript_post.url }} ,
+					date : {{ javascript_post.date }} ,
+					category : {{ javascript_post.category | replace: ' ', '___' }},
+					tags :
+						[
+							{% for javascript_post_tag in javascript_post.tags %}
+								{% if forloop.first %}
+									{{ javascript_post_tag | replace: ' ', '___' }}
+								{% else %}
+									, {{ javascript_post_tag | replace: ' ', '___' }}
+								{% endif %}
+							{% endfor %}
+						]
+				}
+		{% endfor %}
+	]
 {% endcapture %}
 
 {{ javascript_tag_page | strip_newlines }}
