@@ -10,7 +10,7 @@
 			category : {{ javascript_post.category | replace: ' ', '___' }},
 			tags :
 				[
-					{% for javascript_post_tags in javascript_post-.tags %}
+					{% for javascript_post_tag in javascript_post.tags %}
 						{% if forloop.first %}
 							{{ javascript_post_tag | replace: ' ', '___' }}
 						{% esle %}
