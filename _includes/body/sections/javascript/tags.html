@@ -1,7 +1,7 @@
 {% if site.tags.size > 0 %}
 
 	{% assign javascript_tag_name = null %}
-	{% capture javascript_tag_names %}{% for javascript_t in site.tags %}{{ javascript_t[0] | replace: ' ', '___' }}{% endfor %}{% endcapture %}
+	{% capture javascript_tag_names %}{% for javascript_t in site.tags %}{{ javascript_t[0] | replace: ' ', '___' }} {% endfor %}{% endcapture %}
 
 	{% assign javascript_sorted_tag_names = null %}
 	{% capture javascript_sorted_tag_names %}{{ javascript_tag_names | split:' ' | sort | join:' ' }}{% endcapture %}
