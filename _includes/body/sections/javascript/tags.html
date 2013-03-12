@@ -1,5 +1,5 @@
-{% assign javascript_tag_name = null %}
-{% capture javascript_tag_name %}
+{% assign javascript_tag_page = null %}
+{% capture javascript_tag_page %}
 	{% if site.tags.size > 0 %}
 		{% assign javascript_tag_name = null %}
 		{% capture javascript_tag_names %}{% for javascript_t in site.tags %}{{ javascript_t[0] | replace: ' ', '___' }} {% endfor %}{% endcapture %}
