@@ -19,14 +19,14 @@
 
 		{% if javascript_prev_tag != javascript_tag %}
 			{% assign javascript_prev_tag = javascript_tag %}
-				{% if javascript_first_tag == false %}
-					, { tag : {{ javascript_tag }} }
-				{% else %}
-					{% assign javascript_first_tag = false %}
-					{ tag : {{ javascript_tag }} }
-				{% endif %}
-			{% endfor %}
+			{% if javascript_first_tag == false %}
+				, { tag : {{ javascript_tag }} }
+			{% else %}
+				{% assign javascript_first_tag = false %}
+				{ tag : {{ javascript_tag }} }
+			{% endif %}
 		{% endif %}
+	{% endfor %}
 
 	<script type="text/javascript">
 
