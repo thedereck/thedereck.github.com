@@ -26,10 +26,10 @@
 				Tags
 			</li>
 			{% assign section_prev_tag = '' %}
-			{% for section_i in (1..section_number_of_tags) %}
+			{% for section_tag_i in (1..section_number_of_tags) %}
 				{% assign section_tag = null %}
 				{% capture section_tag %}
-					{{ section_sorted_tag_names | truncatewords:section_i | remove:'...' | split:' ' | last | downcase }}
+					{{ section_sorted_tag_names | truncatewords:section_tag_i | remove:'...' | split:' ' | last | downcase }}
 				{% endcapture %}
 		
 				{% if section_prev_tag != section_tag %}

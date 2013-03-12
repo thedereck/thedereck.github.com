@@ -28,11 +28,11 @@
 			</a>
 			<ul class="dropdown-menu">
 				{% assign navbar_prev_category = '' %}
-				{% for navbar_i in (1..navbar_number_of_categories) %}
+				{% for navbar_category_i in (1..navbar_number_of_categories) %}
 
 					{% assign navbar_category = null %}
 					{% capture navbar_category %}
-						{{ navbar_sorted_category_names | truncatewords:navbar_i | remove:'...' | split:' ' | last | downcase }}
+						{{ navbar_sorted_category_names | truncatewords:navbar_category_i | remove:'...' | split:' ' | last | downcase }}
 					{% endcapture %}
 
 					{% if navbar_prev_category != navbar_category %}
