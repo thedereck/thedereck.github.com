@@ -33,7 +33,7 @@
 		{% endcapture %}
 
 		<script type="text/javascript">
-			var tag_posts = [ {{ javascript_tag_object | strip_newlines }} ];
+			var tag_posts = [ {{ javascript_tag_object | strip_newlines | remove:'\t' }} ];
 		</script>
 	{% endif %}
 {% endcapture %}
