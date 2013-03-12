@@ -1,41 +1,45 @@
-{% if site.tags.size > 0 %}
+{% assign javascript_tag_name = null %}
+{% capture javascript_tag_name %}
+	{% if site.tags.size > 0 %}
+		{% assign javascript_tag_name = null %}
+		{% capture javascript_tag_names %}{% for javascript_t in site.tags %}{{ javascript_t[0] | replace: ' ', '___' }} {% endfor %}{% endcapture %}
 
-	{% assign javascript_tag_name = null %}
-	{% capture javascript_tag_names %}{% for javascript_t in site.tags %}{{ javascript_t[0] | replace: ' ', '___' }} {% endfor %}{% endcapture %}
+		{% assign javascript_sorted_tag_names = null %}
+		{% capture javascript_sorted_tag_names %}{{ javascript_tag_names | split:' ' | sort | join:' ' }}{% endcapture %}
 
-	{% assign javascript_sorted_tag_names = null %}
-	{% capture javascript_sorted_tag_names %}{{ javascript_tag_names | split:' ' | sort | join:' ' }}{% endcapture %}
-
-	{% assign javascript_number_of_tags = null %}
-	{% capture javascript_number_of_tags %}{{ javascript_sorted_tag_names | number_of_words }}{% endcapture %}
+		{% assign javascript_number_of_tags = null %}
+		{% capture javascript_number_of_tags %}{{ javascript_sorted_tag_names | number_of_words }}{% endcapture %}
 
 
-	{% assign javascript_tag_object = null %}
-	{% capture javascript_tag_object %}
-		{% assign javascript_first_tag = true %}
-		{% assign javascript_prev_tag = '' %}
-		{% for javascript_tag_i in (1..javascript_number_of_tags) %}
+		{% assign javascript_tag_object = null %}
+		{% capture javascript_tag_object %}
+			{% assign javascript_first_tag = true %}
+			{% assign javascript_prev_tag = '' %}
+			{% for javascript_tag_i in (1..javascript_number_of_tags) %}
 
-			{% assign javascript_tag = null %}
-			{% capture javascript_tag %}{{ javascript_sorted_tag_names | truncatewords:javascript_tag_i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
+				{% assign javascript_tag = null %}
+				{% capture javascript_tag %}{{ javascript_sorted_tag_names | truncatewords:javascript_tag_i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
 
-			{% if javascript_prev_tag != javascript_tag %}
-				{% assign javascript_prev_tag = javascript_tag %}
-				{% if javascript_first_tag == false %}
-					, { tag : {{ javascript_tag }} }
-				{% else %}
-					{% assign javascript_first_tag = false %}
-					{ tag : {{ javascript_tag }} }
+				{% if javascript_prev_tag != javascript_tag %}
+					{% assign javascript_prev_tag = javascript_tag %}
+					{% if javascript_first_tag == false %}
+						, { tag : {{ javascript_tag }} }
+					{% else %}
+						{% assign javascript_first_tag = false %}
+						{ tag : {{ javascript_tag }} }
+					{% endif %}
 				{% endif %}
-			{% endif %}
-		{% endfor %}
-	{% endcapture %}
+			{% endfor %}
+		{% endcapture %}
 
-	<script type="text/javascript">
+		<script type="text/javascript">
 
-		var tag_posts = [
-			{{ javascript_tag_object | strip_newlines }}
-		];
+			var tag_posts = [
+				{{ javascript_tag_object | strip_newlines }}
+			];
 
-	</script>
-{% endif %}
+		</script>
+	{% endif %}
+{% endcapture %}
+
+{{ javascript_tag_page | strip_newlines }}
