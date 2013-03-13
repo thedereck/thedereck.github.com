@@ -24,16 +24,20 @@
 	{% endfor %}
 {% endif %}
 
-<div class="row ghpb">
-	<div class="span8">
-		&copy; Copyright 
-		{% if footer_earliest_year == footer_latest_year %}
-			{{ footer_earliest_year }}
-		{% else %}
-			{{ footer_earliest_year }}-{{ footer_latest_year }}
-		{% endif %}
-	</div>
-	<div class="span4 text-right">
-		<small><a href="https://github.com/thedereck/gh-pages-blog">FORK GH-PAGES-BLOG ON GITHUB</a></small>
-	</div>
+{% assign section_footer_html = null %}
+{% capture section_footer_html %}
+	<div class="row ghpb">
+		<div class="span8">
+			&copy; Copyright 
+			{% if footer_earliest_year == footer_latest_year %}
+				{{ footer_earliest_year }}
+			{% else %}
+				{{ footer_earliest_year }}-{{ footer_latest_year }}
+			{% endif %}
+		</div>
+		<div class="span4 text-right">
+			<small><a href="https://github.com/thedereck/gh-pages-blog">FORK GH-PAGES-BLOG ON GITHUB</a></small>
+		</div>
+{% endcapture %}
+{{ section_footer_html | strip_newlines | remove:'	' }}
 </div>
