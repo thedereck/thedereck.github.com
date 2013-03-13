@@ -29,11 +29,18 @@
 				{% endfor %}
 			];
 
-			var requested_tag = $(location).attr('href').match(/\?.+/)[0].split('tag=')[1];
-			$('div[name="tag_body"]').append('<p>' + requested_tag + '</p>');
+			var requested_tag = null;
+			var url_params = $(location).attr('href').match(/\?tag=.+/);
+			if (url_params !== null) {
+				requested_tag = url_params[0].split('&')[0].split('?tag=')[1];
+			};
 
-			for (var i = 0; i < posts.length; i++) {
-				$('div[name="tag_body"]').append('<p>' + posts[i].title + '</p>');
+			if (requested_tag === null) {
+				$('div[name="tag_body"]').append('<p>No tag supplied.</p>');
+			} else {
+				for (var i = 0; i < posts.length; i++) {
+					$('div[name="tag_body"]').append('<p>' + posts[i].title + '</p>');
+				};
 			};
 		</script>
 	{% endcapture %}
