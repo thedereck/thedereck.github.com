@@ -32,7 +32,7 @@
 
 					{% assign navbar_category = null %}
 					{% capture navbar_category %}
-						{{ navbar_sorted_category_names | truncatewords:navbar_category_i | remove:'...' | split:' ' | last | downcase }}
+						{{ navbar_sorted_category_names | truncatewords:navbar_category_i | remove:'...' | split:' ' | last | downcase | capitalize }}
 					{% endcapture %}
 
 					{% if navbar_prev_category != navbar_category %}
@@ -42,7 +42,7 @@
 								{% if site.font_awesome.enabled %}
 									<i class="icon-folder-open"></i> 
 								{% endif %}
-								{{ navbar_category | capitalize | replace: '___', ' ' }}
+								{{ navbar_category | replace: '___', ' ' }}
 							</a>
 						</li>
 					{% endif %}
