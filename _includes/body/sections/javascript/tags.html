@@ -13,7 +13,7 @@
 						"description" : "{{ javascript_post.description | replace: '"', '\"' }}" , 
 						"url" : "{{site.url}}{{ javascript_post.url | replace: '"', '\"' }}" , 
 						"date" : "{{ javascript_post.date | replace: '"', '\"' }}" , 
-						"category" : "{{ javascript_post.category | replace: ' ', '___' | replace: '"', '\"' | downcase | capitalize }}" , 
+						"category" : "{{ javascript_post.category | replace: ' ', '___' | replace: '"', '\"' | downcase }}" , 
 						"tags" : 
 							[
 								{% for javascript_post_tag in javascript_post.tags %}
