@@ -6,6 +6,8 @@ category : bad_dog
 tags :
   - a b
   - A b
+alert: Sample post alert.
+notice: Sample post notice.
 ---
 
 Hello, world!  
