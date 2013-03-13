@@ -42,7 +42,7 @@
 								{% if site.font_awesome.enabled %}
 									<i class="icon-folder-open"></i> 
 								{% endif %}
-								{{ navbar_category | replace: '___', ' ' | capitalize }}
+								{{ navbar_category | capitalize | replace: '___', ' ' }}
 							</a>
 						</li>
 					{% endif %}
