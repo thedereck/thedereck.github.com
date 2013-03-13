@@ -1,33 +1,34 @@
-{% assign javascript_tag_page = null %}
-{% capture javascript_tag_page %}
-	<script type="text/javascript">
-		var posts = [
-			{% for javascript_post in site.posts %}
-				{% if forloop.first %}
-					{
-				{% else %}
-					, {
-				{% endif %}
-						"title" : "{{ javascript_post.title | replace: '"', '\"' }}" , 
-						"subtitle" : "{{ javascript_post.subtitle | replace: '"', '\"' }}" , 
-						"description" : "{{ javascript_post.description | replace: '"', '\"' }}" , 
-						"url" : "{{site.url}}{{ javascript_post.url | replace: '"', '\"' }}" , 
-						"date" : "{{ javascript_post.date | replace: '"', '\"' }}" , 
-						"category" : "{{ javascript_post.category | replace: ' ', '___' | replace: '"', '\"' | downcase }}" , 
-						"tags" : 
-							[
-								{% for javascript_post_tag in javascript_post.tags %}
-									{% if forloop.first %}
-										"{{ javascript_post_tag | replace: ' ', '___' | replace: '"', '\"' | downcase }}"
-									{% else %}
-										, "{{ javascript_post_tag | replace: ' ', '___' | replace: '"', '\"' | downcase }}"
-									{% endif %}
-								{% endfor %}
-							]
-					}
-			{% endfor %}
-		];
-	</script>
-{% endcapture %}
-
-{{ javascript_tag_page | strip_newlines | remove:'	' }}
+{% if site.tags.size > 0 %}
+	{% assign javascript_tag_html = null %}
+	{% capture javascript_tag_html %}
+		<script type="text/javascript">
+			var posts = [
+				{% for javascript_post in site.posts %}
+					{% if forloop.first %}
+						{
+					{% else %}
+						, {
+					{% endif %}
+							"title" : "{{ javascript_post.title | replace: '"', '\"' }}" , 
+							"subtitle" : "{{ javascript_post.subtitle | replace: '"', '\"' }}" , 
+							"description" : "{{ javascript_post.description | replace: '"', '\"' }}" , 
+							"url" : "{{site.url}}{{ javascript_post.url | replace: '"', '\"' }}" , 
+							"date" : "{{ javascript_post.date | replace: '"', '\"' }}" , 
+							"category" : "{{ javascript_post.category | replace: ' ', '___' | replace: '"', '\"' | downcase }}" , 
+							"tags" : 
+								[
+									{% for javascript_post_tag in javascript_post.tags %}
+										{% if forloop.first %}
+											"{{ javascript_post_tag | replace: ' ', '___' | replace: '"', '\"' | downcase }}"
+										{% else %}
+											, "{{ javascript_post_tag | replace: ' ', '___' | replace: '"', '\"' | downcase }}"
+										{% endif %}
+									{% endfor %}
+								]
+						}
+				{% endfor %}
+			];
+		</script>
+	{% endcapture %}
+	{{ javascript_tag_html | strip_newlines | remove:'	' }}
+{% endif %}
