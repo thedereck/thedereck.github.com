@@ -17,8 +17,8 @@
 		{{ navbar_sorted_tag_names | number_of_words }}
 	{% endcapture %}
 
-	{% assign navbar_tags_html = null %}
-	{% capture navbar_tags_html %}
+	{% assign navbar_dropdown_tags_html = null %}
+	{% capture navbar_dropdown_tags_html %}
 		<ul class="nav pull-left">
 			<li class="dropdown">
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -53,5 +53,5 @@
 			</li>
 		</ul>
 	{% endcapture %}
-	{{ navbar_tags_html | strip_newlines | remove:'	' }}
+	{{ navbar_dropdown_tags_html | strip_newlines | remove:'	' }}
 {% endif %}

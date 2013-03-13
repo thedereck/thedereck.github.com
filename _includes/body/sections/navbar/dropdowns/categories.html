@@ -1,6 +1,6 @@
 {% if site.navbar.categories.enabled and site.categories.size > 0 %}
-	{% assign navbar_categories_html = null %}
-	{% capture navbar_categories_html %}
+	{% assign navbar_dropdown_categories_html = null %}
+	{% capture navbar_dropdown_categories_html %}
 		{% assign navbar_category_names = null %}
 		{% capture navbar_category_names %}
 			{% for navbar_c in site.categories %}
@@ -52,5 +52,5 @@
 			</li>
 		</ul>
 	{% endcapture %}
-	{{ navbar_categories_html | strip_newlines | remove:'	' }}
+	{{ navbar_dropdown_categories_html | strip_newlines | remove:'	' }}
 {% endif %}
