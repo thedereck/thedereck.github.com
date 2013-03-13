@@ -28,4 +28,4 @@
 	];
 {% endcapture %}
 
-{{ javascript_tag_page | strip_newlines }}
+{{ javascript_tag_page | strip_newlines | remove:'	' }}
