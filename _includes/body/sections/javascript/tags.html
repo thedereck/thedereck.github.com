@@ -7,19 +7,19 @@
 			{% else %}
 				, {
 			{% endif %}
-					"title" : "{{ javascript_post.title }}" , 
-					"subtitle" : "{{ javascript_post.subtitle }}" , 
-					"description" : "{{ javascript_post.description }}" , 
-					"url" : "{{site.url}}{{ javascript_post.url }}" , 
-					"date" : "{{ javascript_post.date }}" , 
-					"category" : "{{ javascript_post.category | replace: ' ', '___' }}" , 
+					"title" : "{{ javascript_post.title | replace: '"', '\"' }}" , 
+					"subtitle" : "{{ javascript_post.subtitle | replace: '"', '\"' }}" , 
+					"description" : "{{ javascript_post.description | replace: '"', '\"' }}" , 
+					"url" : "{{site.url}}{{ javascript_post.url | replace: '"', '\"' }}" , 
+					"date" : "{{ javascript_post.date | replace: '"', '\"' }}" , 
+					"category" : "{{ javascript_post.category | replace: ' ', '___' | replace: '"', '\"' }}" , 
 					"tags" : 
 						[
 							{% for javascript_post_tag in javascript_post.tags %}
 								{% if forloop.first %}
-									"{{ javascript_post_tag | replace: ' ', '___' }}"
+									"{{ javascript_post_tag | replace: ' ', '___' | replace: '"', '\"' }}"
 								{% else %}
-									, "{{ javascript_post_tag | replace: ' ', '___' }}"
+									, "{{ javascript_post_tag | replace: ' ', '___' | replace: '"', '\"' }}"
 								{% endif %}
 							{% endfor %}
 						]

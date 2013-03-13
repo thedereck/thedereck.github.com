@@ -2,6 +2,7 @@
 layout : post
 title : Hello, world!
 category : bad dog
+description : Day's end, but "Not today".
 tags :
   - a b
   - c d
