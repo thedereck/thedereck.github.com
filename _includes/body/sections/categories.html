@@ -1,24 +1,24 @@
 {% if site.sections.categories.enabled and site.categories.size > 0 %}
-
-	{% assign section_category_names = null %}
-	{% capture section_category_names %}
-		{% for section_c in site.categories %}
-			{{ section_c[0] | replace: ' ', '___' }}
-		{% endfor %}
-	{% endcapture %}
-
-	{% assign section_sorted_category_names = null %}
-	{% capture section_sorted_category_names %}
-		{{ section_category_names | split:' ' | sort | join:' ' }}
-	{% endcapture %}
-
-	{% assign section_number_of_categories = null %}
-	{% capture section_number_of_categories %}
-		{{ section_sorted_category_names | number_of_words }}
-	{% endcapture %}
-
 	{% assign section_categories_html = null %}
 	{% capture section_categories_html %}
+
+		{% assign section_category_names = null %}
+		{% capture section_category_names %}
+			{% for section_c in site.categories %}
+				{{ section_c[0] | replace: ' ', '___' }}
+			{% endfor %}
+		{% endcapture %}
+
+		{% assign section_sorted_category_names = null %}
+		{% capture section_sorted_category_names %}
+			{{ section_category_names | split:' ' | sort | join:' ' }}
+		{% endcapture %}
+
+		{% assign section_number_of_categories = null %}
+		{% capture section_number_of_categories %}
+			{{ section_sorted_category_names | number_of_words }}
+		{% endcapture %}
+
 		<div class="well ghpb-well-navlist">
 			<ul class="nav nav-list ghpb-nav-list">
 				<li class="nav-header ghpb-nav-header">
