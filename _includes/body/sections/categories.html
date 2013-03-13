@@ -30,7 +30,7 @@
 
 				{% assign section_category = null %}
 				{% capture section_category %}
-					{{ section_sorted_category_names | truncatewords:section_category_i | remove:'...' | split:' ' | last | downcase }}
+					{{ section_sorted_category_names | truncatewords:section_category_i | remove:'...' | split:' ' | last | downcase | capitalize }}
 				{% endcapture %}
 
 				{% if section_prev_category != section_category %}
@@ -40,7 +40,7 @@
 							{% if site.font_awesome.enabled %}
 								<i class="icon-folder-open"></i> 
 							{% endif %}
-							{{ section_category | replace: '___', ' ' | capitalize }}
+							{{ section_category | replace: '___', ' ' }}
 						</a>
 					</li>
 				{% endif %}
