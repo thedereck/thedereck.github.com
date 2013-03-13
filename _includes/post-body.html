@@ -35,13 +35,13 @@
 
 <body>
 	{% include body/sections/navbar.html %}
-	{% include body/site-alerts-and-notices.html %}
+	{% include body/sections/alerts_and_notices/site.html %}
 	<div class="container">
 		<div class="row">
 			<div class="span8">
 				<div class="ghpb-post">
 					{% include body/post-header.html %}
-					{% include body/post-alerts-and-notices.html %}
+					{% include body/sections/alerts_and_notices/post.html %}
 					{{ content }}
 						
 					{% if page_tags_present %}
