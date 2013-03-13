@@ -41,7 +41,7 @@
 				for (var i = 0; i < posts.length; i++) {
 					if (post[i].tags !== null) {
 						for (var j = 0; j < post[i].tags.length; j++) {
-							if (posts[i].tags[j] === requested_tag) {
+							if (posts[i].tags[j].toString() === requested_tag.toString()) {
 								$('div[name="tag_body"]').append('<p>' + posts[i].title + '</p>');
 								break;
 							}
