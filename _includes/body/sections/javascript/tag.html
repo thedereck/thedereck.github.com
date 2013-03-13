@@ -29,7 +29,7 @@
 				{% endfor %}
 			];
 
-			var requested_tag = $(location).attr('href').match(/\?.+/)[0];
+			var requested_tag = $(location).attr('href').match(/\?.+/)[0].split('tag=')[1];
 			$('div[name="tag_body"]').append('<p>' + requested_tag + '</p>');
 
 			for (var i = 0; i < posts.length; i++) {
