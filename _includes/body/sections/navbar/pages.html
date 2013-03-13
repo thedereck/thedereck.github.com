@@ -3,7 +3,7 @@
 	<ul class="nav pull-right">
 		{% for pages_p in site.pages %}
 			{% unless pages_p.exclude %}
-				<li><a href="{{ pages_p.url }}">{{ pages_p.title }}</a></li>
+				<li><a href="{{site.url}}{{ pages_p.url }}">{{ pages_p.title }}</a></li>
 			{% endunless %}
 		{% endfor %}
 	</ul>
