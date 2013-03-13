@@ -38,7 +38,7 @@
 					{% if navbar_prev_category != navbar_category %}
 						{% assign navbar_prev_category = navbar_category %}
 						<li>
-							<a href="{{ site.url }}/category.html?category={{ navbar_category }}">
+							<a href="{{ site.url }}/category.html?category={{ navbar_category | downcase }}">
 								{% if site.font_awesome.enabled %}
 									<i class="icon-folder-open"></i> 
 								{% endif %}
