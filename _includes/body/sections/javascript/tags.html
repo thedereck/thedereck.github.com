@@ -7,13 +7,13 @@
 			{% else %}
 				, {
 			{% endif %}
-					"title" : "{{ javascript_post.title }}" ,
-					"subtitle" : "{{ javascript_post.subtitle }}" ,
-					"description" : "{{ javascript_post.description }}" ,
-					"url" : "{{site.url}}{{ javascript_post.url }}" ,
-					"date" : "{{ javascript_post.date }}" ,
-					"category" : "{{ javascript_post.category | replace: ' ', '___' }}" ,
-					"tags" :
+					"title" : "{{ javascript_post.title }}" , 
+					"subtitle" : "{{ javascript_post.subtitle }}" , 
+					"description" : "{{ javascript_post.description }}" , 
+					"url" : "{{site.url}}{{ javascript_post.url }}" , 
+					"date" : "{{ javascript_post.date }}" , 
+					"category" : "{{ javascript_post.category | replace: ' ', '___' }}" , 
+					"tags" : 
 						[
 							{% for javascript_post_tag in javascript_post.tags %}
 								{% if forloop.first %}
