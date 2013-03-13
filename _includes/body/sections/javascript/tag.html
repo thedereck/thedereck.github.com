@@ -28,6 +28,8 @@
 						}
 				{% endfor %}
 			];
+
+			$('div.tag_body').html('<p>' + posts.length + '</p>');
 		</script>
 	{% endcapture %}
 	{{ javascript_tag_html | strip_newlines | remove:'	' }}
