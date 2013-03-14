@@ -117,7 +117,7 @@
 				}
 			}
 		} else {
-			$('div.page-header > h1').append(' a category of "' + requested_category.replace(/___/g, ' '+'"'));
+			$('div.page-header > h1').append(' a category of "' + requested_category.replace(/___/g, ' ') + '"');
 			for (var i = 0; i < posts.length; i++) {
 				if (posts[i].category !== null) {
 					if (posts[i].category.toLowerCase() === requested_category.toLowerCase()) {
