@@ -54,14 +54,14 @@ exclude: true
 				{% assign index_post_prev_tag = '' %}
 				{% for index_post_i in (1..index_post_number_of_tags) %}
 					{% capture index_post_tag %}{{ index_post_sorted_tag_names | truncatewords:index_post_i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
-					{% if index_post_prev_tag != tag %}
-						{% assign index_post_prev_tag = tag %}
+					{% if index_post_prev_tag != index_post_tag %}
 						{% if index_post_first_tag %}
 							{% assign index_post_first_tag = false %}
 						{% else %}
 							, 
 						{% endif %}
-						<a href="{{ site.url }}/filter.html?tag={{ index_post_tag }}">{{ index_post_tag | replace: '___', ' ' }}</a> 
+						{% assign index_post_prev_tag = index_post_tag %}
+						<a href="{{ site.url }}/filter.html?tag={{ index_post_tag }}">{{ index_post_tag | replace: '___', ' ' }}</a>
 					{% endif %}
 				{% endfor %}
 				<br>
