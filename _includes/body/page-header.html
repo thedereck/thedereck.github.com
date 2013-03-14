@@ -1,13 +1,10 @@
-{% if page.header and page.subtext %}
-	<div class="page-header">
-		<h1>{{ page.header }} <small>{{ page.subtitle }}</small></h1>
-	</div>
-{% elsif page.header %}
-	<div class="page-header">
-		<h1>{{ page.header }}</h1>
-	</div>
-{% elsif page.subtitle %}
-	<div class="page-header">
-		<h1><small>{{ page.subtitle }}</small></h1>
-	</div>
-{% endif %}
+{% if page.title or page.subtitle %}
+<div class="page-header">
+	{% if page.title %}
+		<h1>{{ page.title }}</h1>
+	{% endif %}
+
+	{% if page.subtitle %}
+		<h4>{{ page.subtitle }}</h4>
+	{% endif %}
+</div>
