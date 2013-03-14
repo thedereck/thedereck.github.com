@@ -92,13 +92,13 @@
 		var requested_tag = null;
 		var url_tag_params = $(location).attr('href').match(/\?tag=.+/);
 		if (url_tag_params !== null) {
-			requested_tag = url_params[0].split('&')[0].split('?tag=')[1];
+			requested_tag = url_tag_params[0].split('&')[0].split('?tag=')[1];
 		};
 
 		var requested_category = null;
 		var url_category_params = $(location).attr('href').match(/\?category=.+/);
 		if (url_category_params !== null) {
-			requested_category = url_params[0].split('&')[0].split('?category=')[1];
+			requested_category = url_category_params[0].split('&')[0].split('?category=')[1];
 		};
 
 		if (requested_tag === null && requested_category === null) {
