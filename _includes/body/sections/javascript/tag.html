@@ -96,8 +96,8 @@
 				requested_tag = url_params[0].split('&')[0].split('?tag=')[1];
 			};
 
-			if (requested_tag == null) {
-				$('div.page-header').html = '<h1>No tag</h1>';
+			if (requested_tag === null) {
+				$('div.page-header > h1').html('No tag');
 				$('div[name="tag-body"]').html('<p>A tag must be supplied as a parameter in order to get a list of posts.</p>');
 			} else {
 				$('div.page-header > h1').append(' ' + requested_tag.replace(/___/g, ' '));
@@ -105,7 +105,7 @@
 					if (posts[i].tags !== null) {
 						for (var j = 0; j < posts[i].tags.length; j++) {
 							if (posts[i].tags[j] === requested_tag) {
-								$('div[name="tag_body"]').append(create_post_div(posts[i]));
+								$('div[name="tag-body"]').append(create_post_div(posts[i]));
 								break;
 							}
 						}
