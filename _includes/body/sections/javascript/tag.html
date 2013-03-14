@@ -40,7 +40,7 @@
 				post_div = post_div + '</div></div>';
 
 				return post_div;
-			}
+			};
 
 			var requested_tag = null;
 			var url_params = $(location).attr('href').match(/\?tag=.+/);
@@ -55,8 +55,7 @@
 					if (posts[i].tags !== null) {
 						for (var j = 0; j < posts[i].tags.length; j++) {
 							if (posts[i].tags[j] === requested_tag) {
-								var post_div = create_post_div(posts[i]);
-								$('div[name="tag_body"]').append(post_div);
+								$('div[name="tag_body"]').append(create_post_div(posts[i]));
 								break;
 							}
 						}
