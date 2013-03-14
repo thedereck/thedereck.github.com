@@ -8,31 +8,6 @@
 	{% assign enable_disqus = true %}
 {% endif %}
 
-
-{% assign page_tags_present = false %}
-
-{% if page.tags.size > 0 %}
-	{% assign page_tags_present = true %}
-
-	{% assign page_tag_name = null %}
-	{% capture page_tag_names %}
-		{% for page_t in page.tags %}
-			{{ page_t | replace: ' ', '___' }}
-		{% endfor %}
-	{% endcapture %}
-
-	{% assign sorted_page_tag_names = null %}
-	{% capture sorted_page_tag_names %}
-		{{ page_tag_names | split:' ' | sort | join:' ' }}
-	{% endcapture %}
-
-	{% assign number_of_page_tags = null %}
-	{% capture number_of_page_tags %}
-		{{ sorted_page_tag_names | number_of_words }}
-	{% endcapture %}
-{% endif %}
-
-
 <body>
 	{% include body/sections/navbar.html %}
 	{% include body/sections/alerts_and_notices/site.html %}
@@ -43,26 +18,6 @@
 					{% include body/post-header.html %}
 					{% include body/sections/alerts_and_notices/post.html %}
 					{{ content }}
-						
-					{% if page_tags_present %}
-					<br>
-					<p>
-						{% if site.font_awesome.enabled %}
-						<i class="icon-tags"></i> 
-						{% endif %}
-						Tags:
-						{% assign prev_page_tag = '' %}
-						{% for page_i in (1..number_of_page_tags) %}
-							{% assign page_tag = null %}
-							{% capture page_tag %}{{ sorted_page_tag_names | truncatewords:page_i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
-							{% if prev_page_tag != page_tag %}
-								{% assign prev_page_tag = page_tag %}
-						<a href="{{ site.url }}/filter.html?tag={{ page_tag }}"><span class="label label-inverse">{{ page_tag | replace: '___', ' ' }}</span></a> 
-							{% endif %}
-						{% endfor %}
-					</p>
-					{% endif %}
-
 					{% if enable_disqus %}
 					<br>
 					<br>
