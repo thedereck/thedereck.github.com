@@ -41,7 +41,7 @@
 				{% if site.font_awesome.enabled %}
 					post_div = post_div + '<i class="icon-pencil"></i> ';
 				{% endif %}
-				post_div = post_div + 'Published on ' + post.date + '.</small></p><br>';
+				post_div = post_div + 'Published on ' + post.date + '.</small>';
 
 				if (post.category !== null && post.category.length > 0) {
 					post_div = post_div + '<small>';
@@ -68,7 +68,7 @@
 				}
 
 				if (post.description !== null && post.description.length > 0) {
-					post_div = post_div + '<br>' + post.description;
+					post_div = post_div + '</p><br>' + post.description;
 				}
 
 				post_div = post_div + '</div></div>';
