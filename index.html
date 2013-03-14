@@ -8,22 +8,18 @@ exclude: true
 <div class="ghpb-post">
 	<div class="well ghpb-well-outline">
 		<h2><a href="{{ p.url }}">{{ p.title }}</a></h2>
-		<p>
-			{% if p.subtitle %}
-			{{ p.subtitle }}
-			<br>
-			{% endif %}
+		{% if p.subtitle %}
+			<h4>{{ p.subtitle }}</h4>
+		{% endif %}
 
-			<small>
-				{% if site.font_awesome.enabled %}
+		<h5>
+			{% if site.font_awesome.enabled %}
 				<i class="icon-pencil"></i> 
-				{% endif %}
-				Published on {{ p.date | date_to_long_string }}.
-			</small>
+			{% endif %}
+			Published on {{ p.date | date_to_long_string }}.
 			<br>
 
 			{% if p.category.size > 0 %}
-			<small>
 				{% if site.font_awesome.enabled %}
 				<i class="icon-folder-open"></i> 
 				{% endif %}
@@ -31,8 +27,7 @@ exclude: true
 				<a href="{{ site.url }}/filter.html?category={{ p.category | replace: ' ', '___' | downcase }}">
 					{{ p.category | capitalize }}
 				</a>
-			</small>
-			<br>
+				<br>
 			{% endif %}
 
 			{% if p.tags.size > 0 %}
@@ -51,39 +46,41 @@ exclude: true
 					{{ index_post_sorted_tag_names | number_of_words }}
 				{% endcapture %}
 
-				<small>
-					{% if site.font_awesome.enabled %}
-						<i class="icon-tags"></i> 
-					{% endif %}
-					Tags: 
-					{% assign index_post_first_tag = true %}
-					{% assign index_post_prev_tag = '' %}
-					{% for index_post_i in (1..index_post_number_of_tags) %}
-						{% capture index_post_tag %}{{ index_post_sorted_tag_names | truncatewords:index_post_i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
-						{% if index_post_prev_tag != tag %}
-							{% assign index_post_prev_tag = tag %}
-							{% if index_post_first_tag %}
-								{% assign index_post_first_tag = false %}
-							{% else %}
-								, 
-							{% endif %}
-							<a href="{{ site.url }}/filter.html?tag={{ index_post_tag }}">{{ index_post_tag | replace: '___', ' ' }}</a> 
+				{% if site.font_awesome.enabled %}
+					<i class="icon-tags"></i> 
+				{% endif %}
+				Tags: 
+				{% assign index_post_first_tag = true %}
+				{% assign index_post_prev_tag = '' %}
+				{% for index_post_i in (1..index_post_number_of_tags) %}
+					{% capture index_post_tag %}{{ index_post_sorted_tag_names | truncatewords:index_post_i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
+					{% if index_post_prev_tag != tag %}
+						{% assign index_post_prev_tag = tag %}
+						{% if index_post_first_tag %}
+							{% assign index_post_first_tag = false %}
+						{% else %}
+							, 
 						{% endif %}
-					{% endfor %}
-				</small>
+						<a href="{{ site.url }}/filter.html?tag={{ index_post_tag }}">{{ index_post_tag | replace: '___', ' ' }}</a> 
+					{% endif %}
+				{% endfor %}
+				<br>
 			{% endif %}
-		</p>
+		</h5>
+
+		{% if p.alert or p.notice %}
+			<br>
+			{% if p.alert %}
+			<div class="alert alert-block">
+				{{ p.alert }}
+			</div>
+			{% endif %}
 		
-		{% if p.alert %}
-		<div class="alert alert-block">
-			{{ p.alert }}
-		</div>
-		{% endif %}
-		
-		{% if p.notice %}
-		<div class="alert alert-block alert-success">
-			{{ p.notice }}
-		</div>
+			{% if p.notice %}
+			<div class="alert alert-block alert-success">
+				{{ p.notice }}
+			</div>
+			{% endif %}
 		{% endif %}
 		
 		<br>
