@@ -65,8 +65,11 @@
 						if (prev_tag !== post.tags[k]) {
 							prev_tag = post.tags[k];
 							post_div = post_div +
+								'<a href="{{ site.url }}/tag.html?tag=' + 
+								post.tags[k] + '">' +
 								'<span class="label label-inverse">' +
-								post.tags[k].replace(/___/g, ' ') + '</span> ';
+								post.tags[k].replace(/___/g, ' ') +
+								'</span></a> ';
 						}
 					}
 					post_div = post_div + '</small>';
