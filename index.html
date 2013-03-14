@@ -69,9 +69,9 @@ exclude: true
 		<br>
 		<p>
 			{% if site.font_awesome.enabled %}
-			<i class="icon-tags"></i> 
+				<i class="icon-tags"></i> 
 			{% endif %}
-			Tags:
+			Tags: 
 			{% assign prev_tag = '' %}
 			{% for i in (1..number_of_tags) %}
 				{% capture tag %}{{ sorted_tag_names | truncatewords:i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}

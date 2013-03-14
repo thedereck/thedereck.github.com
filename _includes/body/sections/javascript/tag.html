@@ -58,6 +58,17 @@
 					post_div = post_div + post.description;
 				}
 
+				if (post.tags !== null && post.tags.length > 0) {
+					{% if site.font_awesome.enabled %}
+						post_div = post_div + '<i class="icon-tags"></i> ';
+					{% endif %}
+					post_div = post_div + 'Tags: ';
+					for (var k = 0; k < post.tags.length; k++) {
+						post_div = post_div + '<span class="label label-inverse">' +
+							post.tags[k].replace(/___/g, ' ') + '</span> ';
+					}
+				}
+
 				post_div = post_div + '</div></div>';
 
 				return post_div;
