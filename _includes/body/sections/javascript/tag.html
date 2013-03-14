@@ -31,10 +31,10 @@
 
 			var create_post_div = function(post) {
 				var post_div = '<div class="ghpb-post"><div class="well ghpb-well-outline">';
-				post_div = post_div + '<h2><a href="' + post.url + '">' + post.title + '</a></h2>';
+				post_div = post_div + '<h2><a href="' + post.url + '">' + post.title + '</a></h2><p>';
 
 				if (post.subtitle !== null && post.subtitle.length > 0) {
-					post_div = post_div + '<p>' + post.subtitle + '<br>';
+					post_div = post_div + post.subtitle + '<br>';
 				}
 
 				if (post.category !== null && post.category.length > 0) {
@@ -59,6 +59,7 @@
 				}
 
 				if (post.tags !== null && post.tags.length > 0) {
+					post_div = post_div + '<br><br>';
 					{% if site.font_awesome.enabled %}
 						post_div = post_div + '<i class="icon-tags"></i> ';
 					{% endif %}
