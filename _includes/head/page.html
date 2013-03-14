@@ -1,4 +1,8 @@
-<head>
-	<title>{{ site.name }} - {{ page.title }}</title>
-	{% include head/common/common.html %}
-</head>
+{% assign head_page_html = null %}
+{% capture head_page_html %}
+	<head>
+		<title>{{ site.name }} - {{ page.title }}</title>
+		{% include head/common/common.html %}
+	</head>
+{% endcapture %}
+{{ head_page_html | strip_newlines | remove:'	' }}
