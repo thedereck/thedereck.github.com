@@ -44,7 +44,7 @@
 					post_div = post_div + 'Category: ' +
 						'<a href="{{ site.url }}/category.html?category=' +
 						post.category.toLowerCase() + '">' +
-						post.category.replace('___', ' ') + '</a>';
+						post.category.replace(/___/g, ' ') + '</a>';
 				}
 				
 				post_div = post_div + '</div></div>';
