@@ -60,15 +60,20 @@
 						post_div = post_div + '<i class="icon-tags"></i> ';
 					{% endif %}
 					post_div = post_div + 'Tags: ';
+					var prev_tag = '';
 					for (var k = 0; k < post.tags.length; k++) {
-						post_div = post_div + '<span class="label label-inverse">' +
-							post.tags[k].replace(/___/g, ' ') + '</span> ';
+						if (prev_tag !== post.tags[k]) {
+							prev_tag = post.tags[k];
+							post_div = post_div +
+								'<span class="label label-inverse">' +
+								post.tags[k].replace(/___/g, ' ') + '</span> ';
+						}
 					}
 					post_div = post_div + '</small>';
 				}
 
 				if (post.description !== null && post.description.length > 0) {
-					post_div = post_div + '<p>&nbsp;</p><p>&nbsp;</p><p>' + post.description + '</p>';
+					post_div = post_div + '<p>&nbsp;</p><p>' + post.description + '</p>';
 				}
 
 				post_div = post_div + '</div></div>';
