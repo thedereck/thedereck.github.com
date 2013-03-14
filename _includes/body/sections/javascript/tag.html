@@ -41,7 +41,7 @@
 				{% if site.font_awesome.enabled %}
 					post_div = post_div + '<i class="icon-pencil"></i> ';
 				{% endif %}
-				post_div = post_div + 'Published on ' + post.date + '.</small>';
+				post_div = post_div + 'Published on ' + post.date + '.</small><br>';
 
 				if (post.category !== null && post.category.length > 0) {
 					post_div = post_div + '<small>';
@@ -64,7 +64,7 @@
 						post_div = post_div + '<span class="label label-inverse">' +
 							post.tags[k].replace(/___/g, ' ') + '</span> ';
 					}
-					post_div = post_div + '</small><br>';
+					post_div = post_div + '</small>';
 				}
 
 				if (post.description !== null && post.description.length > 0) {
