@@ -34,7 +34,7 @@
 
 			if (post.subtitle !== null && post.subtitle.length > 0) {
 				post_div = post_div + '<p>' + post.subtitle + '</p>';
-			}
+			};
 
 			post_div = post_div + '<small>';
 			{% if site.font_awesome.enabled %}
@@ -52,7 +52,7 @@
 					post.category.toLowerCase() + '">' +
 					post.category.replace(/___/g, ' ') +
 					'</a></small><br>';
-			}
+			};
 
 			if (post.tags !== null && post.tags.length > 0) {
 				post_div = post_div + '<small>';
@@ -115,7 +115,7 @@
 						}
 					}
 				}
-			};
+			}
 		} else {
 			$('div.page-header > h1').append(' category = ' + requested_category.replace(/___/g, ' '));
 			for (var i = 0; i < posts.length; i++) {
@@ -125,8 +125,8 @@
 						break;
 					}
 				}
-			};
-		}
+			}
+		};
 	</script>
 {% endcapture %}
 {{ javascript_tag_html | strip_newlines | remove:'	' }}
