@@ -14,7 +14,7 @@
 							"description" : "{{ javascript_post.description | replace: '"', '\"' }}" , 
 							"url" : "{{site.url}}{{ javascript_post.url | replace: '"', '\"' }}" , 
 							"date" : "{{ javascript_post.date | date_to_long_string | replace: '"', '\"' }}" , 
-							"category" : "{{ javascript_post.category | replace: ' ', '___' | replace: '"', '\"' | downcase }}" , 
+							"category" : "{{ javascript_post.category | replace: ' ', '___' | capitalize | replace: '"', '\"' | downcase }}" , 
 							"tags" : 
 								[
 									{% for javascript_post_tag in javascript_post.tags %}
@@ -51,7 +51,9 @@
 					post_div = post_div + 'Category: ' +
 						'<a href="{{ site.url }}/category.html?category=' +
 						post.category.toLowerCase() + '">' +
-						post.category.replace(/___/g, ' ') + '</a></small><br>';
+						'<span class="badge badge-inverse">' +
+						post.category.replace(/___/g, ' ') +
+						'</a></span></small><br>';
 				}
 
 				if (post.tags !== null && post.tags.length > 0) {
