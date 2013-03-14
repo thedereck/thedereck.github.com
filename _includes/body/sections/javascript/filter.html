@@ -105,7 +105,7 @@
 			$('div.page-header > h1').html('No category or tag supplied');
 			$('div[name="filter-body"]').html('<p>A category or a tag must be supplied as a parameter in order to get a filtered list of posts.</p>');
 		} else if (requested_tag !== null) {
-			$('div.page-header > h1').append(' tag = ' + requested_tag.replace(/___/g, ' '));
+			$('div.page-header > h1').append(' a tag of "' + requested_tag.replace(/___/g, ' ') + '"');
 			for (var i = 0; i < posts.length; i++) {
 				if (posts[i].tags !== null) {
 					for (var j = 0; j < posts[i].tags.length; j++) {
@@ -117,7 +117,7 @@
 				}
 			}
 		} else {
-			$('div.page-header > h1').append(' category = ' + requested_category.replace(/___/g, ' '));
+			$('div.page-header > h1').append(' a category of "' + requested_category.replace(/___/g, ' '+'"'));
 			for (var i = 0; i < posts.length; i++) {
 				if (posts[i].category !== null) {
 					if (posts[i].category.toLowerCase() === requested_category.toLowerCase()) {
