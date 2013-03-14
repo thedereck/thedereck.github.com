@@ -96,7 +96,7 @@
 				requested_tag = url_params[0].split('&')[0].split('?tag=')[1];
 			};
 
-			if (requested_tag === null) {
+			if (requested_tag == null) {
 				$('div.page-header').html = '<h1>No tag</h1>';
 				$('div[name="tag-body"]').html('<p>A tag must be supplied as a parameter in order to get a list of posts.</p>');
 			} else {
