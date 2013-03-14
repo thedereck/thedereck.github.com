@@ -38,7 +38,7 @@
 					{% if section_prev_category != section_category %}
 						{% assign section_prev_category = section_category %}
 						<li>
-							<a href="{{ site.url }}/category.html?category={{ section_category | downcase }}">
+							<a href="{{ site.url }}/filter.html?category={{ section_category | downcase }}">
 								{% if site.font_awesome.enabled %}
 									<i class="icon-folder-open"></i> 
 								{% endif %}
