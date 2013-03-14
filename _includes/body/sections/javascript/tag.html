@@ -36,7 +36,14 @@
 				if (post.subtitle !== null) {
 					post_div = post_div + '<p>' + post.subtitle + '</p>'
 				}
-	
+
+				if (post.category !== null) {
+					{% if site.font_awesome.enabled %}
+						post_div = post_div + '<i class="icon-folder-open"></i> ';
+					{% endif %}
+					post_div = post_div + 'Category: ' + post.category.replace('___', ' ');
+				}
+				
 				post_div = post_div + '</div></div>';
 
 				return post_div;
