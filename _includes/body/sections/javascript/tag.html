@@ -13,7 +13,7 @@
 							"subtitle" : "{{ javascript_post.subtitle | replace: '"', '\"' }}" , 
 							"description" : "{{ javascript_post.description | replace: '"', '\"' }}" , 
 							"url" : "{{site.url}}{{ javascript_post.url | replace: '"', '\"' }}" , 
-							"date" : "{{ javascript_post.date | replace: '"', '\"' }}" , 
+							"date" : "{{ javascript_post.date | date_to_long_string | replace: '"', '\"' }}" , 
 							"category" : "{{ javascript_post.category | replace: ' ', '___' | replace: '"', '\"' | downcase }}" , 
 							"tags" : 
 								[
@@ -34,19 +34,26 @@
 				post_div = post_div + '<h2><a href="' + post.url + '">' + post.title + '</a></h2>';
 
 				if (post.subtitle !== null) {
-					post_div = post_div + '<p>' + post.subtitle + '</p>'
+					post_div = post_div + '<p>' + post.subtitle;
 				}
 
 				if (post.category !== null) {
+					post_div = post_div + '<small>';
 					{% if site.font_awesome.enabled %}
 						post_div = post_div + '<i class="icon-folder-open"></i> ';
 					{% endif %}
 					post_div = post_div + 'Category: ' +
 						'<a href="{{ site.url }}/category.html?category=' +
 						post.category.toLowerCase() + '">' +
-						post.category.replace(/___/g, ' ') + '</a>';
+						post.category.replace(/___/g, ' ') + '</a></small>';
 				}
-				
+
+				post_div = post_div + '<small>';
+				{% if site.font_awesome.enabled %}
+					post_div = post_div + '<i class="icon-pencil"></i> ';
+				{% endif %}
+				post_div = post_div + 'Published on ' + post.date + '.</small></p>';
+
 				post_div = post_div + '</div></div>';
 
 				return post_div;
