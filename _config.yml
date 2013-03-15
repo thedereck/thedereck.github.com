@@ -42,6 +42,8 @@ sections:
     enabled : true
 
 navbar :
+  archive :
+    enabled : true
   categories :
     enabled : true
   tags :
