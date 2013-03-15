@@ -26,6 +26,9 @@
 						{% endif %}
 						<ul class="nav nav-list ghpb-nav-list" data-toggle="collapse" data-target="#{{ navlist_archive_year }}">
 							<li class="nav-header ghpb-nav-header">
+								{% if site.font_awesome.enabled %}
+									<i class="icon-th-list"></i> 
+								{% endif %}
 								<a href="javascript:void(0);">{{ navlist_archive_year }}</a>
 							</li>
 							<div id="{{ navlist_archive_year }}" class="collapse">
@@ -33,6 +36,9 @@
 					{% endif %}
 
 					<li>
+						{% if site.font_awesome.enabled %}
+							<i class="icon-pencil"></i> 
+						{% endif %}
 						<a href="{{ navlist_archive_p.url }}">
 							{{ navlist_archive_p.title }}
 						</a>
