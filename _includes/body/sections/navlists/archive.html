@@ -1,0 +1,16 @@
+{% if site.posts.size > 0 %}
+	{% assign navlist_archive_html = null %}
+	{% capture navlist_archive_html %}
+		<div class="well ghpb-well-navlist">
+			<ul class="nav nav-list ghpb-nav-list">
+				<li class="nav-header ghpb-nav-header">
+					{% if site.font_awesome.enabled %}
+						<i class="icon-calendar"></i> 
+					{% endif %}
+					Archive
+				</li>
+			</ul>
+		</div>
+	{% endcapture %}
+	{{ navlist_archive_html | strip_newlines | remove:'	' }}
+{% endif %}
