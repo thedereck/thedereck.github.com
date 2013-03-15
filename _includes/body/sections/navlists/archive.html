@@ -22,9 +22,9 @@
 						{% if navlist_archive_first_year == true %}
 							{% assign navlist_archive_first_year = false %}
 						{% else %}
-							</ul>
+							</div></ul>
 						{% endif %}
-						<ul id="{{ navlist_archive_year }}" class="nav nav-list ghpb-nav-list" data-toggle="collapse" data-target="#{{ navlist_archive_year }}">
+						<ul class="nav nav-list ghpb-nav-list" data-toggle="collapse" data-target="#{{ navlist_archive_year }}"><div id="{{ navlist_archive_year }}">
 							{{ navlist_archive_year }}
 						{% assign navlist_archive_prev_year = navlist_archive_year %}
 					{% endif %}
@@ -35,7 +35,7 @@
 						</a>
 					</li>
 				{% endfor %}
-				</ul>
+				</div></ul>
 			</ul>
 		</div>
 	{% endcapture %}
