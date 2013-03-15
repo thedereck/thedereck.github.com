@@ -24,13 +24,13 @@
 						{% else %}
 							</ul>
 						{% endif %}
-						<ul class="nav nav-list ghpb-nav-list">
+						<ul class="nav nav-list ghpb-nav-list" data-toggle="collapse" data-target="#{{ navlist_archive_year }}">
 							{{ navlist_archive_year }}
 						{% assign navlist_archive_prev_year = navlist_archive_year %}
 					{% endif %}
 
 					<li>
-						<a href="{{ navlist_archive_p.url }}">
+						<a id="{{ navlist_archive_year }}" href="{{ navlist_archive_p.url }}">
 							{{ navlist_archive_p.title }}
 						</a>
 					</li>
