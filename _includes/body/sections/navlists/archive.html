@@ -14,7 +14,7 @@
 				{% for navlist_archive_p in site.posts %}
 					{% assign navlist_archive_year = null %}
 					{% capture navlist_archive_year %}
-						{{ navlist_archive_p | date: "%Y" }}
+						{{ navlist_archive_p.date | date: "%Y" }}
 					{% endcapture %}
 
 					{% if navlist_archive_year != navlist_archive_prev_year %}
