@@ -2,14 +2,15 @@
 	{% assign navlist_archive_html = null %}
 	{% capture navlist_archive_html %}
 		<div class="well ghpb-well-navlist">
-			<ul class="nav-tabs nav-stacked">
-				<li>
+			<ul class="nav nav-list ghpb-nav-list">
+				<li class="nav-header ghpb-nav-header">
 					{% if site.font_awesome.enabled %}
 						<i class="icon-calendar"></i> 
 					{% endif %}
 					Archive
 				</li>
 
+				{% assign navlist_archive_first_year = true %}
 				{% assign navlist_archive_prev_year = '' %}
 				{% for navlist_archive_p in site.posts %}
 					{% assign navlist_archive_year = null %}
@@ -18,9 +19,13 @@
 					{% endcapture %}
 
 					{% if navlist_archive_year != navlist_archive_prev_year %}
-						<ul class="nav nav-tabs nav-stacked">
+						{% if navlist_archive_first_year == true %}
+							{% assign navlist_archive_first_year = false %}
+						{% else %}
+							</ul>
+						{% endif %}
+						<ul class="nav nav-list ghpb-nav-list">
 							{{ navlist_archive_year }}
-						</ul>
 						{% assign navlist_archive_prev_year = navlist_archive_year %}
 					{% endif %}
 
@@ -30,6 +35,7 @@
 						</a>
 					</li>
 				{% endfor %}
+				</ul>
 			</ul>
 		</div>
 	{% endcapture %}
