@@ -2,8 +2,8 @@
 	{% assign navlist_archive_html = null %}
 	{% capture navlist_archive_html %}
 		<div class="well ghpb-well-navlist">
-			<ul class="nav nav-list ghpb-nav-list">
-				<li class="nav-header ghpb-nav-header">
+			<ul class="nav-tabs nav-stacked">
+				<li>
 					{% if site.font_awesome.enabled %}
 						<i class="icon-calendar"></i> 
 					{% endif %}
@@ -18,7 +18,7 @@
 					{% endcapture %}
 
 					{% if navlist_archive_year != navlist_archive_prev_year %}
-						<ul class="nav nav-list ghpb-nav-list">
+						<ul class="nav nav-tabs nav-stacked">
 							{{ navlist_archive_year }}
 						</ul>
 						{% assign navlist_archive_prev_year = navlist_archive_year %}
