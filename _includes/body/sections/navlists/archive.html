@@ -26,20 +26,22 @@
 						{% endif %}
 						<ul class="nav nav-list ghpb-nav-list" data-toggle="collapse" data-target="#{{ navlist_archive_year }}">
 							<li class="nav-header ghpb-nav-header">
-								{% if site.font_awesome.enabled %}
-									<i class="icon-th-list"></i> 
-								{% endif %}
-								<a href="javascript:void(0);">{{ navlist_archive_year }}</a>
+								<a href="javascript:void(0);">
+									{% if site.font_awesome.enabled %}
+										<i class="icon-th-list"></i> 
+									{% endif %}
+									{{ navlist_archive_year }}
+								</a>
 							</li>
 							<div id="{{ navlist_archive_year }}" class="collapse">
 						{% assign navlist_archive_prev_year = navlist_archive_year %}
 					{% endif %}
 
 					<li>
-						{% if site.font_awesome.enabled %}
-							<i class="icon-pencil"></i> 
-						{% endif %}
 						<a href="{{ navlist_archive_p.url }}">
+							{% if site.font_awesome.enabled %}
+								<i class="icon-pencil"></i> 
+							{% endif %}
 							{{ navlist_archive_p.title }}
 						</a>
 					</li>
