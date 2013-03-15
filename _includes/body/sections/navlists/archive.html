@@ -1,4 +1,4 @@
-{% if site.posts.size > 0 %}
+{% if site.sections.archive.enabled and site.posts.size > 0 %}
 	{% assign navlist_archive_html = null %}
 	{% capture navlist_archive_html %}
 		<div class="well ghpb-well-navlist">

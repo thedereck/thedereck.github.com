@@ -34,6 +34,8 @@ sections:
     enabled : true
   external_links :
     enabled : true
+  archive :
+    enabled : true
   categories :
     enabled : true
   tags :
