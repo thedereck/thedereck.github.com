@@ -9,6 +9,27 @@
 					{% endif %}
 					Archive
 				</li>
+
+				{% assign navlist_archive_prev_year = '' %}
+				{% for navlist_archive_p in site.posts %}
+					{% assign navlist_archive_year = null %}
+					{% capture navlist_archive_year %}
+						{{ navlist_archive_p | date: "%Y" }}
+					{% endcapture %}
+
+					{% if navlist_archive_year != navlist_archive_prev_year %}
+						<ul class="nav nav-list ghpb-nav-list">
+							{{ navlist_archive_year }}
+						</ul>
+						{% assign navlist_archive_prev_year = navlist_archive_year %}
+					{% endif %}
+
+					<li>
+						<a href="{{ navlist_archive_p.url }}">
+							{{ navlist_archive_p.title }}
+						</a>
+					</li>
+				{% endfor %}
 			</ul>
 		</div>
 	{% endcapture %}
