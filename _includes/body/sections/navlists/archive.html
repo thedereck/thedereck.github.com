@@ -24,17 +24,17 @@
 						{% else %}
 							</div></ul>
 						{% endif %}
+						{% assign navlist_archive_prev_year = navlist_archive_year %}
 						<ul class="nav nav-list ghpb-nav-list" data-toggle="collapse" data-target="#{{ navlist_archive_year }}">
 							<li class="nav-header ghpb-nav-header">
 								<a href="javascript:void(0);">
 									{% if site.font_awesome.enabled %}
-										<i class="icon-th-list"></i> 
+										<i class="icon-reorder"></i> 
 									{% endif %}
 									{{ navlist_archive_year }}
 								</a>
 							</li>
 							<div id="{{ navlist_archive_year }}" class="collapse">
-						{% assign navlist_archive_prev_year = navlist_archive_year %}
 					{% endif %}
 
 					<li>
