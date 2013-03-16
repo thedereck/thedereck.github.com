@@ -12,15 +12,17 @@
 			<br>
 			<p class="text-center"><small><strong>{{ site.github_projects.header }}</strong></small></p>
 
-			<div class="btn-group btn-group-vertical text-center">
-				{% for brief_bio_github_project in site.github_projects.projects %}
-					<a class="btn" href="{{ brief_bio_github_project.url }}">
-						{% if site.font_awesome.enabled %}
-							<i class="icon-github-alt"></i> 
-						{% endif %}
-						{{ brief_bio_github_project.name }}
-					</a>
-				{% endfor %}
+			<div class="text-center">
+				<div class="btn-group btn-group-vertical">
+					{% for brief_bio_github_project in site.github_projects.projects %}
+						<a class="btn" href="{{ brief_bio_github_project.url }}">
+							{% if site.font_awesome.enabled %}
+								<i class="icon-github-alt"></i> 
+							{% endif %}
+							{{ brief_bio_github_project.name }}
+						</a>
+					{% endfor %}
+				</div>
 			</div>
 		{% endif %}
 	{% endcapture %}
