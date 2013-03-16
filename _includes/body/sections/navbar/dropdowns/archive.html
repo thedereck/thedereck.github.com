@@ -29,6 +29,9 @@
 							{% assign navbar_archive_prev_year = navbar_archive_year %}
 							<li class="dropdown-submenu">
 								<a tabindex="-1" href="#">
+									{% if site.font_awesome.enabled %}
+										<i class="icon-calendar"></i> 
+									{% endif %}
 									{{ navbar_archive_year }} 
 								</a>
 								<ul class="dropdown-menu">

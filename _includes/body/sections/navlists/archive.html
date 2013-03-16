@@ -28,6 +28,9 @@
 						{% assign navlist_archive_prev_year = navlist_archive_year %}
 						<li data-toggle="collapse" data-target="#{{ navlist_archive_year }}">
 							<a href="javascript:void(0);">
+								{% if site.font_awesome.enabled %}
+									<i class="icon-calendar"></i> 
+								{% endif %}
 								{{ navlist_archive_year }}
 							</a>
 						</li>
