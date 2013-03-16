@@ -54,7 +54,7 @@
 
 											{% if navbar_tags_p_tag_name == navbar_tag %}
 												{% if navbar_tags_p_match == false %}
-													{% navbar_tags_p_tag_match = true %}
+													{% assign navbar_tags_p_tag_match = true %}
 													<li>
 														<a href="{{ navbar_tags_p.url }}">
 															{% if site.font_awesome.enabled %}
