@@ -33,7 +33,7 @@
 
 						{% assign navbar_category = null %}
 						{% capture navbar_category %}
-							{{ navbar_sorted_category_names | truncatewords:navbar_category_i | remove:'...' | split:' ' | last | downcase | capitalize }}
+							{{ navbar_sorted_category_names | truncatewords:navbar_category_i | remove:'...' | split:' ' | last | downcase | capitalize | strip_newlines }}
 						{% endcapture %}
 
 						{% if navbar_prev_category != navbar_category %}
@@ -50,7 +50,7 @@
 
 										{% assign navbar_category_p_category = null %}
 										{% capture navbar_category_p_category %}
-											{{ navbar_category_p.category | replace: ' ', '___' | downcase | capitalize }}
+											{{ navbar_category_p.category | replace: ' ', '___' | downcase | capitalize | strip_newlines }}
 										{% endcapture %}
 
 										<li>{{ navbar_category }} - {{ navbar_category_p_category }}</li>
