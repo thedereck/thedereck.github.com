@@ -9,6 +9,7 @@
 			<lastBuildDate>{{ site.time | date: "%a, %d %b %Y %H:%M:%S %Z" }}</lastBuildDate>
 			<docs>http://blogs.law.harvard.edu/tech/rss</docs>
 			<generator>http://github.com/thedereck/gh-pages-blog</generator>
+			<atom:link href="{{ site.url }}/rss.xml" rel="self" type="application/rss+xml" />
 
 			{% if site.rss.managingeditor.enabled %}
 				<managingEditor>{{ site.rss.managingeditor.managingeditor }}</managingEditor>
@@ -50,8 +51,6 @@
 					<content:encoded><![CDATA[ {{ p.content }} ]]></content:encoded>
 				</item>
 			{% endfor %}
-
-		<atom:link href="{{ site.url }}/rss.xml" rel="self" type="application/rss+xml" />
 
 		</channel>
 	</rss>
