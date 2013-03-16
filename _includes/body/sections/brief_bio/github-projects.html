@@ -5,9 +5,7 @@
 		{% assign brief_bio_enabled_github_project = false %}
 
 		{% for brief_bio_github_projects_p in site.github_projects.projects %}
-			{% if brief_bio_github_projects_p.enabled %}
-				{% assign brief_bio_enabled_github_project = true %}
-			{% endif %}
+			{% assign brief_bio_enabled_github_project = true %}
 		{% endfor %}
 
 		{% if brief_bio_enabled_github_project %}
