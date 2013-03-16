@@ -14,9 +14,9 @@ exclude: true
 					<h4>{{ p.subtitle }}</h4>
 				{% endif %}
 
-				<div class="span8">
+				<div class="row span8">
 				<h5>
-						<span class="span3">
+						<div class="span3">
 						{% if site.font_awesome.enabled %}
 							<i class="icon-user"></i> 
 						{% endif %}
@@ -33,9 +33,9 @@ exclude: true
 						{% endif %}
 						Published on {{ p.date | date_to_long_string }}.
 						<br>
-					</span>
+					</div>
 
-					<span class = "span3">
+					<div class = "span3">
 					{% if p.category.size > 0 %}
 						{% if site.font_awesome.enabled %}
 						<i class="icon-folder-open"></i> 
@@ -83,7 +83,7 @@ exclude: true
 						{% endfor %}
 						<br>
 					{% endif %}
-					</span>
+					</div>
 				</h5>
 			</div>
 
