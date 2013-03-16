@@ -50,7 +50,7 @@
 
 										{% assign navbar_category_p_category = null %}
 										{% capture navbar_category_p_category %}
-											{{ navbar_category_p.category | downcase | capitalize }}
+											{{ navbar_category_p.category | replace: ' ', '___' | downcase | capitalize }}
 										{% endcapture %}
 
 										{% if navbar_category_p_category == navbar_category %}
