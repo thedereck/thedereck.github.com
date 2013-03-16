@@ -49,8 +49,6 @@
 										{% assign navbar_category_p_category = null %}
 										{% capture navbar_category_p_category %}{{ navbar_category_p.category | replace: ' ', '___' | downcase | capitalize }}{% endcapture %}
 
-										<li>{{ navbar_category }} - {{ navbar_category_p_category }}</li>
-
 										{% if navbar_category_p_category == navbar_category %}
 											<li>
 												<a href="{{ navbar_category_p.url }}">
