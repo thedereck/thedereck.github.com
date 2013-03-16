@@ -50,7 +50,7 @@
 									{% for navlist_tag_p_tag in navlist_tag_p.tags %}
 										
 										{% assign navlist_tag_p_tag_name = null %}
-										{% capture navlist_tag_p_tag_name %}{{ navlist_tags_p_tag | replace: ' ', '___' | downcase }}{% endcapture %}
+										{% capture navlist_tag_p_tag_name %}{{ navlist_tag_p_tag | replace: ' ', '___' | downcase }}{% endcapture %}
 
 										{% if navbar_tag_p_tag_name == section_tag %}
 											{% if navbar_tag_p_match == false %}
