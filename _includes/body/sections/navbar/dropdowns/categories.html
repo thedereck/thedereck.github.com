@@ -28,7 +28,6 @@
 					<b class="caret"></b>
 				</a>
 				<ul class="dropdown-menu">
-					{% assign navbar_first_category = true %}
 					{% assign navbar_prev_category = '' %}
 					{% for navbar_category_i in (1..navbar_number_of_categories) %}
 
@@ -38,12 +37,6 @@
 						{% endcapture %}
 
 						{% if navbar_prev_category != navbar_category %}
-							{% if navbar_first_category == true %}
-								{% navbar_first_category = false %}
-							{% else %}
-								</ul>
-							</li>
-							{% endif %}
 							{% assign navbar_prev_category = navbar_category %}
 							<li class="dropdown-submenu">
 								<a tabindex="-1" href="#">
@@ -53,22 +46,22 @@
 									{{ navbar_category }}
 								</a>
 								<ul class="dropdown-menu">
-						{% endif %}
-						{% for navbar_category_p in site.posts %}
-							{% if navbar_category_p.category === navbar_category %}
-								<li>
-									<a href="{{ navbar_category_p.url }}">
-										{% if site.font_awesome.enabled %}
-											<i class="icon-pencil"></i> 
+									{% for navbar_category_p in site.posts %}
+										{% if navbar_category_p.category === navbar_category %}
+											<li>
+												<a href="{{ navbar_category_p.url }}">
+													{% if site.font_awesome.enabled %}
+														<i class="icon-pencil"></i> 
+													{% endif %}
+													{{ navbar_category_p.title }}
+												</a>
+											</li>
 										{% endif %}
-										{{ navbar_category_p.title }}
-									</a>
-								</li>
-							{% endif %}
-						{% endfor %}
+									{% endfor %}
+								</ul>
+							</li>
+						{% endif %}
 					{% endfor %}
-						</ul>
-					</li>
 				</ul>
 			</li>
 		</ul>
