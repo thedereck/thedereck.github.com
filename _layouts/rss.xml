@@ -48,7 +48,7 @@
 					{% endfor %}
 
 					<description><![CDATA[ {{ p.description }} ]]></description>
-					<content:encoded><![CDATA[ {{p.subtitle}}<br>{{ p.content }} ]]></content:encoded>
+					<content:encoded><![CDATA[ <h4>{{p.subtitle}}</h4>{{ p.content }} ]]></content:encoded>
 				</item>
 			{% endfor %}
 
