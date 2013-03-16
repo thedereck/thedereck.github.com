@@ -37,7 +37,8 @@
 				post_div = post_div + '<p>' + post.subtitle + '</p>';
 			};
 
-			post_div = post_div + '<small>';
+			post_div = post_div + '<div class="row">';
+			post_div = post_div + '<small><div class="span3 offset1">';
 
 			{% if site.font_awesome.enabled %}
 				post_div = post_div + '<i class="icon-user"></i> ';
@@ -53,10 +54,9 @@
 			{% if site.font_awesome.enabled %}
 				post_div = post_div + '<i class="icon-pencil"></i> ';
 			{% endif %}
-			post_div = post_div + 'Published on ' + post.date + '.</small><br>';
+			post_div = post_div + 'Published on ' + post.date + '.<br></div><div class="span3">';
 
 			if (post.category !== null && post.category.length > 0) {
-				post_div = post_div + '<small>';
 				{% if site.font_awesome.enabled %}
 					post_div = post_div + '<i class="icon-folder-open"></i> ';
 				{% endif %}
@@ -64,11 +64,10 @@
 					'<a href="{{ site.url }}/filter.html?category=' +
 					post.category.toLowerCase() + '">' +
 					post.category.replace(/___/g, ' ') +
-					'</a></small><br>';
+					'</a><br>';
 			};
 
 			if (post.tags !== null && post.tags.length > 0) {
-				post_div = post_div + '<small>';
 				{% if site.font_awesome.enabled %}
 					post_div = post_div + '<i class="icon-tags"></i> ';
 				{% endif %}
@@ -90,9 +89,11 @@
 							'</a>';
 					}
 				}
-				post_div = post_div + '</small>';
+				post_div = post_div + '<br>';
 			}
 
+			post_div = post_div + '</div><div class="span1"></div></small>';
+			
 			if (post.description !== null && post.description.length > 0) {
 				post_div = post_div + '<p>&nbsp;</p><p>' + post.description + '</p>';
 			}
