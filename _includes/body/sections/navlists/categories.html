@@ -52,7 +52,7 @@
 									{% assign navlist_category_p_category = null %}
 									{% capture navlist_category_p_category %}{{ navlist_category_p.category | replace: ' ', '___' | downcase | capitalize }}{% endcapture %}
 
-									{% if navlist_category_p_category == navlist_category %}
+									{% if navlist_category_p_category == section_category %}
 										<li>
 											<a href="{{ navlist_category_p.url }}">
 												{% if site.font_awesome.enabled %}
