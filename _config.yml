@@ -74,7 +74,7 @@ social_links :
       enabled : true
       name: Google+
       font_awesome_icon : icon-google-plus
-      url : https://plus.google.com/109660251296662910676
+      url : https://plus.google.com/109660251296662910676?rel=author
     - link :
       enabled : true
       name : Linkedin
