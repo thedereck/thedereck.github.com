@@ -47,19 +47,23 @@
 								<ul class="dropdown-menu">
 									{% for navbar_tags_p in site.posts %}
 
+										{% navbar_tags_p_match = false %}
 										{% for navbar_tags_p_tag in navbar_tags_p.tags %}
 											{% assign navbar_tags_p_tag_name = null %}
 											{% capture navbar_tags_p_tag_name %}{{ navbar_tags_p_tag | replace: ' ', '___' | downcase }}{% endcapture %}
 
 											{% if navbar_tags_p_tag_name == navbar_tag %}
-												<li>
-													<a href="{{ navbar_tags_p.url }}">
-														{% if site.font_awesome.enabled %}
-															<i class="icon-pencil"></i> 
-														{% endif %}
-														{{ navbar_tags_p.title }}
-													</a>
-												</li>
+												{% if navbar_tags_p_match = false %}
+													{% navbar_tags_p_tag_match = true %}
+													<li>
+														<a href="{{ navbar_tags_p.url }}">
+															{% if site.font_awesome.enabled %}
+																<i class="icon-pencil"></i> 
+															{% endif %}
+															{{ navbar_tags_p.title }}
+														</a>
+													</li>
+												{% endif %}
 											{% endif %}
 										{% endfor %}
 									{% endfor %}
