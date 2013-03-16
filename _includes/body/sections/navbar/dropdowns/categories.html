@@ -43,11 +43,17 @@
 									{% if site.font_awesome.enabled %}
 										<i class="icon-folder-open"></i> 
 									{% endif %}
-									{{ navbar_category }}
+									{{ navbar_category | replace: '___', ' ' }}
 								</a>
 								<ul class="dropdown-menu">
 									{% for navbar_category_p in site.posts %}
-										{% if navbar_category_p.category == navbar_category %}
+
+										{% assign navbar_category_p_category = null %}
+										{% capture navbar_category_p_category %}
+											{{ navbar_category_p.category | downcase | capitalize }}
+										{% endcapture %}
+
+										{% if navbar_category_p.category == navbar_category_p_category %}
 											<li>
 												<a href="{{ navbar_category_p.url }}">
 													{% if site.font_awesome.enabled %}
