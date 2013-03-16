@@ -28,6 +28,8 @@ sections:
       enabled : true
     social_links :
       enabled : true
+    github_projects :
+      enabled : true
   social_links :
     enabled : false
   github_projects :
