@@ -29,7 +29,7 @@ sections:
     social_links :
       enabled : true
   social_links :
-    enabled : true
+    enabled : false
   github_projects :
     enabled : true
   external_links :
@@ -43,17 +43,17 @@ sections:
 
 navbar :
   archive :
-    enabled : true
+    enabled : false
   categories :
-    enabled : true
+    enabled : false
   tags :
-    enabled : true
+    enabled : false
   github_projects :
-    enabled : true
+    enabled : false
   social_links :
-    enabled : true
+    enabled : false
   external_links :
-    enabled : true
+    enabled : false
 
 social_links :
   follow_name : Dereck
