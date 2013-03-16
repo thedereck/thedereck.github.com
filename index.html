@@ -16,7 +16,7 @@ exclude: true
 
 				<div>
 				<h5>
-						<div class="span3">
+						<span class="span3">
 						{% if site.font_awesome.enabled %}
 							<i class="icon-user"></i> 
 						{% endif %}
@@ -33,9 +33,9 @@ exclude: true
 						{% endif %}
 						Published on {{ p.date | date_to_long_string }}.
 						<br>
-					</div>
+					</span>
 
-					<div class = "span3 offset1">
+					<span class = "span3">
 					{% if p.category.size > 0 %}
 						{% if site.font_awesome.enabled %}
 						<i class="icon-folder-open"></i> 
@@ -83,7 +83,7 @@ exclude: true
 						{% endfor %}
 						<br>
 					{% endif %}
-					</div>
+					</span>
 				</h5>
 			</div>
 
