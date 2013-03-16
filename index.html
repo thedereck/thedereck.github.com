@@ -15,23 +15,26 @@ exclude: true
 				{% endif %}
 
 				<h5>
-					{% if site.font_awesome.enabled %}
-						<i class="icon-user"></i> 
-					{% endif %}
-					Authored by 
-					{% if p.author %}
-						{{ p.author }}.
-					{% else %}
-						{{ site.author }}.
-					{% endif %}
-					<br>
+						<div class="span4">
+						{% if site.font_awesome.enabled %}
+							<i class="icon-user"></i> 
+						{% endif %}
+						Authored by 
+						{% if p.author %}
+							{{ p.author }}.
+						{% else %}
+							{{ site.author }}.
+						{% endif %}
+						<br>
 
-					{% if site.font_awesome.enabled %}
-						<i class="icon-pencil"></i> 
-					{% endif %}
-					Published on {{ p.date | date_to_long_string }}.
-					<br>
+						{% if site.font_awesome.enabled %}
+							<i class="icon-pencil"></i> 
+						{% endif %}
+						Published on {{ p.date | date_to_long_string }}.
+						<br>
+					</div>
 
+					<div class = "span4">
 					{% if p.category.size > 0 %}
 						{% if site.font_awesome.enabled %}
 						<i class="icon-folder-open"></i> 
@@ -79,6 +82,7 @@ exclude: true
 						{% endfor %}
 						<br>
 					{% endif %}
+					</div>
 				</h5>
 
 				{% if p.alert or p.notice %}
