@@ -53,7 +53,7 @@
 											{{ navbar_category_p.category | downcase | capitalize }}
 										{% endcapture %}
 
-										{% if navbar_category_p.category == navbar_category_p_category %}
+										{% if navbar_category_p_category == navbar_category %}
 											<li>
 												<a href="{{ navbar_category_p.url }}">
 													{% if site.font_awesome.enabled %}
