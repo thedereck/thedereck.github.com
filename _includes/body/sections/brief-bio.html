@@ -5,15 +5,13 @@
 			<div class="thumbnail">
 				{% if site.sections.brief_bio.image.enabled %}
 					<img data-src="holder.js/200x200" alt="" src="{{ site.sections.brief_bio.image.url }}">
-				{% endif %}
-				{% if site.sections.brief_bio.content.enabled %}
-					<div class="caption">
+					{% if site.sections.brief_bio.content.enabled %}
 						{% include content/brief-bio %}
-					</div>
+					{% endif %}
 				{% endif %}
 			</div>
 			{% include body/sections/brief_bio/social-links.html %}
-			{% include body/sections/brief_bio/github-projects.html %}
+			{% include body/sections/brief_bio/github-projects	.html %}
 		</div>
 	{% endcapture %}
 	{{ section_brief_bio_html | strip_newlines | remove:'	' }}
