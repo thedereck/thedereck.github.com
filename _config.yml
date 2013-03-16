@@ -3,6 +3,7 @@ brand : The Dereck
 description : Dereck Curry's blog and website
 url : http://thedereck.github.com
 email : thedereck@thedereck.com
+author: Dereck Curry
 
 favicon :
   enabled : true

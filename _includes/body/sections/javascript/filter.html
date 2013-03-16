@@ -10,6 +10,7 @@
 				{% endif %}
 						"title" : "{{ javascript_post.title | replace: '"', '\"' }}" , 
 						"subtitle" : "{{ javascript_post.subtitle | replace: '"', '\"' }}" , 
+						"author" : "{{ javascript_post.author | replace '"', '\"' }}" , 
 						"description" : "{{ javascript_post.description | replace: '"', '\"' }}" , 
 						"url" : "{{site.url}}{{ javascript_post.url | replace: '"', '\"' }}" , 
 						"date" : "{{ javascript_post.date | date_to_long_string | replace: '"', '\"' }}" , 
@@ -37,6 +38,18 @@
 			};
 
 			post_div = post_div + '<small>';
+
+			{% if site.font_awesome.enabled %}
+				post_div = post_div + '<i class="icon-user"></i> ';
+			{% endif %}
+			post_div = post_div + 'Authored by ';
+			{% if page.author %}
+				post_div = post_div + post.author +'.';
+			{% else %}
+				post_div = post_div + "{{ site.author }}.";
+			{% endif %}
+			post_div = post_div + "<br>";
+
 			{% if site.font_awesome.enabled %}
 				post_div = post_div + '<i class="icon-pencil"></i> ';
 			{% endif %}

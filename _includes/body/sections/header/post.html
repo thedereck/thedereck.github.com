@@ -34,6 +34,17 @@
 
 		<h5>
 			{% if site.font_awesome.enabled %}
+				<i class="icon-user"></i> 
+			{% endif %}
+			Authored by 
+			{% if page.author %}
+				{{ p.author }}.
+			{% else %}
+				{{ site.author }}.
+			{% endif %}
+			<br>
+
+			{% if site.font_awesome.enabled %}
 				<i class="icon-pencil"></i> 
 			{% endif %}
 			Published on {{ page.date | date_to_long_string }}.
