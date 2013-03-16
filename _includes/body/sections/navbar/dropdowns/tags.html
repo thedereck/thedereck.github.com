@@ -33,20 +33,32 @@
 					{% for navbar_tag_i in (1..navbar_number_of_tags) %}
 
 						{% assign navbar_tag = null %}
-						{% capture navbar_tag %}
-							{{ navbar_sorted_tag_names | truncatewords:navbar_tag_i | remove:'...' | split:' ' | last | downcase }}
-						{% endcapture %}
+						{% capture navbar_tag %}{{ navbar_sorted_tag_names | truncatewords:navbar_tag_i | remove:'...' | split:' ' | last | downcase }}{% endcapture %}
 
 						{% if navbar_prev_tag != navbar_tag %}
 							{% assign navbar_prev_tag = navbar_tag %}
-							<li>
-								<a href="{{ site.url }}/filter.html?tag={{ navbar_tag }}">
+							<li class="dropdown-submenu">
+								<a tabindex="-1" href="#">
 									{% if site.font_awesome.enabled %}
 										<i class="icon-tag"></i> 
 									{% endif %}
 									{{ navbar_tag | replace: '___', ' ' }}
 								</a>
+								<ul class="dropdown-menu">
+									{% for navbar_tags_p in site.posts %}
+
+										{% for navbar_tags_p_tag in navbar_tags_p.tags %}
+											{% assign navbar_tags_p_tag_name = null %}
+											{% capture navbar_tags_p_tag_name %}{{ navbar_tags_p_tag | replace: ' ', '___' }}{% endcapture %}
+
+											<li>{{ navbar_tag }} - {{ navbartags_p_tag_name }}</li>
+
+										{% endfor %}
+									{% endfor %}
+								</ul>
 							</li>
+
+
 						{% endif %}
 					{% endfor %}
 				</ul>
