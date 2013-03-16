@@ -47,7 +47,7 @@
 								<ul class="dropdown-menu">
 									{% for navbar_tags_p in site.posts %}
 
-										{% navbar_tags_p_match = false %}
+										{% assign navbar_tags_p_match = false %}
 										{% for navbar_tags_p_tag in navbar_tags_p.tags %}
 											{% assign navbar_tags_p_tag_name = null %}
 											{% capture navbar_tags_p_tag_name %}{{ navbar_tags_p_tag | replace: ' ', '___' | downcase }}{% endcapture %}
