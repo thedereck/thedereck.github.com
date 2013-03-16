@@ -52,13 +52,19 @@
 											{% capture navbar_tags_p_tag_name %}{{ navbar_tags_p_tag | replace: ' ', '___' | downcase }}{% endcapture %}
 
 											{% if navbar_tags_p_tag_name == navbar_tag %}
-												<li>{{ navbar_tag }} - {{ navbar_tags_p_tag_name }}</li>
+												<li>
+													<a href="{{ navbar_tags_p.url }}">
+														{% if site.font_awesome.enabled %}
+															<i class="icon-pencil"></i> 
+														{% endif %}
+														{{ navbar_tags_p.title }}
+													</a>
+												</li>
 											{% endif %}
 										{% endfor %}
 									{% endfor %}
 								</ul>
 							</li>
-
 
 						{% endif %}
 					{% endfor %}
