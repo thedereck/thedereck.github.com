@@ -31,9 +31,7 @@
 				{% for section_category_i in (1..section_number_of_categories) %}
 
 					{% assign section_category = null %}
-					{% capture section_category %}
-						{{ section_sorted_category_names | truncatewords:section_category_i | remove:'...' | split:' ' | last | downcase | capitalize }}
-					{% endcapture %}
+					{% capture section_category %}{{ section_sorted_category_names | truncatewords:section_category_i | remove:'...' | split:' ' | last | downcase | capitalize }}{% endcapture %}
 
 					{% if section_prev_category != section_category %}
 						{% assign section_prev_category = section_category %}
