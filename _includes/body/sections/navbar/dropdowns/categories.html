@@ -47,7 +47,7 @@
 								</a>
 								<ul class="dropdown-menu">
 									{% for navbar_category_p in site.posts %}
-										{% if navbar_category_p.category === navbar_category %}
+										{% if navbar_category_p.category == navbar_category %}
 											<li>
 												<a href="{{ navbar_category_p.url }}">
 													{% if site.font_awesome.enabled %}
