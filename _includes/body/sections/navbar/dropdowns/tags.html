@@ -49,10 +49,11 @@
 
 										{% for navbar_tags_p_tag in navbar_tags_p.tags %}
 											{% assign navbar_tags_p_tag_name = null %}
-											{% capture navbar_tags_p_tag_name %}{{ navbar_tags_p_tag | replace: ' ', '___' }}{% endcapture %}
+											{% capture navbar_tags_p_tag_name %}{{ navbar_tags_p_tag | replace: ' ', '___' | downcase }}{% endcapture %}
 
-											<li>{{ navbar_tag }} - {{ navbar_tags_p_tag_name }}</li>
-
+											{% if navbar_tags_p_tag_name == navbar_tag %}
+												<li>{{ navbar_tag }} - {{ navbar_tags_p_tag_name }}</li>
+											{% endif %}
 										{% endfor %}
 									{% endfor %}
 								</ul>
