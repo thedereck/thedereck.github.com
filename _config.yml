@@ -15,8 +15,8 @@ favicon :
     full_url : false
     type : false
 
-alert : Sample site alert.
-notice : Sample site notice.
+alert : false
+notice : false
 
 sections:
   brief_bio :
