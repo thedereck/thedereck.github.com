@@ -126,10 +126,10 @@ rss :
   enabled : true
   managingeditor :
     enabled : true
-    managingeditor : thedereck@thedereck.com
+    managingeditor : thedereck@thedereck.com (Dereck Curry)
   webmaster :
     enabled : true
-    webmaster : thedereck@thedereck.com
+    webmaster : thedereck@thedereck.com (Dereck Curry)
   ttl :
     enabled : true
     ttl : 300
