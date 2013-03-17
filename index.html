@@ -9,7 +9,7 @@ exclude: true
 	{% for p in paginator.posts %}
 		<div class="ghpb-post">
 			<div class="well ghpb-well-outline">
-				<h2><a href="{{ p.url }}">{{ p.title }}</a></h2>
+				<h2><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></h2>
 				{% if p.subtitle %}
 					<h4>{{ p.subtitle }}</h4>
 				{% endif %}
@@ -66,7 +66,7 @@ exclude: true
 								{% if site.font_awesome.enabled %}
 									<i class="icon-comments"></i> 
 								{% endif %}
-								<a href="{{ p.url }}#disqus_thread"></a>
+								<a href="{{ site.url }}{{ p.url }}#disqus_thread"></a>
 								<br>
 							{% endif %}
 						</div>
