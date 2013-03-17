@@ -46,17 +46,17 @@ sections:
 
 navbar :
   archive :
-    enabled : false
+    enabled : true
   categories :
-    enabled : false
+    enabled : true
   tags :
-    enabled : false
+    enabled : true
   github_projects :
-    enabled : false
+    enabled : true
   social_links :
-    enabled : false
+    enabled : true
   external_links :
-    enabled : false
+    enabled : true
 
 social_links :
   follow_name : Dereck
