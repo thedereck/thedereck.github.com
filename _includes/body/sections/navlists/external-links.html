@@ -11,7 +11,7 @@
 				</li>
 				{% for section_external_link in site.external_links.links %}
 					<li>
-						<a href="{{ section_external_link.url }}">
+						<a href="{{ section_external_link.url }}" target="_blank">
 							{% if site.font_awesome.enabled %}
 								<i class="icon-external-link"></i> 
 							{% endif %}

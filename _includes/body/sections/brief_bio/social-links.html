@@ -22,7 +22,7 @@
 				{% for brief_bio_social_link in site.social_links.links %}
 					{% if brief_bio_social_link.enabled %}
 						<li>
-							<a class="btn" href="{{ brief_bio_social_link.url }}">
+							<a class="btn" href="{{ brief_bio_social_link.url }}" target="_blank">
 								{% if site.font_awesome.enabled and brief_bio_social_link.font_awesome_icon %}
 									<i class="{{ brief_bio_social_link.font_awesome_icon }}"></i>
 								{% else %}

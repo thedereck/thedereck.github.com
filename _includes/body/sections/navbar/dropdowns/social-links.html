@@ -29,7 +29,7 @@
 						{% for navbar_social_link in site.social_links.links %}
 							{% if navbar_social_link.enabled %}
 							<li>
-								<a href="{{ navbar_social_link.url }}">
+								<a href="{{ navbar_social_link.url }}" target="_blank">
 									{% if site.font_awesome.enabled and navbar_social_link.font_awesome_icon %}
 										<i class="{{ navbar_social_link.font_awesome_icon }}"></i> 
 									{% endif %}
