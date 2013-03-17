@@ -107,7 +107,7 @@ external_links :
       url : http://bakingkookys.com
 
 bootstrap:
-  css : cosmo.bootstrap.min.css
+  css : united.bootstrap.min.css
   responsive :
     enabled : true
     css : bootstrap-responsive.min.css
