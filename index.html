@@ -51,6 +51,24 @@ exclude: true
 								<i class="icon-pencil"></i> 
 							{% endif %}
 							Published on {{ p.date | date_to_long_string }}.
+							<br>
+
+							{% assign enable_disqus_show_comments = false %}
+							{% if site.disqus.enabled and site.disqus.show_comment_count and p.disqus == null %}
+								{% assign enable_disqus_show_comments = true %}
+							{% elsif site.disqus.enabled and site.disqus.show_comment_count and p.disqus.enabled == null %}
+								{% assign enable_disqus_show_comments = true %}
+							{% elsif site.disqus.enabled and site.disqus.show_comment_count and p.disqus.enabled %}
+								{% assign enable_disqus_show_comments = true %}
+							{% endif %}
+
+							{% if enable_disqus_show_comments %}
+								{% if site.font_awesome.enabled %}
+									<i class="icon-comments"></i> 
+								{% endif %}
+								<a href="{{ p.url }}#disqus_thread"></a>
+								<br>
+							{% endif %}
 						</div>
 
 						<div class="span3">

@@ -1,5 +1,5 @@
-{% assign javascript_disqus_html = null %}
-{% capture javascript_disqus_html %}
+{% assign javascript_post_disqus_html = null %}
+{% capture javascript_post_disqus_html %}
 	{% assign enable_disqus = false %}
 
 	{% if site.disqus.enabled and page.disqus == null %}
@@ -23,4 +23,4 @@
 		</script>
 	{% endif %}
 {% endcapture %}
-{{ javascript_disqus_html | strip_newlines | remove:'	' }}
+{{ javascript_post_disqus_html | strip_newlines | remove:'	' }}
