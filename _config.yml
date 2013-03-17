@@ -107,7 +107,7 @@ external_links :
       url : http://bakingkookys.com
 
 bootstrap:
-  css : journal.bootstrap.min.css
+  css : simplex.bootstrap.min.css
   responsive :
     enabled : true
     css : bootstrap-responsive.min.css
