@@ -37,6 +37,10 @@
 				post_div = post_div + '<p>' + post.subtitle + '</p>';
 			};
 
+			if (post.description !== null && post.description.length > 0) {
+				post_div = post_div + '<p>&nbsp;</p><p>' + post.description + '</p>';
+			}
+
 			post_div = post_div + '<div class="row">';
 			post_div = post_div + '<small><div class="span3 offset1">';
 
@@ -93,11 +97,6 @@
 			}
 
 			post_div = post_div + '</div><div class="span1"></div></small></div>';
-
-			if (post.description !== null && post.description.length > 0) {
-				post_div = post_div + '<p>&nbsp;</p><p>' + post.description + '</p>';
-			}
-
 			post_div = post_div + '</div></div>';
 
 			return post_div;
