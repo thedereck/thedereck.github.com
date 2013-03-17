@@ -107,6 +107,9 @@ external_links :
     - link :
       name : Baking Kookys
       url : http://bakingkookys.com
+    - link :
+      name : Lowcountry Blues Club
+      url : http://lowcountrybluesclub.blogspot.com/
 
 bootstrap:
   css : simplex.bootstrap.min.css
