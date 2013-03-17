@@ -5,7 +5,7 @@ url : http://thedereck.github.com
 email : thedereck@thedereck.com
 author: Dereck Curry
 
-paginate: 10
+paginate: 2
 
 favicon :
   enabled : true
