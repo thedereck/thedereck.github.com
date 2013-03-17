@@ -14,7 +14,29 @@ exclude: true
 					<h4>{{ p.subtitle }}</h4>
 				{% endif %}
 
+				{% if p.alert or p.notice %}
+					<br>
+					{% if p.alert %}
+					<div class="alert alert-block">
+						{{ p.alert }}
+					</div>
+					{% endif %}
+
+					{% if p.notice %}
+					<div class="alert alert-block alert-success">
+						{{ p.notice }}
+					</div>
+					{% endif %}
+				{% endif %}
+
+				<br>
+				<br>
+				{{ p.content }}
+
+
 				<div class="row">
+					<br>
+					<br>
 					<small>
 						<div class="span3 offset1">
 							{% if site.font_awesome.enabled %}
@@ -86,25 +108,6 @@ exclude: true
 						</div>
 					</small>
 				</div>
-
-				{% if p.alert or p.notice %}
-					<br>
-					{% if p.alert %}
-					<div class="alert alert-block">
-						{{ p.alert }}
-					</div>
-					{% endif %}
-
-					{% if p.notice %}
-					<div class="alert alert-block alert-success">
-						{{ p.notice }}
-					</div>
-					{% endif %}
-				{% endif %}
-
-				<br>
-				<br>
-				{{ p.content }}
 			</div>
 		</div>
 	{% endfor %}
