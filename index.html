@@ -36,8 +36,6 @@ exclude: true
 
 				<div class="row">
 					<br>
-					<br>
-					<hr>
 					<small>
 						<div class="span3 offset1">
 							{% if site.font_awesome.enabled %}
@@ -55,7 +53,6 @@ exclude: true
 								<i class="icon-pencil"></i> 
 							{% endif %}
 							Published on {{ p.date | date_to_long_string }}.
-							<br>
 						</div>
 
 						<div class="span3">
@@ -104,7 +101,6 @@ exclude: true
 										<a href="{{ site.url }}/filter.html?tag={{ index_post_tag }}">{{ index_post_tag | replace: '___', ' ' }}</a>
 									{% endif %}
 								{% endfor %}
-								<br>
 							{% endif %}
 						</div>
 					</small>
