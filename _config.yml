@@ -145,7 +145,7 @@ rss :
 
 disqus :
   enabled : true
-  shortname : TheDereck
+  shortname : thedereck
   show_comment_count : true
 
 analytics :
