@@ -16,7 +16,7 @@ exclude: true
 
 				<div class="row">
 					<small>
-						<div class="span2">
+						<div class="span4">
 							{% if site.font_awesome.enabled %}
 								<i class="icon-user"></i> 
 							{% endif %}
@@ -27,9 +27,7 @@ exclude: true
 								{{ site.author }}.
 							{% endif %}
 							<br>
-						</div>
 
-						<div class="span2">
 							{% if site.font_awesome.enabled %}
 								<i class="icon-pencil"></i> 
 							{% endif %}
@@ -37,7 +35,7 @@ exclude: true
 							<br>
 						</div>
 
-						<div class="span2">
+						<div class="span4">
 							{% if p.category.size > 0 %}
 								{% if site.font_awesome.enabled %}
 									<i class="icon-folder-open"></i> 
@@ -48,9 +46,7 @@ exclude: true
 								</a>
 								<br>
 							{% endif %}
-						</div>
 
-						<div class="span2">
 							{% if p.tags.size > 0 %}
 								{% assign index_post_tag_names = null %}
 								{% capture index_post_tag_names %}
