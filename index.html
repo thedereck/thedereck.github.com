@@ -34,9 +34,9 @@ exclude: true
 				{{ p.content }}
 
 
-				<div class="row well">
+				<div class="row">
 					<small>
-						<div class="span3 offset1">
+						<div class="span3 offset1 well">
 							{% if site.font_awesome.enabled %}
 								<i class="icon-user"></i> 
 							{% endif %}
@@ -54,7 +54,7 @@ exclude: true
 							Published on {{ p.date | date_to_long_string }}.
 						</div>
 
-						<div class="span3">
+						<div class="span3 well">
 							{% if p.category.size > 0 %}
 								{% if site.font_awesome.enabled %}
 									<i class="icon-folder-open"></i> 
