@@ -1,6 +1,5 @@
 ---
 layout: page
-title: Dereck Curry's Blog and Website
 exclude: true
 ---
 
@@ -9,7 +8,11 @@ exclude: true
 	{% for p in paginator.posts %}
 		<div class="ghpb-post">
 			<div class="well ghpb-well-outline">
-				<h2><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></h2>
+				{% if p.title %}
+					<h2><a href="{{ site.url }}{{ p.url }}">{{ p.title }}</a></h2>
+				{% else %}
+					<h2><a href="{{ site.url }}{{ p.url }}">{{ site.description }}</a></h2>
+				{% endif %}
 				{% if p.subtitle %}
 					<h4>{{ p.subtitle }}</h4>
 				{% endif %}

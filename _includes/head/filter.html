@@ -1,7 +1,11 @@
 {% assign head_filter_html = null %}
 {% capture head_filter_html %}
 	<head>
-		<title>{{ site.name }} - Filter</title>
+		{% if page.title %}
+			<title>{{ site.name }} - {{ page.title }}</title>
+		{% else %}
+			<title>{{ site.name }} - {{ site.description }}</title>
+		{% endif %}
 		{% include head/common/common.html %}
 	</head>
 {% endcapture %}

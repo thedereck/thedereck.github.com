@@ -1,7 +1,11 @@
 {% assign head_post_html = null %}
 {% capture head_post_html %}
 	<head>
-		<title>{{ site.name }} - {{ page.title }}</title>
+		{% if page.title %}
+			<title>{{ site.name }} - {{ page.title }}</title>
+		{% else %}
+			<title>{{ site.name }} - {{ site.description }}</title>
+		{% endif %}
 		{% include head/common/common.html %}
 	</head>
 {% endcapture %}

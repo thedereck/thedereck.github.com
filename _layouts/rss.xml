@@ -11,8 +11,8 @@
 			<generator>http://github.com/thedereck/gh-pages-blog</generator>
 			<atom:link href="{{ site.url }}/rss.xml" rel="self" type="application/rss+xml" />
 
-			{% if site.rss.managingeditor.enabled %}
-				<managingEditor>{{ site.rss.managingeditor.managingeditor }}</managingEditor>
+			{% if site.rss.managing_editor.enabled %}
+				<managingEditor>{{ site.rss.managing_editor.managing_editor }}</managingEditor>
 			{% endif %}
 
 			{% if site.rss.webmaster.enabled %}
@@ -33,7 +33,11 @@
 
 			{% for p in site.posts %}
 				<item>
-					<title>{{ p.title }}</title>
+					{% if p.title %}
+						<title>{{ p.title }}</title>
+					{% else %}
+						<title>{{ site.description }}</title>
+					{% endif %}
 					<link>{{ site.url }}{{ p.url }}</link>
 
 					{% if p.author %}
