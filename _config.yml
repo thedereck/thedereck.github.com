@@ -372,6 +372,12 @@ external_links :
     - link :
       name : Lowcountry Blues Club
       url : http://lowcountrybluesclub.blogspot.com/
+    - link :
+      name : Code Camp Charleston
+      url : http://www.chscodecamp.com/
+    - link :
+      name : Charleston Digital Corridor
+      url : http://www.charlestondigitalcorridor.com/
 
 
 # These are the bootstrap settings. These bootstrap settings will control both

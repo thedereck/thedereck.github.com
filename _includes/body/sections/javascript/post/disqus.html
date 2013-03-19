@@ -1,5 +1,5 @@
-{% assign javascript_post_disqus_html = null %}
-{% capture javascript_post_disqus_html %}
+{% assign javascript_disqus_html = null %}
+{% capture javascript_disqus_html %}
 	{% assign enable_disqus = false %}
 
 	{% if site.disqus.enabled and page.disqus == null %}
@@ -17,10 +17,10 @@
 				var dsq = document.createElement('script');
 				dsq.type = 'text/javascript';
 				dsq.async = true;
-				dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
 				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
 			})();
 		</script>
 	{% endif %}
 {% endcapture %}
-{{ javascript_post_disqus_html | strip_newlines | remove:'	' }}
+{{ javascript_disqus_html | strip_newlines | remove:'	' }}
