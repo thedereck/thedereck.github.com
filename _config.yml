@@ -338,7 +338,7 @@ github_projects :
   projects :
   - project :
     name : gh-pages-blog
-    url : https://github.com/thedereck/gh-pages-blog
+    url : http://thedereck.github.com/gh-pages-blog/
 
 
 # These are links to other websites outside of the blog that are not part of
