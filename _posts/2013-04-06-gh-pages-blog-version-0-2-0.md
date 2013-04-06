@@ -1,6 +1,6 @@
 ---
 layout : post
-title : Announcing gh-pages-blog Version 0.1.1
+title : Announcing gh-pages-blog Version 0.2.0
 category : GitHub Projects
 tags : gh-pages-blog
 ---
