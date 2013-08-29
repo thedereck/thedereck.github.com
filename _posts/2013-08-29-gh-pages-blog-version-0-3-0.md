@@ -1,3 +1,4 @@
+---
 layout : post
 title : Announcing gh-pages-blog Version 0.3.0
 category : GitHub Projects
