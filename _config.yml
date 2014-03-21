@@ -339,7 +339,7 @@ github_projects :
   projects :
   - project :
     name : gh-pages-blog
-    url : https://thedereck.github.com/gh-pages-blog/
+    url : https://thedereck.github.io/gh-pages-blog/
   - project :
     name : Open Character Record
     url : https://github.com/thedereck/OpenCharacterRecord
