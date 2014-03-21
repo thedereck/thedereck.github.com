@@ -339,6 +339,9 @@ github_projects :
   - project :
     name : gh-pages-blog
     url : http://thedereck.github.com/gh-pages-blog/
+  - project :
+    name : Open Character Record
+    url : https://github.com/thedereck/OpenCharacterRecord
 
 
 # These are links to other websites outside of the blog that are not part of
