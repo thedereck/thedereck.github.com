@@ -50,17 +50,8 @@ exclude : [ README.md , version.txt ]
 # Here's an example configuration:
 # alert : This is a sample alert message.
 # notice : This is a sample notice message.
-paginate: 10
-favicon :
-  enabled : true
-  local :
-    enabled : true
-    partial_url : /img/TheDereck.png
-    type : png
-  remote :
-    enabled : false
-    full_url : false
-    type : false
+alert : false
+notice : false
 
 
 # The favicon image served up to web browsers. Enable the local if you want
@@ -82,8 +73,18 @@ favicon :
 #     enabled : true
 #     full_url : http://www.gravatar.com/avatar/2f8947394b8acb62e1055f27.png
 #     type : png
-alert : false
-notice : false
+favicon :
+  enabled : true
+  local :
+    enabled : true
+    partial_url : /img/TheDereck.png
+    type : png
+  remote :
+    enabled : false
+    full_url : false
+    type : false
+
+paginate: 10
 
 
 # These are the sections of on the right hand column of the page (or at the
