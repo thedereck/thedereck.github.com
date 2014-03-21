@@ -26,7 +26,7 @@
 name : The Dereck
 brand : The Dereck
 description : Dereck Curry's GitHub Page
-url : http://thedereck.github.com
+url : https://thedereck.github.com
 email : thedereck@thedereck.com
 author: Dereck Curry
 
@@ -87,9 +87,9 @@ notice : false
 
 
 # These are the sections of on the right hand column of the page (or at the
-# bottom if ther responsive design has moved stuff around to accomodate
+# bottom if the responsive design has moved stuff around to accommodate
 # smaller screen sizes). Any section can be enabled by simply setting the
-# enabled configuratin option to true.
+# enabled configuration option to true.
 #
 # brief_bio - This section is to contain a small amount of information
 # about either the GitHub account owner or the GitHub project. There are
@@ -98,7 +98,7 @@ notice : false
 # social links, and GitHub projects.
 #
 # brief_bio : image - For the image used in brief bio, the url should be the
-# full link to the locatin of the image, even if the image is going to be
+# full link to the location of the image, even if the image is going to be
 # served by the GitHub pages.
 #
 # brief_bio : content - The content of the brief bio should be written in the
@@ -108,7 +108,7 @@ notice : false
 # bio are the same ones that are configured in the social_links configuration
 # section below.
 #
-# brief_bio : github_projects - The GitHub projects that are dispalyed in the
+# brief_bio : github_projects - The GitHub projects that are displayed in the
 # brief bio are the same ones that are configured in the github_projects section
 # below.
 #
@@ -451,7 +451,7 @@ jquery:
 # font_awesome : css - The css file to use for font awesome. The min css
 # should be sufficient.
 #
-# Here's an example configurtion:
+# Here's an example configuration:
 # font_awesome :
 #   enabled : true
 #   css : font-awesome.min.css
@@ -460,7 +460,7 @@ font_awesome :
   css : font-awesome.min.css
 
 
-# This section of the configuration determins how syntax highlighting is
+# This section of the configuration determines how syntax highlighting is
 # configured and the css file to be used.
 #
 # syntax_highlighting : enabled - Enables or disables the loading of the
@@ -571,10 +571,10 @@ disqus :
 #
 # enabled - Determines whether analytics are enabled or not.
 #
-# google_analytics : enabled - Determines whether google analytics in
+# google_analytics : enabled - Determines whether Google analytics in
 # particular is enabled or not.
 #
-# google_analytics : tracking_id - The tracking ID assigned by google.
+# google_analytics : tracking_id - The tracking ID assigned by Google.
 #
 # Here's a sample configuration:
 # analytics :
