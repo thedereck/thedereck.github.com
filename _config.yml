@@ -277,7 +277,7 @@ navbar :
 #       enabled : true
 #       name : Twitter
 #       font_awesome_icon : icon-twitter
-#       url : http://www.twitter.com/_TheDereck_
+#       url : https://www.twitter.com/dereckcurry
 social_links :
   follow_name : Dereck
   links :
@@ -310,7 +310,7 @@ social_links :
       enabled : true
       name : Twitter
       font_awesome_icon : icon-twitter
-      url : http://www.twitter.com/DereckCurry
+      url : https://www.twitter.com/DereckCurry
 
 
 # These are a list of GitHub projects that the blog owner would like to
@@ -424,13 +424,13 @@ bootstrap:
     src : bootstrap.min.js
 
 
-# These are the configuration settings for the JQuery javascript. JQuery is
+# These are the configuration settings for the jQuery javascript. jQuery is
 # needed for responsive Bootstrap and for the filter.html file.
 #
-# jquery : enabled - This enables or disables JQuery. Disabling will probably
+# jquery : enabled - This enables or disables jQuery. Disabling will probably
 # cause the site to behave in a way that is unexpected.
 #
-# jquery : src - The source code file of the JQuery to use.
+# jquery : src - The source code file of the jQuery to use.
 #
 # Here's an example configuration:
 # jquery:
@@ -564,13 +564,13 @@ disqus :
   show_comment_count : true
 
 
-# This section determines whether to use Google analytics to track site
+# This section determines whether to use Google Analytics to track site
 # visitors and statistics. In the future, other analytic engines will most
 # likely be supported.
 #
 # enabled - Determines whether analytics are enabled or not.
 #
-# google_analytics : enabled - Determines whether Google analytics in
+# google_analytics : enabled - Determines whether Google Analytics in
 # particular is enabled or not.
 #
 # google_analytics : tracking_id - The tracking ID assigned by Google.
