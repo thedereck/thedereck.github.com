@@ -9,7 +9,7 @@
 # description will be used instead.
 #
 # url - This is the fully qualified url of the website. Include the
-# http:// or https://.
+# https://.
 #
 # email - The email address of the site administrator.
 #
@@ -20,7 +20,7 @@
 # name : The Dereck
 # brand : The Dereck
 # description : Dereck's Awesome Blog
-# url : http://thedereck.github.io
+# url : https://thedereck.github.io
 # email : thedereck@thedereck.com
 # author : Dereck Curry
 name : The Dereck
@@ -39,6 +39,7 @@ exclude : [ README.md , version.txt ]
 # Replace the number with the default number of blot posts you want on each
 # page. A value of 0 will indicate that you don't want to paginate, and all
 # blog posts will be on the index page.
+paginate: 10
 
 
 # To put a alert or notice on every page served, change the appropriate value
@@ -59,7 +60,7 @@ notice : false
 # appended to the site configured url above (basically don't include the part
 # that is included in the URL above). If you want to use a favicon that
 # is hosted elsewhere, disable the local and enable the remote and include the
-# full url (http://www.something.domain/directory/file.extention). For either
+# full url (https://www.something.domain/directory/file.extention). For either
 # the local or remote, you'll need to include the file type.
 #
 # Here's an example configuration:
@@ -71,7 +72,7 @@ notice : false
 #     type : false
 #   remote :
 #     enabled : true
-#     full_url : http://www.gravatar.com/avatar/2f8947394b8acb62e1055f27.png
+#     full_url : https://www.gravatar.com/avatar/2f8947394b8acb62e1055f27.png
 #     type : png
 favicon :
   enabled : true
@@ -83,8 +84,6 @@ favicon :
     enabled : false
     full_url : false
     type : false
-
-paginate: 10
 
 
 # These are the sections of on the right hand column of the page (or at the
@@ -146,7 +145,7 @@ paginate: 10
 #     enabled : true
 #     image :
 #       enabled : true
-#       url : http://www.gravatar.com/avatar/2f89473908df91055f27.png?s=200
+#       url : https://www.gravatar.com/avatar/2f89473908df91055f27.png?s=200
 #     content :
 #       enabled : true
 #     social_links :
@@ -354,8 +353,7 @@ github_projects :
 #
 # links : link : name - The name of the external website.
 #
-# links : link : url - The url of the external website. Include the http://
-# or https://.
+# links : link : url - The url of the external website. Include the https://.
 #
 # Here is an example configuration:
 # external_links :
@@ -384,28 +382,28 @@ external_links :
       url : http://www.charlestondigitalcorridor.com/
 
 
-# These are the bootstrap settings. These bootstrap settings will control both
+# These are the Bootstrap settings. These Bootstrap settings will control both
 # the theme and responsive settings of this site.
 #
-# css - The name of the bootstrap css. Using one of the min css should be
+# css - The name of the Bootstrap css. Using one of the min css should be
 # fine. This also controls the general theme of the website, so using a custom
-# bootstrap css should work just fine. Also any of the bootswatch settings
+# Bootstrap css should work just fine. Also any of the Bootswatch settings
 # should work just fine, but you may need to tweak the css settings in the
 # css/gh-pages-blog.css if things clash.
 #
 # responsive : enabled - To enable a responsive bootstrap, set this value to
 # true.
 #
-# responsive : css - The name of the bootstrap responsive css file to use. It
+# responsive : css - The name of the Bootstrap responsive css file to use. It
 # should be just fine to use the min file.
 #
 # responsive : js : enabled - This either enables or disables the responsive
-# bootstrap css. If you're going to use responsive css, you also need to use
-# a responsive bootstrap js.
+# Bootstrap css. If you're going to use responsive css, you also need to use
+# a responsive Bootstrap js.
 #
 # responsive : js : src - The javascript to use for the responsive
-# bootstrap. If you're going to use responsive css, you also need to use
-# a responsive bootstrap js.
+# Bootstrap. If you're going to use responsive css, you also need to use
+# a responsive Bootstrap js.
 #
 # Here's an example configuration:
 # bootstrap:
@@ -426,13 +424,13 @@ bootstrap:
     src : bootstrap.min.js
 
 
-# These are the configuration settings for the jquery javascript. JQuery is
-# needed for responsive bootstrap and for the filter.html file.
+# These are the configuration settings for the JQuery javascript. JQuery is
+# needed for responsive Bootstrap and for the filter.html file.
 #
-# jquery : enabled - This enables or disables jquery. Disabling will probably
+# jquery : enabled - This enables or disables JQuery. Disabling will probably
 # cause the site to behave in a way that is unexpected.
 #
-# jquery : src - The source code file of the jquery to use.
+# jquery : src - The source code file of the JQuery to use.
 #
 # Here's an example configuration:
 # jquery:
@@ -447,9 +445,9 @@ jquery:
 # site. Although not required, the Font Awesome fonts make the website look
 # much better.
 #
-# font_awesome : enabled - Enables or disables the use of font awesome.
+# font_awesome : enabled - Enables or disables the use of Font Awesome.
 #
-# font_awesome : css - The css file to use for font awesome. The min css
+# font_awesome : css - The css file to use for Font Awesome. The min css
 # should be sufficient.
 #
 # Here's an example configuration:
@@ -495,7 +493,7 @@ syntax_highlighting :
 # thedereck@thedereck.com (Dereck Curry).
 #
 # webmaster : enabled - Enables or disables the inclusion of the
-# webmater node in the xml.
+# webmaster node in the xml.
 #
 # webmaster : webmater - The email address and name of the
 # webmaster. The format is fairly specific in that the email address is
